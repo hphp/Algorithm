@@ -1,0 +1,97 @@
+/*
+ID: hanjiatong1
+PROG: castle 
+LANG: C++
+*/
+#include <iostream>
+#include <fstream>
+#include <string>
+#define N 53 
+#define avl(x,y) ((x) >= 1 && (x) <= n && (y) >= 1 && (y)<=m ? 1 :0)
+using namespace std;
+int area[N*N],cnt;
+int blg[N][N];
+int n,m;
+int st[N][N];
+
+void dfs(int x,int y)
+{
+	area[cnt] ++;
+	blg[x][y] =cnt;
+	for(int i=0;i<4;i++)
+	{
+		int xx = x + mv[i][0];
+		int yy = y + mv[i][1];
+		if(avl (xx,yy) &&( ! (st[x][y] & (1<<wl[i]))) && blg[xx][yy] == -1)
+		{
+			dfs(xx,yy);
+		}
+	}
+}
+
+int mv[4][0] = {{0,-1},{-1,0},{0,1},{1,0}};
+int fst[4] = {2,1,1,0};
+char to[4] = {"EN"}
+
+int main() {
+    ofstream fout ("castle.out");
+    ifstream fin ("castle.in");
+    fin >> n >> m;
+    for(int i=1;i<=n;i++)
+		for(int j=1;j<=m;j++)
+		{
+			blg[i][j] = -1;
+			scanf("%d",&st[i][j]);
+		}
+	cnt = 0;
+	for(int i=1;i<=n;i++)
+		for(int j=1;j<=m;j++)
+			if(blg[i][j] == -1)
+			{
+				dfs(i,j);
+				cnt ++;
+			}
+	int mxmx = 0;
+	int ansx = -1,ansy = -1;
+	char anss;
+	for(int j=m;j>=1;j--)
+		for(int i=n;i>0;i--)
+		{
+			for(int k=0;k<2;k++)
+			{
+				int tire = fst[k];
+				int xx = i + mv[tire][0];
+				int yy = j + mv[tire][1];
+				if( avl(xx,yy) && ( st[i][j] & (1<<tire)))
+				{
+					int mx = area[blg[i][j]] + area[blg[xx][yy]];
+					if(mx > mxmx)
+					{
+						mxmx = mx;
+						ansx = i;
+						ansy = j;
+						anss = to[k];
+					}
+				}
+			}
+		}
+	fout << cnt << endl;
+	fout << mx << endl;
+	fout << mxmx << endl;
+	fout << ansx << ' ' << ansy << ' ' << anss  << endl;
+    return 0;
+}
+
+/*
+     1   2   3   4   5   6   7
+   #############################
+ 1 #   |   #   |   #   |   |   #
+   #####---#####---#---#####---#   
+ 2 #   #   |   #   #   #   #   #
+   #---#####---#####---#####---#
+ 3 #   |   |   #   #   #   #   #   
+   #---#########---#####---#---#
+ 4 # ->#   |   |   |   |   #   #   
+   ############################# 
+
+*/

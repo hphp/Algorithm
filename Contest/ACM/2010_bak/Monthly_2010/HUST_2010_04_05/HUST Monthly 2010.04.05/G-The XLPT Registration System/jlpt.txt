@@ -1,0 +1,101 @@
+The XLPT Registration System
+
+One day, INFINITE_Li decided to attend the XLPT exam. Then he visited the XLPT registration website and register his information. He found the registration system for XLPT is very interesting, and decided to write a program to simulate the system. But, it is well known that he is poor at programming. So he turns to you and asks for your help.
+
+There are 3 steps to register for XLPT exam:
+
+1. register your personal information on the website.
+2. choose a test center to take the exam.
+3. pay for the exam.
+
+All the test centers has a capacity K, which means the amount of the students that chosen this center must not excceed K at the same time.
+
+in more details, there are 4 kinds of request for the system:
+
+REG student_name
+GET student_name test_center_name
+PAY student_name
+CAL student_name
+
+REG is the request for step 1 above, GET is for step 2, and PAY is for step 3. The CAL request means the student want to rechoose a test center to take the exam, the system should will delete his name from his current chosen test center's namelist.
+
+What's more, if you had chosen your test center and didn't pay for the exam for T seconds, the system will delete your name from the namelist of the test center automatically. There are 4 more rules below:
+
+1. the REG request is always the first request of an student, and one student will register only once.
+2. if a person chose a test center and didn't use CAL to cancel that he could't choose another test center.
+3. if a person chosed a test center and paid for the exam, then he couldn't cancel that anyway.
+4. before you pay, your name must be in a test center's namelist
+
+All illegal requests will be ignored.
+
+now given all the requests, you are to determine where the paid student will take the exam.
+
+
+INPUT
+
+There are less than 10 test cases. For each test case there are 3 integers in the first line: N K T (N <= 50000). Then N lines, each line contains an request in the follow form:
+
+TIME REQ student_name [test_center_name]
+
+TIME is the time that the request will be processed by the system, and it is guaranteed it will be ascending in the input.
+
+note that only GET request contains "test_center_name"
+the length of student_name and test_center_name will not excceed 20.
+
+
+OUTPUT
+
+for each test case print "Case #i:" in a line first, i means the case number. Then print a list that contains all the paid person and his chosen test center in the "student_name test_center_name" form, one item per line. the list should be sorted in alphabetical order according to student_name.
+
+print a blank line after each test case
+
+
+SAMPLE INPUT
+
+6 1 100
+10  REG INFINITE_Li 
+20  GET INFINITE_Li    HUST
+120 PAY INFINITE_Li
+210 REG frederic
+220 GET frederic       HUST
+319 PAY frederic
+
+8 1 100
+10  REG INFINITE_Li 
+20  GET INFINITE_Li    HUST
+119 PAY INFINITE_Li
+210 REG frederic
+220 GET frederic       HUST
+315 CAL frederic
+316 GET frederic       HUSTCS
+319 PAY frederic
+
+12 2 1000
+10 REG frederic
+20 REG amamiya_yuuko
+30 GET amamiya_yuuko   otoha
+40 REG miyamura_miyako
+50 GET miyamura_miyako otoha
+60 GET frederic        otoha
+70 REG yuri   
+80 GET yuri            SSS
+90 PAY frederic
+100 PAY amamiya_yuuko
+110 PAY miyamura_miyako 
+120 PAY yuri
+
+
+
+SAMPLE OUTPUT
+
+Case #1:
+frederic HUST
+
+Case #2:
+INFINITE_Li HUST
+frederic HUSTCS
+
+Case #3:
+amamiya_yuuko otoha
+miyamura_miyako otoha
+yuri SSS

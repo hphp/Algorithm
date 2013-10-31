@@ -1,0 +1,192 @@
+#include <stdio.h>
+#define T 2100
+#define MAXP 2100
+#define MAX (1<<28)
+#define Max(a,b) ((a)>(b)?(a):(b))
+#define Min(a,b) ((a)<(b)?(a):(b))
+
+int mx[T][MAXP],mxb[T][MAXP];
+int as[T],bs[T],ap[T],bp[T];
+int day,maxP,w;
+int recMx[MAXP];
+/// 单调队列 
+struct Node
+{
+	int id;
+	int v;
+	Node * next;
+	Node * last;
+}node[T];
+
+bool cmpv0(Node * a , Node * b)
+{
+	if(a->v<b->v)
+		return true;
+	return false;
+}
+
+class MonnotonePriorityQueue
+{
+	public:
+		MonnotonePriorityQueue()
+		{
+			head = NULL;	
+			tail = NULL;	
+		}
+		Node * head;
+		Node * tail;
+		void insert(Node *,bool (*cmp)(Node * a , Node * b));
+		int query(int);
+};
+
+void MonnotonePriorityQueue::insert(Node * cur , bool (*cmp)(Node * a,Node * b))
+{
+	if( head == NULL )
+	{
+		head = cur;
+		tail = cur;
+	}
+	else
+	{
+		Node * tmp = tail;
+		bool flag = cmp(tmp,cur);
+		while( tmp != NULL && flag)
+		{
+			tmp = tmp->last;
+			if(tmp != NULL)
+			flag = cmp(tmp,cur);
+		}
+		if(tmp == NULL)
+		{
+			head = cur;
+			tail = cur;
+			cur->next = NULL;
+			cur->last = NULL;
+		}
+		else
+		{
+			tmp->next = cur;
+			cur->last = tmp;
+			cur->next = NULL;
+			tail = cur;
+		}
+
+	}
+}
+
+int MonnotonePriorityQueue::query(int st)
+{
+	Node * cur = head;
+	while(cur != NULL && cur->id <st)
+	{
+		cur = cur->next;	
+	}
+	head = cur;
+	cur->last = NULL;
+	return cur->v;
+}
+
+void dp_init()
+{
+	for(int i=1;i<=day;i++)
+		for(int j=0;j<=maxP;j++)
+		{
+			mx[i][j] = -MAX;
+			mxb[i][j] = -MAX;
+		}
+	mx[0][0] = 0;
+	mxb[0][0] = 0;
+}
+int getVB(int i0,int j,int i)
+{
+	return mxb[i0][j] - j * ap[i];
+}
+
+void getRecMx(int i,int i0,int * recMx,int (*getV)(int i0,int j,int i))
+{
+	MonnotonePriorityQueue mpq = MonnotonePriorityQueue();
+			for(int j=0;j<=maxP;j++)
+			{
+				node[j].id = j;
+				node[j].v = getV(i0,j,i);
+				node[j].next = node[j].last = NULL;
+				mpq.insert(&node[j],cmpv0);
+				int lm = Max(j-as[i],0);
+				recMx[j] = mpq.query(lm);
+				printf("%d ",recMx[j]);
+			}
+	printf("i:%d \n",i);
+}
+
+int getVS(int i0,int j,int i)
+{
+	return mxb[i0][j] + j * bp[i];
+}
+
+void getRecMx0(int i,int i0,int * recMx,int (*getV)(int i0,int j,int i))
+{
+	MonnotonePriorityQueue mpq = MonnotonePriorityQueue();
+			for(int j=0;j<=maxP;j++)
+			{
+				node[j].id = j;
+				node[j].v = getV(i0,j,i);
+				node[j].next = node[j].last = NULL;
+				mpq.insert(&node[j],cmpv0);
+				int lm = Max(j-bs[i],0);
+				recMx[lm] = mpq.query(lm);
+				printf("%d ",recMx[j]);
+			}
+	printf("i:%d \n",i);
+}
+
+
+int main()
+{
+	int test;
+	scanf("%d",&test);
+	while(test--)
+	{
+		scanf("%d %d %d",&day,&maxP,&w);
+		for(int i=1;i<=day;i++)
+		{
+			scanf("%d %d %d %d",&ap[i],&bp[i],&as[i],&bs[i]);
+		}
+		dp_init();
+		for(int i=1;i<=day;i++)
+		{
+			int i0 = Max(i-w-1,0);
+
+			getRecMx(i,i0,recMx,getVB);
+			
+			for(int j=1;j<=maxP;j++)
+			{
+				int maxx = recMx[j];
+				mx[i][j] = Max(maxx + ap[i]*j,mx[i][j]);
+			}
+			getRecMx0(i,i0,recMx,getVS);
+			for(int j=0;j<=maxP;j++)
+			{
+				int rm = j;
+				//int rm = Min(j+bs[i],maxP);
+				int maxx = recMx[rm];
+				mx[i][j] = Max(maxx - bp[i]*j,mx[i][j]);
+			}
+
+			for(int j=0;j<=maxP;j++)
+			{
+				mxb[i][j] = Max(mx[i][j],mxb[i-1][j]);
+			}
+        }
+		int a,b;
+		while(scanf("%d %d",&a,&b)!=EOF)
+		{
+			printf("%d\n",mx[a][b]);
+		}
+		int mxmx = 0;
+		for(int j=0;j<=maxP;j++)
+			if(mxb[day][j] > mxmx)
+				mxmx = mxb[day][j];
+		printf("%d\n",mxmx);
+	}
+	return 0;
+}

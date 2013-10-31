@@ -1,0 +1,152 @@
+#include <stdio.h>
+#include <string.h>
+#define N 1010000
+#define dig(a) ((a)<='9'&&(a)>='0'?1:0)
+#define ltr(a) ((!dig(a) && a!='+' && a!='-')?1:0)
+#include <vector>
+char s1[N],s2[N];
+std::vector<int> r1,r2;
+
+int tran(char a)
+{
+	if(a<='z'&&a>='a')
+		return a-'a'+'A';
+	return a;
+}
+
+std::vector<int> deal(char s[],std::vector<int> r)
+{
+	r.clear();
+	int sz = strlen(s);
+	int flag = 2 , sign = 1;//0 digit,-1 flag, 1 
+	int sum = 0;
+	for(int i=0;i<sz;i++)
+	{
+		if(flag == 1 || flag == -1)
+		{
+			sign = flag;
+			sum = 0;
+			if(dig(s[i]))
+			{
+				sum *= 10;
+				sum += (sign*(s[i]-'0'));
+//				printf("%d\n",sum);
+				flag = 0;
+			}
+			else if(ltr(s[i]) || s[i] == '+' || s[i] == '-')
+			{
+				if(flag == 1)
+				{
+					r.push_back('+');
+				}
+				else r.push_back('-');
+				r.push_back(tran(s[i]));
+				if(s[i] == '+')
+					flag *= 1;
+				else if(s[i] == '-')
+					flag *= -1; 
+				else flag = 2;
+			}
+		}
+		else if(flag == 0)
+		{
+			if(dig(s[i]))
+			{
+				sum *= 10;
+				sum += (sign*(s[i]-'0'));
+				flag = 0;
+			}
+			else if(ltr(s[i]))
+			{
+				r.push_back(sum);
+				sum = 0;
+				sign = 1;
+				flag = 2;
+				r.push_back(tran(s[i]));
+			}
+			else if(s[i] == '+')
+			{
+				flag = 2;
+				r.push_back(sum);
+				sum = 0;
+				sign = 1;
+				r.push_back('+');
+			}
+			else if(s[i] == '-')
+			{
+				flag = 2;
+				r.push_back(sum);
+				sum =0;
+				sign = 1;
+				//printf("%d\n",'-');
+				r.push_back('-');
+			}
+		}
+		else if(flag == 2)
+		{
+			sum = 0;
+			if(dig(s[i]))
+			{
+				sign = 1;
+				sum *= 10;
+				sum += (sign*(s[i]-'0'));
+//				printf("%dhi",sum);
+				flag = 0;
+			}
+			else if(ltr(s[i]))
+			{
+				r.push_back(tran(s[i]));
+				flag = 2;
+			}
+			else
+			{
+				if(s[i] == '+')
+				{
+					flag = 1;
+				}
+				else if(s[i] == '-')
+				{
+					flag = -1;
+				}
+				sum = 0;
+			}
+			sign 
+				= 1;
+		}
+/*		for(int k=0;k<r.size();k++)
+			printf("hello kk %d\n",r[k]);
+		printf("\n");*/
+	}
+	r.push_back(sum);
+	return r;
+}
+int main()
+{
+	int tc;
+	scanf("%d",&tc);
+	for(int tt = 1 ; tt <= tc ; tt ++)
+	{
+		scanf("%s%s",s1,s2);
+		r1 = deal(s1,r1);
+		for(int i=0;i<r1.size();i++)
+			printf("%d ",r1[i]);
+		printf("\n");
+		r2 = deal(s2,r2);
+		for(int i=0;i<r1.size();i++)
+			printf("%d ",r2[i]);
+		printf("\n");
+		int ans = 0;
+		int aa = r1.size();
+		int bb = r2.size();
+		for(int i=0;i<aa&&i<bb;i++)
+			if(r1[i] < r2[i])
+			{
+				ans = -1;break;
+			}
+			else if(r1[i] > r2[i])
+			{
+				ans = 1;break;
+			}
+		printf("%d %d\n",tt,ans);
+	}
+}

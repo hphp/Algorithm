@@ -1,0 +1,40 @@
+Ancient Printer Sort 80%
+Predict difficulty: 2
+
+Code Lock Disjoint-set 20%
+Predict difficulty: 3
+
+Date Shortest Path 20%
+Predict difficulty: 3
+
+Goldbach Division Math DP 50%
+Predict difficulty: 3
+
+Integers' Weight Math DP 5%
+Predict difficulty: 4
+
+Life is a Line Geomerty BIT 15%
+Predict difficulty: 3
+
+Proud Merchants Greedy DP 25% AC Radio <= 10%
+Predict difficulty: 3
+
+Song of the Siren Computation Geomerty 5%
+Predict difficulty: 4
+
+Treasure Hunting BFS match 60%
+Predict difficulty: 2
+
+——————————————————————————
+
+上面的是预估的，实际情况差了好多~
+
+A题还算正常，不少队直接trie了..
+I题基本当水题的，但是可能我题意没说清楚，大家都没发现 = =
+D题被不少人暴力过，自己电脑要跑5s的，大赞HDOJ服务器，1s不到...
+F题和G题，大家过的都很漂亮
+B题和E题，天王的题，思维难度确实不小
+H题，很遗憾UESTC_23只有一个-0.00错误却不做了，最后的ECNU_06也只错了一个数据~
+C题，很tricky的问题，大家都无视了...
+
+还好没有出现大问题，谢谢大家奉献的精彩比赛！

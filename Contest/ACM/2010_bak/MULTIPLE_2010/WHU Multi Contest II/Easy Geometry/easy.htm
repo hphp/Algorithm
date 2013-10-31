@@ -1,0 +1,212 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta name=Generator content="Microsoft Word 12 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Calibri","sans-serif";}
+h3
+	{mso-style-link:"标题 3 Char";
+	margin-right:0cm;
+	margin-left:0cm;
+	font-size:13.5pt;
+	font-family:宋体;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"页眉 Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	layout-grid-mode:char;
+	border:none;
+	padding:0cm;
+	font-size:9.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"页脚 Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	layout-grid-mode:char;
+	font-size:9.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:21.0pt;
+	font-size:10.5pt;
+	font-family:"Calibri","sans-serif";}
+span.Char
+	{mso-style-name:"页眉 Char";
+	mso-style-link:页眉;}
+span.Char0
+	{mso-style-name:"页脚 Char";
+	mso-style-link:页脚;}
+span.3Char
+	{mso-style-name:"标题 3 Char";
+	mso-style-link:"标题 3";
+	font-family:宋体;
+	font-weight:bold;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	layout-grid:15.6pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=ZH-CN style='text-justify-trim:punctuation'>
+
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:18.0pt;font-family:"Times New Roman","serif";color:blue'>Easy
+Geometry</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman","serif";color:green'>Time
+Limit: </span><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>1.0
+Seconds<span style='color:green'>&nbsp; &nbsp;Memory Limit: </span>65536K</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>There
+are a set of points in the plane. Dumbear will choose some of them and find the
+convex hull of the chosen points. For each point, we know that probability that
+Dumbear will choose it. We want to know the expected number of vertexes the
+convex hull had.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>You
+can assume that any three points are not in the same line. If the number of the
+chosen points is smaller than three, we think all the chosen points are
+vertexes of the convex hull.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:13.5pt;font-family:
+"Times New Roman","serif"'>Input</span></b></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>There
+are several test cases in the input.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>The
+first line of each test case contains an integer n (1&lt;=n&lt;=1000). n lines
+follow, each line contains three integers x, y and p (1&lt;=x, y&lt;=</span><span
+lang=EN-US> </span><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>100000,
+0 &lt;= p &lt; 100) indicating a point at (x, y) and Dumbear will choose it
+with probability p%.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>The
+input terminates by end of file marker.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:13.5pt;font-family:
+"Times New Roman","serif"'>Output</span></b></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>For
+each test case, output the answer rounded to 2 digits after the decimal point.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:13.5pt;font-family:
+"Times New Roman","serif"'>Sample Input </span></b></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>1</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>1
+1 50</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>3</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>1
+1 99</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>1
+2 99</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>2
+3 0</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>4</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>1
+1 50</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>5
+1 50</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>1
+5 50</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>2
+2 50</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:13.5pt;font-family:
+"Times New Roman","serif"'>Sample Output </span></b></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>0.50</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>1.98</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>1.94</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:13.5pt;font-family:
+"Times New Roman","serif"'>Author</span></b></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>hanshuai@WHU</span></p>
+
+</div>
+
+</body>
+
+</html>

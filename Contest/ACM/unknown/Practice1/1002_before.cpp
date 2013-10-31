@@ -1,0 +1,70 @@
+#include <stdio.h>
+#define N 100100
+
+typedef long long Int;
+int shorter[N];
+Int mxmx,sum[N];
+struct Stuff
+{
+	int w,h;
+}stuff[N];
+int h[N],w[N];
+int n;
+
+void dp_init()
+{
+	
+}
+
+void dp()
+{h[0]=0;
+	shorter[0]=-1;
+	mxmx = 0;
+	//dp_init();
+	for(int i=1;i<=n;i++)
+	{
+		int tmp;
+		tmp = i-1;
+		while(tmp&&w[tmp]>w[i])
+			tmp = shorter[tmp];
+		shorter[i]=tmp;
+/*
+		if(h[i]>h[i-1])
+		{
+			shorter[i] = i-1;
+		}
+		else
+		{
+		}*/
+		tmp = shorter[i];
+		int tmpmx = w[i]*w[i];
+		int shtst = w[i];
+		while(tmp>=0)
+		{
+			Int tt = shtst*(sum[i]-sum[tmp]);
+			if(tt > tmpmx)
+				tmpmx = tt;
+			shtst = w[tmp];
+			tmp = shorter[tmp];
+		}
+		if(tmpmx>mxmx)
+			mxmx = tmpmx;
+	}
+	printf("%lld\n",mxmx);
+}
+
+int main()
+{
+	while(scanf("%d",&n)!=EOF)
+	{
+		if(!n)break;
+		sum[0]=0;
+		for(int i=1;i<=n;i++)
+		{
+			scanf("%d",&w[i]);
+			sum[i] = sum[i-1]+w[i];
+		}
+		dp();
+	}
+	return 0;
+}

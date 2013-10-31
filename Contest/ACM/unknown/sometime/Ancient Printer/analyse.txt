@@ -1,0 +1,2 @@
+if you build a trie, you may find the best strategy is stepping on the tree
+observing this, we can sort it, then calculate the common length between adjacent strings

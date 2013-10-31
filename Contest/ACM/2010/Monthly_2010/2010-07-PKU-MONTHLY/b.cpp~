@@ -1,0 +1,51 @@
+#include <stdio.h>
+#define N 10100
+#define MAX (1<<28)
+typedef __int64 Int;
+
+Int sum[N];
+int a[N];
+int n;
+
+int main()
+{
+	int tc;
+	scanf("%d",&tc);
+	while(tc--)
+	{
+		scanf("%d",&n);
+		sum[0] = 0;
+		int mxx = -MAX;
+		for(int i=1;i<=n;i++)
+		{
+			scanf("%d",&a[i]);
+			sum[i] = sum[i-1]+a[i];
+			if(mxx < a[i])
+				mxx = a[i];
+		}
+		for(int i=1;i<=n;i++)
+		{
+			if(sum[i] >= mxx && sum[n] %sum[i] == 0 )
+			{
+				int cnt = i + 1;
+				Int cur = sum[i]+sum[i];
+				while(cnt <= n)
+				{
+					if(sum[cnt] > cur)
+						break;
+					if(sum[cnt] == cur)
+					{
+						cur += sum[i];
+					}
+					else cnt ++;
+				}
+				if(cur > n)
+				{
+					printf("%I64d\n",sum[i]);
+					break;
+				}
+			}
+		}
+	}
+	return 0;
+}

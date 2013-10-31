@@ -1,0 +1,70 @@
+ACM again- Ancient China Mathematics again
+
+Dr.K has published a essay on ACM(Ancient China Mathematics), he asked me to thank you for your help what really helped a lot. But another problem raised that the ACM is not as simple as we descripted last time.
+
+In order to help you understand it, we should first go over the ancient people's counting system again:
+
+1、They use only 7 digits to represent numbers, and numbers are as follow:
+      |         -> 1
+      ||        -> 2
+      |||       -> 3
+      ||||      -> 4
+      |||||     -> 5
+      ||||||    -> 6
+      |||||||   -> 7
+      It is a pity that they have not developed "0" before these people disapeared.
+2、If a number is greater than 7, they use digit place just as we do today. Between each two digit places, there is a ",".
+   eg:
+      |||||,||     -> 42 (5x8+2)
+      |||,||,||||  -> 212 (3*64+2*8+4)
+
+In Dr.K's further study, he noticed that, there comes another two symbols - "[" and "]". They are often used together and there is always an expression between them. To see it more clearly, we define it as a grammer expression:
+
+expression = [exp1]
+exp1 = [exp1] | [exp1]exp1 | exp1[exp1] | Digit
+Digit = "|" | "||" | "|||" | "||||" | "|||||" | "||||||" | "|||||||"
+
+For example:
+    [||,||||]
+    [[||][||,|]]
+    [||[|||][|||||,|]]
+    are all acceptable expressions.
+
+But what does these expressions mean? That really confused Dr.K a long time, fortunately, he conquered it. He found that:
+1、"[]" is used in pairs and all the time with an expersion between them.
+2、An expersion is always a number (certainly in their "|||..." form) or another expression.
+3、An "exp1[exp2]" or "[exp1]exp2" expersion means exp1 + exp2.
+4、An "[exp1][exp2]" expersion means exp1 x exp2.
+
+For example:
+    [||[||]]                         = 2+2 = 4
+    [|]                              = 1
+    [[||][|,|]]                      = 2x9 = 18
+    [||[[||]|][||]|,||]              = 2+(2+1)x2+10 = 18
+
+As same as mordern mathematics, multiplication is piror to addition, and expersion in a "[]" should be count piror to the outer expersion.
+
+For another time, he turns to you for help, it is sure that you will not let him down.
+
+Input
+
+The first line of standard input contains an integer N, the number of test cases. N lines followed.
+In each line a squence is given, it is guaranteed that the length of the squence will not exceed 1024 characters and the outcome number will not be greater than 1000000.
+
+Output
+
+For each case you are to output a line giving the number in today's decimal counting system.
+
+Sample Input
+
+3
+[||[||]]
+[|]
+[[||][|,|]]
+
+
+Sample Output
+
+4
+1
+18

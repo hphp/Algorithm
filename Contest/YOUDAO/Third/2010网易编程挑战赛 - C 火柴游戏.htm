@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>2010网易编程挑战赛 - C:火柴游戏</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+<meta http-equiv="Cache-Control" content="no-store">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<link href="http://www.163.com/favicon.ico" rel="shortcut icon" 
+type="image/x-icon">
+<link 
+href="2010%E7%BD%91%E6%98%93%E7%BC%96%E7%A8%8B%E6%8C%91%E6%88%98%E8%B5%9B%20-%20C%20%E7%81%AB%E6%9F%B4%E6%B8%B8%E6%88%8F_files/global.css"
+ media="screen" rel="stylesheet" type="text/css">
+<link 
+href="2010%E7%BD%91%E6%98%93%E7%BC%96%E7%A8%8B%E6%8C%91%E6%88%98%E8%B5%9B%20-%20C%20%E7%81%AB%E6%9F%B4%E6%B8%B8%E6%88%8F_files/styles.css"
+ media="screen" rel="stylesheet" type="text/css">
+<link 
+href="2010%E7%BD%91%E6%98%93%E7%BC%96%E7%A8%8B%E6%8C%91%E6%88%98%E8%B5%9B%20-%20C%20%E7%81%AB%E6%9F%B4%E6%B8%B8%E6%88%8F_files/group.css"
+ media="screen" rel="stylesheet" type="text/css">
+<link 
+href="2010%E7%BD%91%E6%98%93%E7%BC%96%E7%A8%8B%E6%8C%91%E6%88%98%E8%B5%9B%20-%20C%20%E7%81%AB%E6%9F%B4%E6%B8%B8%E6%88%8F_files/styles_002.css"
+ media="screen" rel="stylesheet" type="text/css">
+<!--[if lt IE 7]>
+	<link type="text/css" href="http://poj.youdao.com/styles/ie6-deprecated.css?1275043088.css" rel="stylesheet" />
+<![endif]-->
+<!--[if IE 7]>
+	<link type="text/css" href="http://poj.youdao.com/styles/ie7.css?1274858272.css" rel="stylesheet" />
+<![endif]-->
+<!--[if IE 8]>
+	<link type="text/css" href="http://poj.youdao.com/styles/ie8.css?1274858272.css" rel="stylesheet" />
+<![endif]-->
+<script type="text/javascript" src="2010%E7%BD%91%E6%98%93%E7%BC%96%E7%A8%8B%E6%8C%91%E6%88%98%E8%B5%9B%20-%20C%20%E7%81%AB%E6%9F%B4%E6%B8%B8%E6%88%8F_files/jquery-1.js"></script>
+<script type="text/javascript" src="2010%E7%BD%91%E6%98%93%E7%BC%96%E7%A8%8B%E6%8C%91%E6%88%98%E8%B5%9B%20-%20C%20%E7%81%AB%E6%9F%B4%E6%B8%B8%E6%88%8F_files/jquery.js"></script>
+<script type="text/javascript" src="2010%E7%BD%91%E6%98%93%E7%BC%96%E7%A8%8B%E6%8C%91%E6%88%98%E8%B5%9B%20-%20C%20%E7%81%AB%E6%9F%B4%E6%B8%B8%E6%88%8F_files/base-nc.js"></script>
+<script type="text/javascript" src="2010%E7%BD%91%E6%98%93%E7%BC%96%E7%A8%8B%E6%8C%91%E6%88%98%E8%B5%9B%20-%20C%20%E7%81%AB%E6%9F%B4%E6%B8%B8%E6%88%8F_files/api.js"></script>
+<script type="text/javascript">
+    //<![CDATA[
+var web_root = '/',
+	script_root = '/scripts',
+	style_root = '/styles';
+    //]]>
+</script></head><body>
+	<div id="warp">
+<!-- 容器开始 -->
+<!-- 头部开始 -->
+<div id="topbanner"><img 
+src="2010%E7%BD%91%E6%98%93%E7%BC%96%E7%A8%8B%E6%8C%91%E6%88%98%E8%B5%9B%20-%20C%20%E7%81%AB%E6%9F%B4%E6%B8%B8%E6%88%8F_files/title_image.jpg"
+ alt="" usemap="#Map" width="980" border="0" height="249">
+<map name="Map" id="Map"><area shape="rect" coords="608,3,747,56" 
+href="http://www.163.com/" target="blank"><area shape="rect" 
+coords="762,4,928,58" href="http://www.youdao.com/" target="blank/"><area
+ shape="rect" coords="38,153,202,203" 
+href="http://www.youdao.com/nanti/apply.php"><area shape="rect" 
+coords="212,150,378,206" href="http://www.youdao.com/nanti/mi2010/" 
+target="blank"></map></div>
+	
+	<div id="contestNavigation">
+<a class="tab tab-0 current" href="http://poj.youdao.com/nanti3/">有道难题资格
+赛(3)</a><a class="tab tab-1" href="http://poj.youdao.com/nanti3/mine/">我
+的难题</a><a class="tab tab-2" href="http://poj.youdao.com/nanti3/ranking/">比
+赛排名</a><a class="tab tab-3" href="http://poj.youdao.com/nanti3/status/">提
+交状态</a><a class="tab tab-4" 
+href="http://poj.youdao.com/nanti3/statistics/">统计数据</a><a class="tab 
+tab-5" href="http://poj.youdao.com/nanti3/clarify/">提问</a>
+</div>	
+	<div id="pagebody">
+		<div class="wrapper">
+			
+			<div id="pageTitle">
+				<h2>C:火柴游戏</h2>
+			</div>
+			
+<div id="problemPageTitleDescrip">	
+	<div id="bottomMenu">
+		<ul>
+			<li><a href="http://poj.youdao.com/nanti3/C/">查看</a></li>
+			<li><a href="http://poj.youdao.com/nanti3/C/submit/">提交</a></li>
+			<li><a href="http://poj.youdao.com/nanti3/C/statistics/">统计</a></li>
+			<li><a href="http://poj.youdao.com/nanti3/clarify/C/">讨论</a></li>	
+		</ul>
+	</div>
+</div><div class="col-12">
+	<dl class="problem-params">
+		<dt>时间限制: </dt>
+		<dd>1000ms</dd>
+		<dt>内存限制: </dt>
+		<dd>131072kB</dd>
+	</dl>
+	<dl class="problem-content">
+		<dt>描述</dt>
+		<dd><img 
+src="2010%E7%BD%91%E6%98%93%E7%BC%96%E7%A8%8B%E6%8C%91%E6%88%98%E8%B5%9B%20-%20C%20%E7%81%AB%E6%9F%B4%E6%B8%B8%E6%88%8F_files/matches.jpg"
+ width="666" height="112"><br>
+如上图所示，我们可以用不同数量的火柴排成0~9这10个数字。现在这个问题需要让聪明的你来计算一下，给你N根火柴，总共可以组合成多少个被M取余后结
+果是素数的数字。<br>
+注意，N根火柴都要用上,另外，除了0，其他数字均不能出现前导零。</dd>
+		<dt>输入</dt>
+		<dd>第一行有一个正整数T，表示有T组测试数据。<br>
+接下来T行每一行表示一组测试数据，每行包含空格隔开的两个正整数N和M。<br>
+其中：<br>
+T &lt; =20, <br>
+N, M &lt;=10000并且M*N&lt;=1000000</dd>
+		<dt>输出</dt>
+		<dd>对于每一个测试数据，请输出一行，包含一个数，即结果对1000000007取模的值。</dd>
+		<dt>样例输入</dt>
+		<dd><pre>4
+4 15
+20 4
+6 10
+6 20
+</pre></dd>
+		<dt>样例输出</dt>
+		<dd><pre>1
+6982
+1
+2
+</pre></dd>
+				</dl>
+	<div id="bottomMenu">
+		<ul>
+			<li><a href="http://poj.youdao.com/nanti3/C/submit/">提交</a></li>
+			<li><a href="http://poj.youdao.com/nanti3/C/statistics/">统计</a></li>
+			<li><a href="http://poj.youdao.com/nanti3/clarify/C/">讨论</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="problem-statistics col-4">
+		<ul>
+			<li>提交次数: 1235</li>
+	    <li>通过人数: 236</li>
+	</ul>
+		
+	</div>
+		</div>
+	</div>
+	<!-- 版权信息开始 -->
+<div id="copyright_navigation">
+  <p class="gray"> ©2010 网易公司 京ICP证080268号 | <a 
+href="http://acm.pku.edu.cn/JudgeOnline/">POJ(北大在线测试平台)</a> | <a 
+href="http://poj.youdao.com/help.html">帮助</a> | <a 
+href="http://poj.youdao.com/compiler.html">编译器信息</a> | <a 
+href="http://tie.youdao.com/tl_-8833529291065876902?page=1">去有道快帖和大家一起交流</a>
+ | 页面生成时间: 21:59:25</p>
+</div>
+<!-- 版权信息结束 -->
+</div><!-- wrap -->	
+	<div style="position: absolute; display: none; z-index: 9999;" 
+id="livemargins_control"><img 
+src="2010%E7%BD%91%E6%98%93%E7%BC%96%E7%A8%8B%E6%8C%91%E6%88%98%E8%B5%9B%20-%20C%20%E7%81%AB%E6%9F%B4%E6%B8%B8%E6%88%8F_files/monitor-background-horizontal.png"
+ style="position: absolute; left: -77px; top: -5px;" width="77" 
+height="5">	<img 
+src="2010%E7%BD%91%E6%98%93%E7%BC%96%E7%A8%8B%E6%8C%91%E6%88%98%E8%B5%9B%20-%20C%20%E7%81%AB%E6%9F%B4%E6%B8%B8%E6%88%8F_files/monitor-background-vertical.png"
+ style="position: absolute; left: 0pt; top: -5px;">	<img 
+id="monitor-play-button" 
+src="2010%E7%BD%91%E6%98%93%E7%BC%96%E7%A8%8B%E6%8C%91%E6%88%98%E8%B5%9B%20-%20C%20%E7%81%AB%E6%9F%B4%E6%B8%B8%E6%88%8F_files/monitor-play-button.png"
+ onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.5" 
+style="position: absolute; left: 1px; top: 0pt; opacity: 0.5; cursor: 
+pointer;"></div></body></html>

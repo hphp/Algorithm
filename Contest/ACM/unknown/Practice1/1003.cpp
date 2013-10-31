@@ -1,0 +1,139 @@
+//09-10-04-13:43---14:41----dull...
+#include <stdio.h>
+#include <algorithm>
+#define N 201000
+#define MAX (1<<30)
+#define lowbit(a) (a&(a^(a-1)))
+
+struct Ori
+{
+	int s;
+	int e;
+	int id;
+	int ans;
+	int maps,mape;
+}ori[N],back[N];
+int n;
+int rec[N*2],cnt;
+int map[N],mapcnt;
+int sum[N];
+
+bool cmp1(Ori a,Ori b)
+{
+	if(a.id<b.id)
+		return 1;
+		return 0;
+}
+
+void insert(int cur)
+{
+	for(int i=cur;i<mapcnt;i+=lowbit(i))
+	{
+		sum[i]++;
+	}
+}
+
+int query(int cur)
+{
+	int ans = 0;
+	while(cur)
+	{
+		ans += sum[cur];
+		cur -= lowbit(cur);
+	}
+	return ans;
+}
+
+bool cmp(Ori a,Ori b)
+{
+	if(a.e>b.e)
+		return 1;
+	else if(a.e<b.e)
+		return 0;
+	else
+	{
+		if(a.s<b.s)	
+			return 1;
+			return 0;
+	}
+}
+
+int find(int real)
+{
+	int s = 1;
+	int e = mapcnt-1;
+	while(s<=e)
+	{
+		int mid = (s+e)/2;
+		if(real==map[mid])
+			return mid;
+		else if(real<map[mid])
+			e = mid-1;
+		else s = mid+1;
+	}
+}
+
+int ans[N];
+
+int main()
+{
+	while(scanf("%d",&n)!=EOF)
+	{
+		cnt = 1;
+		for(int i=1;i<=n;i++)	
+		{
+			scanf("%d %d",&ori[i].s,&ori[i].e);
+			ori[i].id = i;
+			rec[cnt++]=ori[i].s;
+			rec[cnt++]=ori[i].e;
+		}
+		std::sort(rec+1,rec+cnt);
+		mapcnt=1;
+		rec[0] = MAX;
+		for(int i=1;i<cnt;i++)
+		{
+			sum[i]=0;
+			if(rec[i]!=rec[i-1])
+			{
+				map[mapcnt++]=rec[i];
+			}
+		}
+		/*printf("mapmap\n");
+		for(int i=1;i<mapcnt;i++)
+			printf("%d ",map[i]);
+			printf("\n");*/
+		std::sort(ori+1,ori+n+1,cmp);
+		for(int i=1;i<=n;i++)
+		{
+				int ss= find(ori[i].s);
+				int ee= find(ori[i].e);
+				insert(ss);
+				ori[i].ans = query(ss);
+			/*if(ss!=ori[i-1].s&&ee!=ori[i-1].e)
+			{
+			}*/
+		}
+		int p = 1;
+		ori[0].s = ori[0].e = -MAX;
+		while(p<=n)
+		{
+			cnt = 0;
+			int tmp = p;
+			while(p<=n&&ori[p].s==ori[tmp].s&&ori[p].e==ori[tmp].e)
+			{
+				cnt++;	
+				p++;
+			}
+			int ttmp = ori[p-1].ans;
+			for(int i=tmp;i<p;i++)
+				ori[i].ans=ttmp-cnt;
+		}
+		std::sort(ori+1,ori+n+1,cmp1);
+		for(int i=1;i<n;i++)
+		{
+			printf("%d ",ori[i].ans);
+		}
+		printf("%d\n",ori[n].ans);
+	}
+	return 0;
+}

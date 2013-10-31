@@ -1,0 +1,742 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>ZOJ Monthly, November 2010解题报告 | ゆっくりでいいさ</title>
+
+<meta name="generator" content="WordPress 2.8.6">
+<meta name="theme" content="Mandigo 1.41">
+
+<link rel="stylesheet" href="ZOJ%20Monthly,%20November2010_Analysis_files/style.css" type="text/css" media="screen">
+<style type="text/css">
+
+body {
+	font-family: Arial, Sans-Serif;
+	background-color: #44484F;
+	background-image: url(http://watashi.ws/blog/wp-content/themes/mandigo/images/patterns/thbg.jpg);
+	background-attachment: scroll;
+	background-repeat: repeat;
+	background-position: ;
+}
+
+
+.narrowcolumn .entry, .widecolumn .entry {
+	line-height: 1.4em;
+}
+
+.inline-widgets #wp-calendar caption, .blogname, .blogdesc {
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+}
+
+.blogname {
+	font-size: 4em;
+	margin-top: 15px;
+}
+
+.posttitle, #comments, #respond .title, #respond.pre27, #trackbacks {
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+}
+
+.commentlist li, #commentform input, #commentform textarea {
+	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+}
+
+#commentform p {
+	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+}
+
+.sidebars {
+	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+}
+
+
+#page {
+	width: 763px;
+}
+
+#header {
+	background: url(http://watashi.ws/blog/wp-content/themes/mandigo/images/header.png);
+	height: 243px;
+	width: 763px;
+}
+
+#headerimg {
+	height: 226px;
+	width: 737px;
+	background: url(http://watashi.ws/blog/wp-content/themes/mandigo/schemes/pink/images/head.jpg) bottom center no-repeat;
+	cursor: pointer;
+}
+
+#main {
+	background: url(http://watashi.ws/blog/wp-content/themes/mandigo/images/bg.png);
+	width: 733px;
+}
+
+#footer {
+	background: url(http://watashi.ws/blog/wp-content/themes/mandigo/images/foot.png);
+}
+
+.post {
+	text-align: justify;
+	background: #FAFAFA; 
+	border: 1px solid #EEEEEE; 
+}
+
+
+#footer {
+	width: 763px;
+}
+
+
+.sidebars {
+	background: #EEEEEE;
+	border: 1px solid #DDDDDD;
+}
+
+#sidebar1 .sidebars {
+	width: 210px;
+}
+
+#sidebar2 .sidebars {
+	width: 210px;
+}
+
+
+.entry img {
+	float: none;
+	background: #fff;
+	border: 1px solid #333;
+	padding: 3px;
+}
+
+.sidebars li {
+	list-style-image: url(http://watashi.ws/blog/wp-content/themes/mandigo/schemes/pink/images/star.gif);
+}
+
+.commentlist {
+}
+
+.commentlist li {
+	list-style: none;
+}
+
+#wp-calendar {
+	margin: 0 !important; margin-top: -1.5em;
+}
+
+#wp-calendar caption {
+	margin-top: -1.4em;
+}
+
+/* dirty fix for the event calendar plugin */
+div#wp-calendar .nav {
+	margin: 0;
+}
+/* end dirty fix */
+
+.datestamp div {
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, Sans-Serif;
+}
+
+.cal3 {
+}
+
+.pages {
+	text-align: right;
+}
+
+.pages ul li.has_sub {
+	background: url(http://watashi.ws/blog/wp-content/themes/mandigo/images/icons/bullet_arrow_right.png) no-repeat center right;
+}
+
+.head_overlay {
+	background: url(http://watashi.ws/blog/wp-content/themes/mandigo/images/head_overlay.png);
+}
+
+
+
+
+</style>
+<link rel="stylesheet" href="ZOJ%20Monthly,%20November2010_Analysis_files/scheme.css" type="text/css" media="screen">
+<link rel="alternate" type="application/rss+xml" title="ゆっくりでいいさ RSS Feed" href="http://watashi.ws/blog/feed/">
+<link rel="pingback" href="http://watashi.ws/blog/xmlrpc.php">
+
+
+	<link rel="canonical" href="http://watashi.ws/blog/1622/zojmonthly1011/">
+<link rel="alternate" type="application/rss+xml" title="ゆっくりでいいさ » ZOJ Monthly, November 2010解题报告 Comments Feed" href="http://watashi.ws/blog/1622/zojmonthly1011/feed/">
+<script type="text/javascript" src="ZOJ%20Monthly,%20November2010_Analysis_files/comment-reply.js"></script>
+<script type="text/javascript" src="ZOJ%20Monthly,%20November2010_Analysis_files/swfobject.js"></script>
+<script type="text/javascript" src="ZOJ%20Monthly,%20November2010_Analysis_files/jquery_002.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wordtube = {
+	ajaxurl: "http://watashi.ws/blog/wp-content/plugins/wordtube/lib/statistic.php"
+};
+/* ]]> */
+</script>
+<script type="text/javascript" src="ZOJ%20Monthly,%20November2010_Analysis_files/statistic.js"></script>
+<script type="text/javascript" src="ZOJ%20Monthly,%20November2010_Analysis_files/external-tracking.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://watashi.ws/blog/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://watashi.ws/blog/wp-includes/wlwmanifest.xml"> 
+<link rel="index" title="ゆっくりでいいさ" href="http://watashi.ws/blog">
+<link rel="start" title="杯具！" href="http://watashi.ws/blog/1/hello-world/">
+<link rel="prev" title="[ネタバレ注意]成都赛区验题比赛小结 by watashi@ArcOfDream" href="http://watashi.ws/blog/1604/netabara-chengdu-solutio/">
+<meta name="generator" content="WordPress 2.8.6">
+<style type="text/css">
+/* <![CDATA[ */
+img.latex { vertical-align: middle; border: none; }
+img.latex { background-color: transparent; }
+/* ]]> */
+</style>
+<!-- Google Analytics Tracking by Google Analyticator 6.0.2: http://ronaldheft.com/code/analyticator/ -->
+<script type="text/javascript">
+	var analyticsFileTypes = ['mp3','pdf','mp4','zip','flv','swf'];
+	var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-11148206-1']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+	})();
+</script><script src="ZOJ%20Monthly,%20November2010_Analysis_files/ga.js" async="" type="text/javascript"></script>
+
+<script type="text/javascript" src="ZOJ%20Monthly,%20November2010_Analysis_files/jquery_003.js"></script>
+<script type="text/javascript" src="ZOJ%20Monthly,%20November2010_Analysis_files/jquery.js"></script>
+<script type="text/javascript">jQuery.noConflict();</script>
+
+<style type="text/css">
+  #headerimg {   background: url(http://watashi.ws/blog/wp-content/themes/mandigo/images/headers/thheader3.jpg) bottom center no-repeat; }
+  .entry img, .entry embed, .entry object { max-width: 656px; width: expression(this.clientWidth > 656 ? 656 : true); }
+  .entry img { height: auto; }</style>
+
+</head><body>
+
+<div id="page">
+
+<div id="header" class="png">
+	<div id="headerimg">
+		<h1 class="blogname" id="blogname"><a href="http://watashi.ws/blog/">ゆっくりでいいさ</a></h1><span class="blogname text-stroke-br">ゆっくりでいいさ</span><span class="blogname text-stroke-bl">ゆっくりでいいさ</span><span class="blogname text-stroke-tr">ゆっくりでいいさ</span><span class="blogname text-stroke-tl">ゆっくりでいいさ</span>
+		<h6 class="blogdesc" id="blogdesc">このblogはwatashiの平凡な日常を淡々と描く物です。過度な期待はしないでください。</h6><span class="blogdesc text-stroke-br">このblogはwatashiの平凡な日常を淡々と描く物です。過度な期待はしないでください。</span><span class="blogdesc text-stroke-bl">このblogはwatashiの平凡な日常を淡々と描く物です。過度な期待はしないでください。</span><span class="blogdesc text-stroke-tr">このblogはwatashiの平凡な日常を淡々と描く物です。過度な期待はしないでください。</span><span class="blogdesc text-stroke-tl">このblogはwatashiの平凡な日常を淡々と描く物です。過度な期待はしないでください。</span>
+
+		<ul class="pages png head_overlay">
+			<li class="page_item"><a href="http://watashi.ws/blog/">Home</a></li>
+<li class="page_item page-item-1194"><a href="http://watashi.ws/blog/thac1/" title="THAC1">THAC1</a></li>
+<li class="page_item page-item-2"><a href="http://watashi.ws/blog/about/" title="About">About</a></li>
+		</ul>
+	
+	</div>
+	
+</div>
+
+<div id="main" class="png">
+<table>
+<tbody><tr>
+	<td id="content" class="widecolumn">
+
+
+		<div class="navigation">
+			<div class="alignleft">«&nbsp;<a href="http://watashi.ws/blog/1604/netabara-chengdu-solutio/">[ネタバレ注意]成都赛区验题比赛小结 by watashi@ArcOfDream</a></div>
+			<div class="alignright"></div>
+		</div>
+
+		<div class="post" id="post-1622">
+			<div class="postinfo">
+				
+						<div class="datestamp">
+							<div>
+								<span class="cal1 cal1x">Nov</span>
+								<span class="cal2">14</span>
+								<span class="cal3">2010</span>
+							</div>
+						</div>
+						<span class="switch-post">
+					<a href="javascript:toggleSidebars();" class="switch-sidebars"><img src="ZOJ%20Monthly,%20November2010_Analysis_files/bullet_sidebars_hide.png" alt="" class="png"></a><a href="javascript:togglePost(1622);" id="switch-post-1622"><img src="ZOJ%20Monthly,%20November2010_Analysis_files/bullet_toggle_minus.png" alt="" class="png"></a>
+				</span>
+
+				<h1 class="posttitle"><a href="http://watashi.ws/blog/1622/zojmonthly1011/" rel="bookmark" title="Permanent Link: ZOJ Monthly, November 2010解题报告">ZOJ Monthly, November 2010解题报告</a></h1>
+				<small>
+Posted by <a href="http://watashi.ws/blog/author/admin/" title="Posts by watashi">watashi</a> in <a href="http://watashi.ws/blog/category/uncategorized/" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a>, tags: <a href="http://watashi.ws/blog/tag/counting/" rel="tag">counting</a>, <a href="http://watashi.ws/blog/tag/solution/" rel="tag">solution</a>, <a href="http://watashi.ws/blog/tag/splice/" rel="tag">splice</a>, <a href="http://watashi.ws/blog/tag/zoj/" rel="tag">ZOJ</a>, <a href="http://watashi.ws/blog/tag/%e5%ae%b9%e6%96%a5%e5%8e%9f%e7%90%86/" rel="tag">容斥原理</a>, <a href="http://watashi.ws/blog/tag/%e6%95%b0%e8%ae%ba/" rel="tag">数论</a>				</small>
+
+			</div>
+
+			<div class="entry">
+<p></p><center><br>
+<table width="80%">
+<tbody><tr bgcolor="#ccccff">
+<th colspan="4">ZOJ Monthly, November 2010</th>
+</tr>
+<tr bgcolor="#ffffff">
+<td>A</td>
+<td>ZOJ3427</td>
+<td>Array Slicing</td>
+<td>21.05% (56/266)</td>
+</tr>
+<tr bgcolor="#e9eff8">
+<td>B</td>
+<td>ZOJ3428</td>
+<td>Bug Races</td>
+<td>25.00% (2/8)</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>C</td>
+<td>ZOJ3429</td>
+<td>Cube Simulation</td>
+<td>22.94% (131/571)</td>
+</tr>
+<tr bgcolor="#e9eff8">
+<td>D</td>
+<td>ZOJ3430</td>
+<td>Detect the Virus</td>
+<td>8.23% (40/486)</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>E</td>
+<td>ZOJ3431</td>
+<td>Escape!</td>
+<td>9.90% (21/212)</td>
+</tr>
+<tr bgcolor="#e9eff8">
+<td>F</td>
+<td>ZOJ3432</td>
+<td>Find the Lost Sock</td>
+<td>18.38% (257/1398)</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>G</td>
+<td>ZOJ3433</td>
+<td>Gu Jian Qi Tan</td>
+<td>17.41% (39/224)</td>
+</tr>
+<tr bgcolor="#e9eff8">
+<td>H</td>
+<td>ZOJ3434</td>
+<td>Hiiragi’s Sticks</td>
+<td>23.68% (9/38)</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>I</td>
+<td>ZOJ3435</td>
+<td>Ideal Puzzle Bobble</td>
+<td>4.87% (2/41)</td>
+</tr>
+<tr bgcolor="#e9eff8">
+<td>J</td>
+<td>ZOJ3436</td>
+<td>July Number</td>
+<td>13.15% (15/114)</td>
+</tr>
+</tbody></table>
+<p></p></center>
+<p>
+因为这一段时间考试、作业、Project实在忙不过来。所以原定的三题比较难的题目都没有挂出来，所以平凡的题目好像多了一点。最近事情好多好烦，希望快点应付过去……
+</p>
+<h3><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3427" target="_blank">ZOJ<em>3427</em>. Array Slicing</a></h3>
+<p><a href="http://watashi.ws/blog/1622/zojmonthly1011/ZOJ3427/" target="_blank"><img title="download" alt="download" src="ZOJ%20Monthly,%20November2010_Analysis_files/icon-icpc-small.gif" height="10" width="12">source code (ZOJ3427.cpp)</a> <strong>[regex, simulation, slice, splice]</strong></p>
+<blockquote><p>
+其实就是要实现一个list的__getslice__和__setslice__操作(<a href="http://watashi.ws/blog/1622/zojmonthly1011/ZOJ3427py/" target="_blank">pretty solution in python</a>)，或者说splice(<a href="http://watashi.ws/blog/1622/zojmonthly1011/ZOJ3427pl/" target="_blank">more pretty solution in perl</a>)操作。题目关于slice只贴了wiki上一段话，没有详细解释，不过sample给得很强，我以为slice是common sense，可是我错了。
+</p></blockquote>
+<p>
+输入有点小麻烦，其实scanf可以轻松搞定的啦，规模非常小，所以暴力什么的就好了。STL里的vector::insert和
+list::splice都可以直接做题目中的操作。题目说数字都是100，不过list的长度可是可以长到很长的哦，xe一点倒是可以让用数组的
+TLE，不过这是签名题，没有那么坏啦，sample应该是非常强的了 <img src="ZOJ%20Monthly,%20November2010_Analysis_files/icon_smile.gif" alt=":-)" class="wp-smiley">
+</p>
+<h3><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3428" target="_blank">ZOJ<em>3428</em>. Bug Races</a></h3>
+<p><a href="http://watashi.ws/blog/1622/zojmonthly1011/ZOJ3428/" target="_blank"><img title="download" alt="download" src="ZOJ%20Monthly,%20November2010_Analysis_files/icon-icpc-small.gif" height="10" width="12">source code (ZOJ3428.cpp)</a> <strong>[Number theory, Pythagorean triple, Euclid's formula, counting]</strong><br>
+<span id="more-1622"></span></p>
+<blockquote><p>
+题目实际上就是给定n，考虑所有的边长为i ≤ j ≤ k = n的且沿表面对角线的长度是个整数的长方体，求其面对角线长度的均方和与体对角线长度的均方。也就是求这种长方体的个数和其两种对角线的长度的平方和。
+</p></blockquote>
+<p>
+事实上面对角线的长度就是sqrt((i+j)^2+k^2)，所以我们不妨先考虑如何求方案数，首先利用Euclid’s formula(参考<a href="http://en.wikipedia.org/wiki/Pythagorean_triple" target="_blank">Pythagorean triple</a>)
+可以得到所有的勾股数(x=r^2-s^2, y=2rs, 
+z=r^2+s^2)，这个不是太多的，我的程序一共算了518346对互质的r和s，一共算了12811925对不同的x和y。然后对于y=n，应该有
+x=i+j，且i ≤ j ≤ n，有从i从l=max(1, x – 
+y)到r=x/2一共r-l种三元组；对于x=n类似。对于面对角线，这个很好求，就是加上(x^2+y^2)*(r-l)。对于体对角线，首先加上
+n*n*(r-l)，然后就是\sum_{i=l}^{r-1}i^2+\sum_{i=l}^{r-1}(x-i)^2，\sum{n^p}直接套用
+O(1)公式就好。注意中间过程是会爆long long的。我的算法预处理出了所有的答案，事实上照范叔的按单case做的算法可以更快 <img src="ZOJ%20Monthly,%20November2010_Analysis_files/icon_biggrin.gif" alt=":D" class="wp-smiley">
+</p>
+<h3><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3429" target="_blank">ZOJ<em>3429</em>. Cube Simulation</a></h3>
+<p><a href="http://watashi.ws/blog/1622/zojmonthly1011/ZOJ3429/" target="_blank"><img title="download" alt="download" src="ZOJ%20Monthly,%20November2010_Analysis_files/icon-icpc-small.gif" height="10" width="12">source code (ZOJ3429.cpp)</a> <strong>[simulation]</strong></p>
+<p>
+注意到所有SWAP操作就相当于交换了两个坐标的值，所以直接模拟维护x、y、z坐标和原先的对应情况。于是fill操作是O(n)的，其余操作都是O(1)的。
+</p>
+<h3><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3430" target="_blank">ZOJ<em>3430</em>. Detect the Virus</a></h3>
+<p><a href="http://watashi.ws/blog/1622/zojmonthly1011/ZOJ3430/" target="_blank"><img title="download" alt="download" src="ZOJ%20Monthly,%20November2010_Analysis_files/icon-icpc-small.gif" height="10" width="12">source code (ZOJ3430.cpp)</a> <strong>[base64, Aho-Corasick]</strong></p>
+<blockquote><p>
+有若干种virus的关键字串，还有一些待检查查的数据，问数据中出现了几种不同的样本。不过输入是以base64给出的。
+</p></blockquote>
+<p>
+明显的多串匹配，上AC自动机，不过KMP也能过。AC自动机要能处理一个样本是另一个样本子串或两个样本连接后的子串的情况。
+</p>
+<h3><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3431" target="_blank">ZOJ<em>3431</em>. Escape!</a></h3>
+<p><a href="http://watashi.ws/blog/1622/zojmonthly1011/ZOJ3431/" target="_blank"><img title="download" alt="download" src="ZOJ%20Monthly,%20November2010_Analysis_files/icon-icpc-small.gif" height="10" width="12">source code (ZOJ3431.cpp)</a> <strong>[DP, enumeration]</strong></p>
+<blockquote><p>
+题目就是要从第n层逃到第1层出口，知道每层楼梯的位置，必须在一定时间Ti内逃离第i层。另外每层都有一些不同价值的宝物，问是否能逃出和能逃出时可获得的最大价值。
+</p></blockquote>
+<p>
+很显然的动态规划，dp[i][j]表示在时间逃离第i层的时间为j，然后由于每层最多只有5个宝物，只要考虑各种取得宝物的顺序，而两点之间所需的时间就是曼哈顿距离了，所以枚举所有5!+4!+3!+2!+1!+0!种可能的转移就好了。
+</p>
+<h3><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3432" target="_blank">ZOJ<em>3432</em>. Find the Lost Sock</a></h3>
+<p><a href="http://watashi.ws/blog/1622/zojmonthly1011/ZOJ3432/" target="_blank"><img title="download" alt="download" src="ZOJ%20Monthly,%20November2010_Analysis_files/icon-icpc-small.gif" height="10" width="12">source code (ZOJ3432.c)</a> <strong>[bitwise xor]</strong></p>
+<p>
+签名题。也是骗提交的题。由于两个完全相同的串异或一下就全0了，所以只要把所有串都异或一下就是答案。不知道实现的好的hash能不能过，我的程序跑了30ms。
+</p>
+<h3><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3433" target="_blank">ZOJ<em>3433</em>. Gu Jian Qi Tan</a></h3>
+<p><a href="http://watashi.ws/blog/1622/zojmonthly1011/ZOJ3433/" target="_blank"><img title="download" alt="download" src="ZOJ%20Monthly,%20November2010_Analysis_files/icon-icpc-small.gif" height="10" width="12">source code (ZOJ3433.cpp)</a> <strong>[greedy]</strong></p>
+<blockquote><p>
+这题给出M个迷宫，在第i个迷宫中，你可以获得A[i]个Cake，并有许多Ice Heart(IH)，对于第j个IH可以靠消耗B[i][j]个Cake来获得。最后，要求<strong>按顺序</strong>走完全部迷宫后，最多能获得多少IH。
+</p></blockquote>
+<p>
+比赛的时候WA了无数次才发现自己的贪心不对，后来写了个绕大弯的贪心过了。猛犸的算法是走到一个迷宫后，尽可能地占下所有的IH，如果占下某个IH时将
+当前积累的Cake消耗成了负数，则放弃之前取得的一个消耗Cake最大的IH。类似的标程是如果Cake数不足以再取得一个IH的时候，将消耗最小的
+IH的消耗值减去所剩的Cake数。我的想法比较蛋疼，就不说了。
+</p>
+<h3><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3434" target="_blank">ZOJ<em>3434</em>. Hiiragi’s Sticks</a></h3>
+<p><a href="http://watashi.ws/blog/1622/zojmonthly1011/ZOJ3434/" target="_blank"><img title="download" alt="download" src="ZOJ%20Monthly,%20November2010_Analysis_files/icon-icpc-small.gif" height="10" width="12">source code (ZOJ3434.cpp)</a> <strong>[DP]</strong></p>
+<p>
+这题正好是H打头的title，所以就选了，不过题目背景很无聊，和H什么的也没有关系。直接按题目的理解把答案写成三层循环求和的话是很难算出来的，事
+实上把里面两重循环求和合并成直接按那两条规则DP就好了。起初所有dp[i]=0，然后如果柊(Hiiragi, 
+ひいらぎ)已有一个长度为b的木棍，那么++dp[b]，这相当于<em>Use t1 as the new t and go back to the first step until t reaches 1</em>，然后(2 .. l).each{|i| (i’s primer factor).each{|p| dp[i] += dp[i / p]}}，这相当于<em>For a number t, find one of its prime factor p, calculate t1 = t / p</em>。于是dp[i]就是如果i \in S所能得到的收益。要注意题目里的描述<em>Use each of your m short sticks to measure each of the lengths in S</em>，m根木棍是要重复就算的，而S集合是要去掉重复计算的。
+</p>
+<h3><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3435" target="_blank">ZOJ<em>3435</em>. Ideal Puzzle Bobble</a></h3>
+<p><a href="http://watashi.ws/blog/1622/zojmonthly1011/ZOJ3435/" target="_blank"><img title="download" alt="download" src="ZOJ%20Monthly,%20November2010_Analysis_files/icon-icpc-small.gif" height="10" width="12">source code (ZOJ3435.cpp)</a> <strong>[Number theory, Inclusion–exclusion principle, Möbius function, Möbius inversion formula, counting]</strong></p>
+<blockquote><p>
+题目去掉背景以后就是要求#{(i, j, k) | gcd(i, j, k) = 1, i ≤ L, j ≤ W, k ≤ H}。
+</p></blockquote>
+<p>
+规模1e6，暴力显然是不行的。首先对于<a href="http://acm.hdu.edu.cn/showproblem.php?pid=1695" target="_blank">gcd(x, y) = 1</a>这个问题，可以直接利用容斥原理(<a href="http://en.wikipedia.org/wiki/Inclusion%E2%80%93exclusion_principle" target="_blank">Inclusion–exclusion principle</a>)
+得到解决。类似的，记f(x)表示gcd(i, j, k)整除x的个数，那么利用容斥原理有answer := f(1) – f(2) – f(3)
+ – … – f(p) + f(2*3) + f(2*5) + … + f(p1*p2) – f(2*3*5) – 
+…。事实上这个玩意是有名字的，叫做默比乌斯函数<a href="http://en.wikipedia.org/wiki/M%C3%B6bius_inversion_formula" target="_blank">Möbius inversion formula</a>。然后显然有f(n)=(i/n)(j/n)(k/n)，这里的/是整数除法。至此，我们推出的这玩意在一维的情况其实就是默比乌斯反演公式(<a href="http://en.wikipedia.org/wiki/M%C3%B6bius_inversion_formula" target="_blank">Möbius inversion formula</a>)，不过我总记不住，每次都是重新推。于是我们知道答案就是<br>
+</p><center><img src="ZOJ%20Monthly,%20November2010_Analysis_files/latex_002.png" alt=" \sum_{n=0}^\infty\mu(n)\lfloor\frac{i}{n}\rfloor\lfloor\frac{j}{n}\rfloor\lfloor\frac{k}{n}\rfloor" title=" \sum_{n=0}^\infty\mu(n)\lfloor\frac{i}{n}\rfloor\lfloor\frac{j}{n}\rfloor\lfloor\frac{k}{n}\rfloor" class="latex"></center><br>
+这个公式应该是没有closed form的（这玩意要有closed form，必然会被搜<a href="http://oeis.org/" target="_blank">OEIS</a>的
+同学秒了，所以我出monthly的时候都会把此类题毙掉），不过我们已经能在O(N)的时间解决这道题了，事实上不只是三维，来个十维八维都不成问题，
+嗯事实上这题也可以扩展到更高维。如果这题是单case的话，到这里就结束了，不过这题有很多很多case，题目要求一个更高效的算法。做法就是合并
+(i/n)(j/n)(k/n)相同的项，即枚举商，比如<a href="http://acm.zju.edu.cn/onlinejudge/showContestProblem.do?problemId=3207" target="_blank">这个</a>求<img src="ZOJ%20Monthly,%20November2010_Analysis_files/latex.png" alt="\sum_{i=1}^n\left(\lfloor\frac{n}{x}\rfloor-1\right)" title="\sum_{i=1}^n\left(\lfloor\frac{n}{x}\rfloor-1\right)" class="latex">的
+问题，很容易证明这个复杂度是O(\sqrt{N})的。这样我们事先求出默比乌斯函数函数的部分和（哦，这玩意也有名字，叫Mertens 
+function），这部分只要通过素数筛法可以O(n)的预处理得到，然后对于(i/n)(j/n)(k/n)相同一段的和就可以O(1)得到，由于这
+样的段数不超过O(3\sqrt{N})，所以对于每个case，只要O(\sqrt{N})的时间求解。
+
+<h3><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3436" target="_blank">ZOJ<em>3436</em>. July Number</a></h3>
+<p><a href="http://watashi.ws/blog/1622/zojmonthly1011/ZOJ3436/" target="_blank"><img title="download" alt="download" src="ZOJ%20Monthly,%20November2010_Analysis_files/icon-icpc-small.gif" height="10" width="12">source code (ZOJ3436.cpp)</a> <strong>[search, counting]</strong></p>
+<blockquote><p>
+将一个数字的相邻两位的差（的绝对值）组成一个新的数字，不断重复，如果最后得到7，就称这个数为July Number，比如9024 – 922 – 70 – 7。题目要求1e9范围内给定区间[a, b]里July Number的个数。
+</p></blockquote>
+<p>
+没有发现这种数字有什么特别的统计上的规律。不过可以想到，这种数是不太多的，事实上对各种Number有<br>
+</p><center><br>
+<table>
+<tbody><tr>
+<td></td>
+<td>353008254</td>
+</tr>
+<tr>
+<td>January</td>
+<td>451156127</td>
+</tr>
+<tr>
+<td>February</td>
+<td>131145647</td>
+</tr>
+<tr>
+<td>March</td>
+<td>44286220</td>
+</tr>
+<tr>
+<td>April</td>
+<td>14800278</td>
+</tr>
+<tr>
+<td>May</td>
+<td>4397180</td>
+</tr>
+<tr>
+<td>June</td>
+<td>1031969</td>
+</tr>
+<tr>
+<td>July</td>
+<td>160218</td>
+</tr>
+<tr>
+<td>August</td>
+<td>13851</td>
+</tr>
+<tr>
+<td>September</td>
+<td>256</td>
+</tr>
+<tr>
+<td>October</td>
+<td>0</td>
+</tr>
+<tr>
+<td>November</td>
+<td>0</td>
+</tr>
+<tr>
+<td>December</td>
+<td>0</td>
+</tr>
+</tbody></table>
+<p></p></center><br>
+所以只要把这些数暴力出来存在一张表里，然后对每个查询做两次二分就能得到答案。生成表的方法就是<strong style="color: rgb(240, 43, 136);">逆推</strong>！比如由7出发，可以得到70, 81, 92, 19, 29，从19出发可以得到109, 890，这只要枚举最后以为数字，然后枚举相邻两位的差是正的还是负的，可以简单的写成一个dfs。
+
+				<p class="postmetadata alt clear">
+					<small>
+This entry was posted on Sunday, November 14th, 2010  at 5:03 pm and is filed under <a href="http://watashi.ws/blog/category/uncategorized/" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a>. You can follow any responses to this entry through the <a href="http://watashi.ws/blog/1622/zojmonthly1011/feed/">RSS 2.0</a> feed. You can <a href="#respond">leave a response</a>, or <a href="http://watashi.ws/blog/1622/zojmonthly1011/trackback/" rel="trackback">trackback</a> from your own site. 
+					</small>
+				</p>
+			</div>
+		</div>
+
+	<div id="comments">
+5 Responses to 		“ZOJ Monthly, November 2010解题报告”
+	</div> 
+	
+	<ol class="commentlist" id="commentlist">
+			<li class="comment even thread-even depth-1 parent alt" id="comment-3855">
+				<div id="div-comment-3855" class="comment-body">
+				<span class="switch-post"><a href="#"><img src="ZOJ%20Monthly,%20November2010_Analysis_files/bullet_toggle_minus.png" alt="" class="png"></a></span><div class="comment-author vcard">
+		<img alt="" src="ZOJ%20Monthly,%20November2010_Analysis_files/db3923721464c2ca66fc4584b3d2976d.png" class="avatar avatar-32 photo" height="32" width="32">		<cite class="fn">Navi</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://watashi.ws/blog/1622/zojmonthly1011/comment-page-1/#comment-3855">2010/11/14 at 5:20 pm</a></div>
+
+		<div class="comment"><p>bs.. H题为什么就要和H有关系……</p></div>
+
+		<div class="comment"><div class="reply">
+		<a rel="nofollow" class="comment-reply-link" href="http://watashi.ws/blog/1622/zojmonthly1011/?replytocom=3855#respond" onclick='return addComment.moveForm("div-comment-3855", "3855", "respond", "1622")'>Reply</a>		</div></div>
+				</div>
+		<ul class="children">
+		<li class="comment byuser comment-author-admin bypostauthor odd alt depth-2 parent" id="comment-3857">
+				<div id="div-comment-3857" class="comment-body">
+				<span class="switch-post"><a href="#"><img src="ZOJ%20Monthly,%20November2010_Analysis_files/bullet_toggle_minus.png" alt="" class="png"></a></span><div class="comment-author vcard">
+		<img alt="" src="ZOJ%20Monthly,%20November2010_Analysis_files/d395e4fe57d207fe0979da191d1dfbca.jpeg" class="avatar avatar-32 photo" height="32" width="32">		<cite class="fn"><a href="http://watashi.ws/blog/" rel="external nofollow" class="url">watashi</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://watashi.ws/blog/1622/zojmonthly1011/comment-page-1/#comment-3857">2010/11/14 at 6:13 pm</a></div>
+
+		<div class="comment"><p>がっかり</p></div>
+
+		<div class="comment"><div class="reply">
+		<a rel="nofollow" class="comment-reply-link" href="http://watashi.ws/blog/1622/zojmonthly1011/?replytocom=3857#respond" onclick='return addComment.moveForm("div-comment-3857", "3857", "respond", "1622")'>Reply</a>		</div></div>
+				</div>
+		<ul class="children">
+		<li class="comment even depth-3 alt" id="comment-3858">
+				<div id="div-comment-3858" class="comment-body">
+				<span class="switch-post"><a href="#"><img src="ZOJ%20Monthly,%20November2010_Analysis_files/bullet_toggle_minus.png" alt="" class="png"></a></span><div class="comment-author vcard">
+		<img alt="" src="ZOJ%20Monthly,%20November2010_Analysis_files/db3923721464c2ca66fc4584b3d2976d.png" class="avatar avatar-32 photo" height="32" width="32">		<cite class="fn">Navi</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://watashi.ws/blog/1622/zojmonthly1011/comment-page-1/#comment-3858">2010/11/14 at 6:17 pm</a></div>
+
+		<div class="comment"><p>がっかりじゃねぇ。。。</p></div>
+
+		<div class="comment"><div class="reply">
+		<a rel="nofollow" class="comment-reply-link" href="http://watashi.ws/blog/1622/zojmonthly1011/?replytocom=3858#respond" onclick='return addComment.moveForm("div-comment-3858", "3858", "respond", "1622")'>Reply</a>		</div></div>
+				</div>
+		</li>
+</ul>
+</li>
+</ul>
+</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1 parent" id="comment-3856">
+				<div id="div-comment-3856" class="comment-body">
+				<span class="switch-post"><a href="#"><img src="ZOJ%20Monthly,%20November2010_Analysis_files/bullet_toggle_minus.png" alt="" class="png"></a></span><div class="comment-author vcard">
+		<img alt="" src="ZOJ%20Monthly,%20November2010_Analysis_files/0158915dc3965c7fdedd6467edec4a70.jpeg" class="avatar avatar-32 photo" height="32" width="32">		<cite class="fn"><a href="http://3214668848.blog.163.com/" rel="external nofollow" class="url">3214668848</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://watashi.ws/blog/1622/zojmonthly1011/comment-page-1/#comment-3856">2010/11/14 at 6:06 pm</a></div>
+
+		<div class="comment"><p>orz I题神题啊，俨然就是spoj一题的升级版啊</p></div>
+
+		<div class="comment"><div class="reply">
+		<a rel="nofollow" class="comment-reply-link" href="http://watashi.ws/blog/1622/zojmonthly1011/?replytocom=3856#respond" onclick='return addComment.moveForm("div-comment-3856", "3856", "respond", "1622")'>Reply</a>		</div></div>
+				</div>
+		<ul class="children">
+		<li class="comment even depth-2 alt" id="comment-3859">
+				<div id="div-comment-3859" class="comment-body">
+				<span class="switch-post"><a href="#"><img src="ZOJ%20Monthly,%20November2010_Analysis_files/bullet_toggle_minus.png" alt="" class="png"></a></span><div class="comment-author vcard">
+		<img alt="" src="ZOJ%20Monthly,%20November2010_Analysis_files/db3923721464c2ca66fc4584b3d2976d.png" class="avatar avatar-32 photo" height="32" width="32">		<cite class="fn">Navi</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://watashi.ws/blog/1622/zojmonthly1011/comment-page-1/#comment-3859">2010/11/14 at 6:21 pm</a></div>
+
+		<div class="comment"><p>7001. Visible Lattice Points么？<br>
+I题出出来的时候好像spoj还没挂那题的样子…</p></div>
+
+		<div class="comment"><div class="reply">
+		<a rel="nofollow" class="comment-reply-link" href="http://watashi.ws/blog/1622/zojmonthly1011/?replytocom=3859#respond" onclick='return addComment.moveForm("div-comment-3859", "3859", "respond", "1622")'>Reply</a>		</div></div>
+				</div>
+		</li>
+</ul>
+</li>
+		<li style="display: none;">&nbsp;</li>
+	</ol>
+	<div class="navigation">
+		<div class="alignleft"></div>
+		<div class="alignright"></div>
+	</div>
+
+
+	<div id="respond">
+		<div class="title">Leave a Reply</div>
+
+
+<div class="cancel-comment-reply">
+	<small><a rel="nofollow" id="cancel-comment-reply-link" href="http://watashi.ws/blog/1622/zojmonthly1011/#respond" style="display: none;">Click here to cancel reply</a></small>
+</div>
+	<form action="http://watashi.ws/blog/wp-comments-post.php" method="post" id="commentform">
+	<input name="comment_post_ID" value="1622" id="comment_post_ID" type="hidden">
+<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+
+	<p><input name="author" id="author" size="22" tabindex="1" type="text">
+	<label for="author"><small>Name (required)</small></label></p>
+
+	<p><input name="email" id="email" size="22" tabindex="2" type="text">
+	<label for="email"><small>E-mail (will not be published) (required)</small></label></p>
+
+	<p><input name="url" id="url" size="22" tabindex="3" type="text">
+	<label for="url"><small>Website</small></label></p>
+
+
+	<p><textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea></p>
+
+	<p>
+		<input name="submit" id="submit" tabindex="5" value="Submit Comment" type="submit">
+		<input name="comment_post_ID" value="1622" type="hidden">
+	</p>
+<p><input name="comment_mail_notify" id="comment_mail_notify" value="comment_mail_notify" checked="checked" style="width: auto;" type="checkbox"><label for="comment_mail_notify">Notify me of follow-up comments via e-mail</label></p>	<br class="clear">
+</form>
+
+	</div>
+
+<script type="text/javascript">
+<!-- // <![CDATA[
+
+		jQuery(document).ready(function() {
+			if (jQuery('#trackbacklist li').length == 1)
+				jQuery('#trackbacks, #trackbacklist').hide();
+			jQuery('li.comment>div>*').filter(':not(.comment-author, .comment-meta)').wrap('<div class="comment"><\/div>');
+			
+			jQuery('.comment-author').before('<span class="switch-post"><a href="#"><img src="http://watashi.ws/blog/wp-content/themes/mandigo/images/icons/bullet_toggle_minus.png" alt="" class="png" /><\/a><\/span>');
+		});
+
+// ]]> -->
+</script>
+	</td>
+
+</tr>
+</tbody></table>
+</div>
+
+<div id="footer" class="png">
+	<p>
+		Powered by <a href="http://wordpress.org/">WordPress</a>, <a href="http://www.onehertz.com/portfolio/wordpress/" target="_blank" title="WordPress themes">Mandigo theme</a> by tom.
+
+		<br><a href="http://watashi.ws/blog/feed/"><img src="ZOJ%20Monthly,%20November2010_Analysis_files/rss_s.gif" alt=""> Entries (RSS)</a>
+		and <a href="http://watashi.ws/blog/comments/feed/"><img src="ZOJ%20Monthly,%20November2010_Analysis_files/rss_s.gif" alt=""> Comments (RSS)</a>.
+		<br>23 queries. 0.355 seconds.
+	</p>
+</div>
+</div>
+
+
+<p id="suattr" style="text-align: center; font-size: smaller;">Search engine optimization by <a href="http://www.seodesignsolutions.com/" style="color: inherit;">SEO Design Solutions</a></p>
+
+<script type="text/javascript">
+<!-- // <![CDATA[
+
+	jQuery(document).ready(function() {
+		jQuery('#rssicon, #searchsubmit').hover(
+			function() { this.src = this.src.replace('.gif','_hover.gif'); },
+			function() { this.src = this.src.replace('_hover.gif','.gif'); }
+		);
+
+		jQuery('.entry img[align=left]' ).addClass('alignleft' );
+		jQuery('.entry img[align=right]').addClass('alignright');
+		
+		if (jQuery.browser.msie) {
+			if (/^[56]/.test(jQuery.browser.version)) {
+				jQuery.ifixpng('http://watashi.ws/blog/wp-content/themes/mandigo/images/1x1.gif');
+				jQuery('body, .png').ifixpng();
+				jQuery('.commentlist.pre27 .avatar').height(36);
+			}
+
+		}
+		
+		jQuery('p:has(.dropcap)').append('<br class="clear"/>');
+
+		togglePost = function(id) {
+			if (!id) return;
+			icon = jQuery('#switch-post-'+ id +' img');
+			icon.attr('src', /minus/.test(icon.attr('src')) ? icon.attr('src').replace('minus', 'plus') : icon.attr('src').replace('plus', 'minus'));
+			jQuery('#post-'+ id +' .entry').animate({ height: 'toggle', opacity: 'toggle' }, 1000);
+		}
+
+		jQuery('.switch-post img').bind('click', function() {
+			id = jQuery(this).parents('li').attr('id').replace(/[^\d]+-/, '');
+			icon = jQuery('#comment-'+ id +' .switch-post img');
+			src  = icon.attr('src');
+			icon.attr('src', /minus/.test(src) ? src.replace('minus', 'plus') : src.replace('plus', 'minus'));
+			jQuery('#comment-'+ id +' div.comment').animate({ height: 'toggle', opacity: 'toggle' }, 1000);
+			return false;
+		});
+
+		toggleSidebars = function() {
+			icon = jQuery('.switch-sidebars img');
+			icon.attr('src', /hide/.test(icon.attr('src')) ? icon.attr('src').replace('hide', 'show') : icon.attr('src').replace('show', 'hide'));
+			jQuery('.sidebars').animate({ width: 'toggle', height: 'toggle', padding: 'toggle', border: 'toggle' }, 1000);
+		}
+
+		jQuery('.widgettitle, .linkcat *:first, .wpg2blockwidget h3').click(function() {
+			jQuery(this).siblings().animate({ height: 'toggle', opacity: 'toggle' }, 1000);
+		}).css({cursor: 'n-resize'});
+
+		jQuery.each(['tl','tr','bl','br'],function() {
+			jQuery('#blogname').after('<span class="blogname text-stroke-'+ this +'">'+ jQuery('#blogname a').html() +'<\/span>');
+			jQuery('#blogdesc').after('<span class="blogdesc text-stroke-'+ this +'">'+ jQuery('#blogdesc'  ).html() +'<\/span>');
+		});
+
+		jQuery('#headerimg').click(function() {
+			window.location = 'http://watashi.ws/blog';
+		});
+
+		jQuery('#header .page_item:has(ul)').addClass('has_sub, png');
+		
+		jQuery('#header .page_item').hover(
+			function() {
+				ul = jQuery(this).find('>ul');
+				if (ul.hasClass('sliding')) return;
+				a  = jQuery(this).find('>a');
+				if (jQuery(this).parent().hasClass('pages')) {
+					y = a.position().top + a.height();
+				x = a.position().left + a.width() - ul.width();
+				}
+				else {
+					y = jQuery(this).position().top - 5;
+					x = jQuery(this).parent().width();
+				}
+				jQuery(this)
+					.find('>ul')
+					.css({left:x, top:y})
+					.addClass('sliding')
+					.slideDown(300, function() { jQuery(this).removeClass('sliding'); });
+			},
+			function() {
+				jQuery(this)
+					.find('>ul')
+					.addClass('sliding')
+					.slideUp(800, function() { jQuery(this).removeClass('sliding').hide(); });
+			}
+		);
+
+		jQuery('.commentlist li:even').addClass('alt');
+});
+// ]]> -->
+</script>
+</body></html>

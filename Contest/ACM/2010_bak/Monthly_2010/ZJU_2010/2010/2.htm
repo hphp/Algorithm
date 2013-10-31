@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+
+<title></title>
+<style>
+a:link{color:#D3EDF4; text-decoration:none; }
+a:visited{color:#D3EDF4; text-decoration:none;}
+a:hover{color:#82CA25; text-decoration:none; background:none;}
+a:active{color:#D3EDF4; text-decoration:none; background:none;}
+img{border:0;margin:0;padding:0;}
+</style>
+</head><body style="margin: 0pt; background: none repeat scroll 0% 0% 
+transparent;">
+<div id="ad" style="display: none;">
+
+</div>
+<a href="http://www.clicki.cc/" id="ad_link" target="_blank"><img 
+id="ad_img" src="2_data/ad.gif"></a>
+<script>
+function $(id){
+	return document.getElementById(id);
+}
+window.onload=function(){
+	var link = $('ad').getElementsByTagName('a')[0],img='',ad = $('ad_link'),ad_img = $('ad_img');
+	if(!link){
+		link = 'http://www.clicki.cc/';
+		img='ad.gif';
+	}else{
+		link = link.href;
+		img='ad.gif';
+	}
+	ad.href=link;
+	ad_img.src='http://www.clicki.cn/images/'+img;
+	
+}
+</script>
+</body></html>

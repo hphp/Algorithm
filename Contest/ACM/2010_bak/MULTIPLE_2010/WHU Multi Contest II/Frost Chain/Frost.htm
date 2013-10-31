@@ -1,0 +1,226 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta name=Generator content="Microsoft Word 12 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Calibri","sans-serif";}
+h3
+	{mso-style-link:"标题 3 Char";
+	margin-right:0cm;
+	margin-left:0cm;
+	font-size:13.5pt;
+	font-family:宋体;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"页眉 Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	layout-grid-mode:char;
+	border:none;
+	padding:0cm;
+	font-size:9.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"页脚 Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	layout-grid-mode:char;
+	font-size:9.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:21.0pt;
+	font-size:10.5pt;
+	font-family:"Calibri","sans-serif";}
+span.Char
+	{mso-style-name:"页眉 Char";
+	mso-style-link:页眉;}
+span.Char0
+	{mso-style-name:"页脚 Char";
+	mso-style-link:页脚;}
+span.3Char
+	{mso-style-name:"标题 3 Char";
+	mso-style-link:"标题 3";
+	font-family:宋体;
+	font-weight:bold;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	layout-grid:15.6pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=ZH-CN style='text-justify-trim:punctuation'>
+
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:18.0pt;font-family:"Times New Roman","serif";color:blue'>Frost
+Chain</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman","serif";color:green'>Time
+Limit: </span><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>1.0
+Seconds<span style='color:green'>&nbsp; &nbsp;Memory Limit: </span>65536K</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>In
+the unimaginable popular DotA game, the hero Lich has a wonderful skill: Frost
+Chain, release a jumping breath of frost that jumps N times against enemy units.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman","serif"'><img width=606
+height=385 src="Frost.files/image001.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Today
+iSea play the role of Lich, at first he randomly chooses an enemy hero to release
+the skill, then the frost jumps for N times. Each time, it make a damage of one
+HP unit on this hero (including the first time), then bounces to another hero
+(can’t be himself) if their distance is no more than D and this hero is alive
+of course, also randomly. Here random means equal probability.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Now
+we know there are always only five enemy heroes, and also their coordinates and
+HP value. iSea wonders the death probability of each hero. One hero is dead if
+its HP is equal to or less than zero.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:13.5pt;font-family:
+"Times New Roman","serif"'>Input</span></b></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>There
+are several test cases in the input.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Each
+test case begin with two integers N and D (1 &lt;= N &lt;= 25, 1 &lt;= D &lt;=
+10000).</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>The
+following line contains ten integers, indicating the coordinates of the five
+opponents, and -10000 ≤ <i>x, y</i> ≤ 10000.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Then
+five integers follows, indicating the HP (1 &lt;= HP &lt;= 5) of five opponents.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>The
+input terminates by end of file marker.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:13.5pt;font-family:
+"Times New Roman","serif"'>Output</span></b></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>For
+each test case, output five floating numbers, indicating the death probability
+of each hero, as the given order, rounded to three fractional digits, and
+separated by a single blank.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:13.5pt;font-family:
+"Times New Roman","serif"'>Sample Input </span></b></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>3
+100</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>0
+1 0 2 0 3 0 4 0 5</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>1
+1 1 1 1</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>3
+1</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>0
+1 0 2 0 3 0 4 0 5</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>1
+1 1 1 1</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:13.5pt;font-family:
+"Times New Roman","serif"'>Sample Output </span></b></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>0.800
+0.800 0.800 0.800 0.800</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>0.500
+0.800 0.800 0.800 0.500</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:13.5pt;font-family:
+"Times New Roman","serif"'>Author</span></b></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:13.5pt;font-family:
+"Times New Roman","serif"'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>iSea@WHU</span></p>
+
+</div>
+
+</body>
+
+</html>

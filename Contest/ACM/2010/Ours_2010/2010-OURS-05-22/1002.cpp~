@@ -1,0 +1,79 @@
+#include <stdio.h>
+#define M 1001
+#define S 12
+#define N 10100
+#define MAX (1<<28)
+
+int vl[M];
+int mx[N][S];
+int from[N][S];
+int n,m,a;
+char s[100];
+
+int main()
+{
+	while(scanf("%d %d",&m,&n)!=EOF)
+	{
+		for(int i=0;i<M;i++)
+			vl[i] = 0;
+		for(int i=0;i<m;i++)
+		{
+			scanf("%s%d",s,&a);
+			int sum = 0;
+			for(int j=0;j<3;j++)
+			{
+				sum *= 10;
+				sum += s[j]-'0';
+			}
+			vl[sum] += a;
+		}
+		for(int i=0;i<1000;i++)
+			if(vl[i])
+				printf("%d %d\n",i,vl[i]);
+		for(int i=0;i<=n;i++)
+			for(int j=0;j<100;j++)
+				mx[i][j] = -MAX;
+		for(int i=0;i<100;i++)
+			mx[2][i] = 0;
+		for(int i=3;i<=n;i++)
+		{
+			for(int j=0;j<100;j++)
+			{
+				int g = j/10;	
+				for(int k=0;k<10;k++)
+				{
+					int next = k*10+g;
+					int cur = k*100 + j;
+					int tmp = mx[i-1][j];
+					if(tmp > -MAX)
+						tmp += vl[cur];
+					if(mx[i][next] < tmp)
+					{
+						printf("i:%d  next %d\nj:%d k:%d tmp %d vl %d cur %d\n",i,next,j,k,tmp,vl[cur],cur);
+						mx[i][next]	= tmp;
+						from[i][next] = j;
+					}
+				}
+			}
+		}
+		int ans = -MAX ;
+		int last = 0;
+		for(int i=0;i<100;i++)
+		{
+			if(mx[n][i] > ans)
+			{
+				ans = mx[n][i];
+				last = i;
+			}
+		}
+		printf("%d %d\n",ans,last);
+		int cc = n;
+		while(cc > 2)
+		{
+			printf("%d",last/10);
+			last = from[cc][last];
+			cc --;
+		}printf("%d",last);
+		printf("\n");
+	}
+}

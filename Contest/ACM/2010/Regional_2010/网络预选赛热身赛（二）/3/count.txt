@@ -1,0 +1,16 @@
+Given a number of strings, can you find how many times a string appear in the input?
+Input
+The input contains multiple test cases. Each case begins with a integer N(the number of strings you will get, N<=100000), followed by N lines, each consists of a string.
+Output
+For each test case, print "Case K:" where K is the Kth case. K begins with 1.  Then print the times(T) a string appears and the number(M) of strings that appear T times. Don't print T or M where M<=0. The output is ordered by T. The length of each strings won't longer than 20.
+Sample Input
+5
+BBA
+BBA
+BEA
+DEC
+CCF
+Sample Output
+Case 1:
+1 3
+2 1

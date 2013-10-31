@@ -1,0 +1,7 @@
+sort by Qi - Pi decreasingly then Dp 
+
+simple proof:
+if good_i good_j can buy in trun, and Qi - Pi < Qj - Pj
+then we can also buy them in reverse, because
+if M - Pi >= Qj
+M >= Qj + Pi > Qi + Pj

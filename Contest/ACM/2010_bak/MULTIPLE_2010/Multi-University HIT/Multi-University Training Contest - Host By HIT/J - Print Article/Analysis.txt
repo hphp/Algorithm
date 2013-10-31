@@ -1,0 +1,8 @@
+记sum[i]为前i个单词的长度之和。状态转移方程为
+dp[i]=min(dp[j]+(sum[i]-sum[j])^2+m) (i>=j>=1)
+观察到:
+若从J转移比从K转移更优，则
+dp[j]+(sum[i]-sum[j])^2+m<=dp[k]+(sum[i]-sum[k])^2+m
+化简之后
+(dp[j]-dp[k]+sum[j]^2-sum[k]^2)<=sum[i]*2(sum[j]-sum[k])
+满足斜率优化条件，故可以使用斜率优化将时间复杂度从O(n2)降至O(n);

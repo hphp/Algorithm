@@ -1,0 +1,99 @@
+#include <stdio.h>
+#include <string.h>
+#define LIM 1010001010101011LL
+int k;
+
+typedef long long Int;
+
+int getSHI(char s[])
+{
+	int size = strlen(s);
+	int cur = 0;
+	for(int i=0;i<size;i++)
+	{
+		cur *= 2;
+		cur += s[i]-'0';
+	}
+	return cur;
+}
+
+/*int a[2];
+void getOnes(int cur)
+{
+	a[0] = a[1] = 0;
+	while(cur)
+	{
+		a[cur%2] ++;
+		cur/=2;
+	}
+}*/
+
+char a[1000099];
+void getString(Int cur,char des[])
+{
+	int cnt = 0;
+	while(cur)
+	{
+		a[cnt] = cur%2+'0';
+		cur/=2;
+		cnt++;
+	}
+	int j =0;
+	for(int i=cnt-1;i>=0;i--,j++)
+	{
+		des[j] = a[i];
+	}
+	des[j] = '\0';
+}
+
+int cmp(char des[],char ori[])
+{
+	int sd = strlen(des);
+	int so = strlen(ori);
+	int cd = 0,co = 0;
+	while(cd < sd && co < so)
+	{
+		if(des[cd] == ori[co])
+		{
+			co++;	
+		}
+		cd++;
+	}
+	if(co == so)return 1;
+	return 0;
+}
+
+int main()
+{
+	char s[100],des[100990];
+	while(scanf("%s%lld",s,&k)!=EOF)
+	{
+		int cur = getSHI(s);
+		Int mul = cur/k;
+//		printf("%d\n",cur);
+	/*	getOnes(cur);
+		int cone = a[1] ;
+		int czero = a[0] ;
+		printf("%d %d\n",cone,czero);*/
+		int flag = 1;
+		while(1)
+		{
+		//	if(mul*k >= cur)
+			if(mul*k > LIM)
+			{
+				flag = 0;
+				break;
+			}
+			getString(mul*k,des);
+		//	printf("%s\n",des);
+			if(cmp(des,s))break;
+			/*printf("%d %d\n",a[0],a[1]);
+			if(a[1] >= cone && a[0] >= czero)
+				break;*/
+			mul ++;
+		}
+		if(flag == 1)
+		printf("%s\n",des);
+		else printf("impossible\n");
+	}
+}

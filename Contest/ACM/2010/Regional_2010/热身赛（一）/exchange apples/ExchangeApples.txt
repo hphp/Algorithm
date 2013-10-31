@@ -1,0 +1,17 @@
+Exchange apples
+There N(2<=n<=100000) students standing in q line, the distance between adjacent students is 1. A student send one apple to the adjacent student takes 1 unit of work. Each student may have extral apples or he may want some apples. 
+Give you a sequence of integers, integer Xi at the position of i means that the i'th student has Xi extral apples, if Xi is negative, it means that he want -Xi apples.
+Your job is to find the minimum overall work of all the students to make that none student have extral apples nor student want apples. You may assume that the sum of all Xi(1<=i<=N) is 0.
+Input 
+Input contains multiple test cases. The first line is a integer, the number of cases. Each case begin with a integer N, then N integer follows.
+Output
+For each case print the minumum amout of work needed to fulfill the problem.
+Sample Input
+2
+5
+6 -4 1 -4 1
+6
+-6 -7 -8 8 9 4
+Sample Output
+12
+57

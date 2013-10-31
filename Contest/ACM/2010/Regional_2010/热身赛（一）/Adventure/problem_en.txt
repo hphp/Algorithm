@@ -1,0 +1,19 @@
+Adventure
+Once an explorer went on an adventure, but he was stop by a door that he couldn't break into. Fortunately he found a table with N*M grids(1<=N,M<=200). Each grid contained a pillar. There were N+M buttons aside,coresponding to the 1th,2,...Nth row and 1th,2,...Mth column in the table. He found that if he press a button the height of pillars in the coresponding row or column would descrease by 1. The height of pillars with height 0 wouldn't descrease ever. If the height of all pillars become 0 then the door would open. Because of risk the explorer want to open the door as early as possible, that is what is the minimum times he needed to press buttons.
+Input 
+Input contains multiple test cases. First line is an integer T, the number of test cases. The first line of each case contains two integer N,M. Then N lines follows each with M integers. The height of all pillar won't larger than 10000.
+Output
+For each test case print a integer, the minimum times the explorer need to press buttons.
+Sample Input
+2
+2 2
+1 2
+1 1
+4 1
+1
+2
+3
+4
+Sample Output
+3
+4

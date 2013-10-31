@@ -1,0 +1,12 @@
+#include <stdio.h>
+#define MOD 1000000007
+
+long long power(int a,int b){
+	if(b==0)
+		return 1;
+	long long t = power(a,b/2);
+	int tt = b&1;
+	if(tt == 0)
+		return (t*t%MOD);
+	else return (t*t%MOD*a)%MOD;
+}

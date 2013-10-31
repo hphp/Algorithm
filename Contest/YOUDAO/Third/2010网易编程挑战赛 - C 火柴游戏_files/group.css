@@ -1,0 +1,555 @@
+@CHARSET "UTF-8";
+
+.wrapper{
+	overflow:hidden;
+	width:960px;
+	margin:0 auto;
+}
+#pagebody .wrapper{
+	background-color:white;
+	padding-bottom:18px;
+	padding-top:18px;
+}
+.clear{
+	clear:both;
+}
+/* start of the headerTop */
+#headerTop{
+	background:#F9F9F9;
+	border-bottom:1px solid #C9D7F1;
+	height:25px;
+}
+#headerTop .logo{
+	float:left;
+	font-size:14px;
+	padding-top:2px;
+}
+.handOffGroup{
+	font-size:12px;
+}
+#userToolbar{
+	float:right;
+	line-height:25px;
+}
+#userToolbar li{
+	float:left;
+}
+#userToolbar a{
+	display:block;
+	font-size:12px;
+	padding-left:10px;
+}
+#groupToolBar{
+	float:left;
+	padding-top:2px;
+}
+#groupToolBar ul li{
+	position:relative;
+}
+#groupToolBar .group-list{
+	position:absolute;
+	top:18px;
+	left:22px;
+	width:100px;
+}
+#groupToolBar .group-list a{
+	display:block;
+	padding-left:2px;
+}
+#groupToolBar .group-list a:hover{
+	background:#CCC;
+} 
+#groupToolBar ul.group-list{
+	border:1px solid #CCC;
+	border-width:0 1px;
+	display:none;
+}
+#groupToolBar .group-list li{
+	border-bottom:1px solid #CCC;
+	line-height:23px;
+	background-color:white;
+}
+#groupToolBar li:hover ul.group-list{
+	display:block;
+}
+#groupToolBar li:hover h3{
+	border:1px;
+}
+/* end of the headerTop */
+
+/* start of the header */
+
+#header{
+	background:url("images/header_background.png") repeat-x scroll 0 -35px #F9F9F9;
+	position:relative;
+}
+#mainNav .first{
+	background:url("images/nav_background_full.png") no-repeat scroll 0 0 #007F1B;
+}
+#mainNav .last{
+	background:url("images/nav_background_full.png") no-repeat scroll 100% 0 transparent;
+	margin-left:3px;
+	padding-left:7px;
+    padding-right:13px;
+}
+#headerLine h1{
+	line-height:86px;
+}
+#mainNav a, #mainNav a:visited, #header .search-form a:visited{
+	color:white;
+}
+#mainNav a:hover{
+	color:#C8F304;
+}
+#mainNav li{
+	float:left;
+	font-size:16px;
+	background:url("images/nav_background_full.png") no-repeat scroll -1000px 0 #007F1B;
+}
+#mainNav li a{
+	display:block;
+	line-height:32px;
+	padding:0 10px;
+	font-size:15px;
+	font-weight:bold;
+}
+#header #mainNav li.current{
+	background:url("images/nav_background_full.png") no-repeat scroll -1000px -31px;
+}
+#header #mainNav li.current a.first{
+	background:url("images/nav_background_full.png") no-repeat scroll 0 -31px;
+}
+#header #mainNav li.current a.last{
+	background:url("images/nav_background_full.png") no-repeat scroll 100% -31px;
+}
+#searchHead{
+	width:255px;
+	float:right;
+	background:url("images/nav_background_full.png") repeat-x scroll 0 0 transparent;
+    padding-left:10px;
+}
+#searchHead .search-form{
+	height:32px;
+	background:url("images/nav_background_full.png") no-repeat scroll 100% 0 transparent;
+	padding-right:1px;
+}
+#searchHead .search-form input{
+	height:15px;
+	margin-right:4px;
+	margin-top:8px;
+	width:181px;
+}
+#searchHead .search-form button{
+	font-size:11px;
+}
+#header .back-index{
+	background:url("images/nav_background_full.png") repeat-x scroll 0 102% transparent;
+	width:152px;
+}
+#header .back-index  a{
+	background:url("images/nav_background_full.png") repeat-x scroll 100% 102% transparent;
+	color:white;
+	display:block;
+	font-size:15px;
+	font-weight:bold;
+	line-height:32px;
+	padding-left:5px;
+}
+
+/* end of the header */
+
+.affiche{
+	border:1px solid #CCC;
+}
+#problemContent #bottomMenu{
+	border-top:1px solid gray;
+	padding:2px 194px 0;
+	margin-top:24px;
+}
+#problemContent #bottomMenu li a{
+	border:none;
+	padding-left:45px;
+}
+#bottomMenu{
+	overflow:hidden;
+	font-size:14px;
+	padding:9px 16px 0;
+}
+#bottomMenu li{
+	float:left;
+	margin-right:8px;
+	line-height:24px;
+}
+#bottomMenu li a{
+	border-color:#9B898E #9B898E black;
+	border-style:solid;
+	border-width:1px;
+	display:block;
+	padding:4px 10px 0;
+}
+#bottomMenu #subcurrent{
+	background:none repeat scroll 0 0 #FFFFFF;
+	border-color:#9B898E #9B898E #FFFFFF;
+	border-style:solid solid none;
+	border-width:1px 1px medium;
+	height:25px;
+}
+.pages{
+	margin-left:16px;
+	clear:left;
+	float:left;
+}
+.pages a{
+	padding:1px;
+}
+#problemContent{
+	margin:20px 0;
+}
+#pagebody .problem-statistics {
+	color:#999999;
+	font-size:12px;
+	padding-top:22px;
+}
+.problem-statistics ul{
+	margin-bottom:10px;
+}
+#problemContent .submenu, #discuss .submenu,.problem-status .submenu{
+	font-size:14px;
+}
+#pageTitle{
+	background:url("images/pageid_background.png") no-repeat scroll 0 0 #3868C7;
+	border-bottom:1px solid #5070B1;
+	height:50px;
+}
+#pageTitle h2{
+	color:white;
+	font-family:黑体;
+	padding:10px 0 0 16px;
+}
+#pageTitleDescrip{
+	background:url("images/section_nav_background.png") repeat-x scroll 0 99% transparent;
+	height:30px;
+	border:1px solid #D0DDF9;
+}
+#problemPageTitleDescrip{
+	height:39px;
+	border:1px solid #D0DDF9;
+	background:url("images/section_nav_background.png") repeat-x scroll 0 99% transparent;
+}
+#problemsList #pageTitleDescrip,#rankingList #pageTitleDescrip{
+	height:30px;
+}
+/* start of the contest */
+#pastContest tbody tr{
+	border-bottom:1px solid #CCCCCC;
+}
+#pastContest .date{
+	width:203px;
+	padding-left:18px;
+}
+#pastContest .title{
+	width:328px;
+}
+/* end of the contest */
+.page-nav{
+	background:url("images/section_nav_background.png") repeat-x scroll 0 100% transparent;
+	border-left:1px solid #D0DDF9;
+	border-right:1px solid #D0DDF9;
+	margin-bottom:0.75em;
+	position:relative;
+}
+/*  ranking  */
+#rankingList .page-bar{
+	padding-top:5px;
+}
+#rankingList .rank{
+	width:40px;
+	padding-left:18px;	
+}
+#rankingList .user-name{
+	width:140px;
+	color:#AAA;
+}
+#rankingList .penalty{
+	width:70px;
+}
+#rankingList .accepted{
+	width:60px;
+}
+#rankingList table{
+	width:auto;
+}
+#rankingList .submissions{
+	width:125px;
+}
+
+/* contest status */
+#pagebody .status-search{
+	height:40px;
+}
+#pageTitleDescrip form{
+	padding:10px 2px 0;
+}
+.status-query-params dt{
+	float:left;
+	padding-left:15px;
+}
+.status-query-params dd{
+	float:left;
+}
+.status-query-params .submit-user{
+	padding-left:16px;
+}
+.status-query-params .problem-number{
+	padding-left:16px;
+}
+/* end of the contest status */
+
+#discuss .topic{
+	padding-left:16px;
+	width:458px;
+}
+#discuss .author{
+	width:142px;
+}
+#discuss .respondent-number{
+	width:110px;
+}
+
+/*  status  */
+#pagebody .timeBar{
+	height:100px;
+}
+.contest-status{
+	font-size:20px;
+	font-weight:bold;
+	margin-top:6px;
+	text-align:center;
+}
+.start-time{
+	left:90px;
+	position:relative;
+	top:34px;
+}
+.start-time-dd{
+	left:32px;
+	position:relative;
+	top:-12px;
+	font-weight:bold;
+	font-size:16px;
+}
+.end-time{
+	position:relative;
+	right:-796px;
+	top:-8px;
+}
+.end-time-dd{
+	position:relative;
+	right:-728px;
+	top:-54px;
+	font-weight:bold;
+	font-size:16px;
+}
+.current-time{
+	position:relative;
+	right:-435px;
+	top:-49px;
+}
+.current-time-dd{
+	position:relative;
+	font-size:16px;
+	font-weight:bold;
+	right:-442px;
+	top:-93px;
+}
+#problemStatus .submit-user{
+}
+#problemStatus .title{
+	width:160px;
+}
+#problemStatus .date{
+	width:150px;
+}
+#problemStatus .result{
+	width:150px;
+}
+#problemStatus .memory, #problemStatus .spending-time{
+	width:50px;
+}
+#problemStatus .language{
+	width:50px;
+}
+
+/*  */
+.ratio, .accepted, .submissions{
+	text-align:center;
+}
+tbody .problem-number, tbody .title{
+	padding-left:7px;
+}
+.problem-params dt, .problem-params dd{	
+	color:white;
+	display:inline;
+	font-size:12px;
+	font-weight:bold;
+	left:613px;
+	position:relative;
+	top:-75px;
+}
+
+/* start of the forum */
+#clarify h4{
+	clear:both;
+	padding:15px 0 0 10px;
+}
+td.topic{
+	width:315px;
+}
+td.replies{
+	padding-right:27px;
+	text-align:center;
+	width:70px;
+}
+.last-post, td.author{
+	width:100px;
+}
+.discuss-topic-list tbody td cite {
+	display: block;
+	font-size:12px;
+	margin-bottom:-3px;
+}
+.discuss-topic-list tbody td em {
+	font-size:9px;
+	font-style:normal;
+}
+
+.new-topic{
+	background: #EAF3FA;
+	margin-top:15px;
+}
+.new-topic dt{
+	float: left;
+	width: 70px;
+	padding-top: 10px;
+}
+.new-topic dd{
+	width:600px;
+	padding-top: 10px;
+	margin-left:68px;
+}
+.new-topic-submit{
+	padding-left: 70px;
+}
+.reply-box{
+	background: #EAF3FA;
+	clear:both;
+}
+.reply-box form{
+	padding: 10px 0 10px 10px;
+}
+.post{
+	word-wrap:break-word;
+	overflow:hidden;
+	width:500px;
+	float:right;
+}
+/* end of the forum */
+
+/*  start of contest and problem submit page  */
+#submit{
+	margin-top:20px;
+	overflow:hidden;
+}
+#submit h3{
+	font-size:19px;
+	text-indent:0;
+}
+#submit dd{
+	font-size:14px;
+	margin:0 0 10px;
+	overflow:hidden;
+	position:relative;	
+}
+#submit textarea{
+	height: 400px;
+	width: 574px; 
+}
+.submit-language, .submit-source{
+	padding:0;
+}
+.submit-button{
+	margin-left:100px;
+}
+.submit-reset{
+	margin-left:10px;
+}
+/* start of contest and problem submit page  */
+
+.my-solutions{
+	font-size:10px;
+}
+.my-solutions thead td,.my-solutions thead th,.my-solutions tfoot th {
+	background:#cccccc;
+}
+.problem-content dt{
+	font-weight:bold;
+	font-size:16px;
+}
+.problem-content dd{
+	margin:12px 0;
+}
+/*   start of submit status page  */
+.compile-info{
+	font-size:12px;
+	line-height:2em;
+	margin-bottom:15px;
+}
+.compile-info dt{
+	float:left;
+	width:53px;
+}
+.compile-info dd, .h3-compile-info{
+	border-bottom:1px solid #DEDEDE;
+}
+.h3-compile-error{
+	font-weight:bold;
+	margin:0 0 0 0;
+	text-indent:0;
+}
+.h3-compile-info{
+	text-indent:0;
+	font-weight:bold;
+	margin-top:10px;
+}
+.h3-compile-status{
+	clear:left;
+	text-indent:0;
+	font-weight:bold;
+}
+p.compile-status{
+	font-weight:bold;
+	font-size:18px;
+}
+.h3-check-code{
+	font-size:14px;
+	margin-left:5px;
+}
+p.compile-status em{
+	font-size:22px;
+	font-weight:bold;
+}
+
+/*  end 0f submit status page  */
+
+.notification{
+	font-size:14px;
+	color:red;
+}
+
+a.red-name{
+	color:red;
+}
+/* admin */
+#name-label{
+	margin-left:-135px;
+}

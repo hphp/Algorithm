@@ -1,0 +1,1873 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head 
+profile="http://gmpg.org/xfn/11">
+
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<title>2010校赛 Judge’s View &amp;&amp; 解题报告 | 籟·来·也</title>
+
+	<meta name="generator" content="WordPress 2.9.2"> <!-- leave this for stats -->
+	<link rel="stylesheet" 
+href="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/style.css"
+ type="text/css" media="screen">
+
+	<link rel="alternate" type="application/rss+xml" title="籟·来·也 RSS Feed"
+ href="http://www.hhanger.com/blog/?feed=rss2">
+	<link rel="pingback" href="http://www.hhanger.com/wordpress/xmlrpc.php">
+
+		<link rel="alternate" type="application/rss+xml" title="籟·来·也 » 2010校赛
+ Judge’s View &amp;&amp; 解题报告 评论 Feed" 
+href="http://www.hhanger.com/blog/?feed=rss2&amp;p=438">
+<link rel="stylesheet" id="jquery-ui-all-css" 
+href="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/ui.css"
+ type="text/css" media="">
+<link rel="stylesheet" id="mingle-css" 
+href="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/mingle.css"
+ type="text/css" media="">
+<link rel="stylesheet" id="codebox-css" 
+href="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/codebox.css"
+ type="text/css" media="screen">
+<script type="text/javascript" src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/comment-reply.js"></script>
+<script type="text/javascript" src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/jquery_002.js"></script>
+<script type="text/javascript" src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/jquery.js"></script>
+<script type="text/javascript" src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/jquery_003.js"></script>
+<script type="text/javascript" src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/ui_002.js"></script>
+<script type="text/javascript" src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/ui.js"></script>
+<script type="text/javascript" src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/index.php"></script>
+<script type="text/javascript" src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/codebox.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" 
+href="http://www.hhanger.com/wordpress/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" 
+href="http://www.hhanger.com/wordpress/wp-includes/wlwmanifest.xml"> 
+<link rel="index" title="籟·来·也" href="http://www.hhanger.com/blog">
+<link rel="start" title="First Blood" 
+href="http://www.hhanger.com/blog/?p=7">
+<link rel="prev" title="SRM 466" 
+href="http://www.hhanger.com/blog/?p=431">
+<meta name="generator" content="WordPress 2.9.2">
+<link rel="canonical" href="http://www.hhanger.com/blog/?p=438">
+<style type="text/css">
+    .cloudy-tags-shortcode a { text-decoration: none; }  .cloudy-tags-shortcode a:hover { text-decoration: underline; }
+    </style>
+<style type="text/css">
+    .CloudyTagsWidget a { text-decoration: none; }  .CloudyTagsWidget a:hover { text-decoration: underline; }
+    </style>
+<!-- wp thread comment 1.4.9.4.002 -->
+<style type="text/css" media="screen">
+.editComment, .editableComment, .textComment{
+	display: inline;
+}
+.comment-childs{
+	border: 1px solid #999;
+	margin: 5px 2px 2px 4px;
+	padding: 4px 2px 2px 4px;
+	background-color: white;
+}
+.chalt{
+	background-color: #E2E2E2;
+}
+#newcomment{
+	border:1px dashed #777;width:90%;
+}
+#newcommentsubmit{
+	color:red;
+}
+.adminreplycomment{
+	border:1px dashed #777;
+	width:99%;
+	margin:4px;
+	padding:4px;
+}
+.mvccls{
+	color: #999;
+}
+			
+</style>
+
+<!--[if IE 6]>
+	<link rel="stylesheet" href="http://www.hhanger.com/wordpress/wp-content/themes/desk-mess-mirrored/ie60-2.css" type="text/css" media="screen" />
+<![endif]-->
+
+<style type="text/css">#r_w_div{left:0;top:0;z-index:1000}#r_c_wrap *,#r_c_wrap div,#r_c_wrap img,#r_c_wrap p,#r_c_ctn *{text-align:left;font:normal 11px/100% tahoma,arial;color:#00648C;border:0;padding:0;margin:0;cursor:pointer;}#r_c_btm a{color:#00648C;text-decoration:none;}#r_c_wrap .row td,#r_c_ctn .row td{padding:5px;border-top:1px solid #E2E2E2;}#r_c_wrap a:visited,#r_c_wrap a:link,#r_c_ctn a{display:inline;color:#00648C;background:none;font:normal 12px/100% tahoma;text-decoration:none;padding:0;border:0;margin:0;}#r_c_wrap a:hover,#r_c_ctn a:hover{border:0;border-bottom:1px solid #00648C;background:none;text-decoration:none;}#r_c_wrap .th td,#r_w_div .th td{padding:3px;background:#FFFFD9;overflow:hidden;font:11px arial;}.row td{background:none;}.r_c_over td{background:#FFFFFF;}.c_nav{width:16px;float:left;cursor:pointer;}</style></head><body
+ class="single postid-438">
+	<div id="mainwrap">
+		<div id="header-container">
+
+			<div id="header">  <!-- header -->
+
+				<div id="headerleft"></div>
+
+				<div id="logo">
+					<h2><a href="http://www.hhanger.com/blog" title="籟·来·也">籟·来·也</a></h2>
+					<p>Thinking in My Life</p>
+				</div> <!-- #logo -->
+
+				<div id="cup"></div>
+
+				<ul id="menu">
+          											<li><a href="http://www.hhanger.com/blog">首页</a></li>
+						<li class="page_item page-item-2"><a 
+href="http://www.hhanger.com/blog/?page_id=2" title="getinfo(hhanger)">getinfo(hhanger)</a></li>
+<li class="page_item page-item-65"><a 
+href="http://www.hhanger.com/blog/?page_id=65" title="Leave a note">Leave
+ a note</a></li>
+ <!-- Only displays "parent" pages -->
+									</ul>
+
+			</div> <!-- #header -->
+		</div> <!-- #header-container --><div id="maintop"></div><!--end maintop-->
+
+<div id="wrapper">
+	<div id="content">
+		<div id="main-blog">
+
+							
+<!-- Start Of Script Generated By WP-PostViews Plus -->
+<script type="text/javascript">
+/* <![CDATA[ */
+jQuery.ajax({type:'GET',url:'http://www.hhanger.com/wordpress/wp-content/plugins/wp-postviews-plus/postviews_plus.php',data:'todowppvp=add&type=post&id=438',cache:false,dataType:'script'});
+/* ]]> */
+</script>
+<!-- End Of Script Generated By WP-PostViews Plus -->
+			
+					<div class="clear">&nbsp;</div>
+					<div class="post-438 post hentry category-algo tag-acm 
+tag-algorithm tag-zju tag-zjupc tag-zoj" id="post-438">
+			
+						<h1><a href="http://www.hhanger.com/blog/?p=438" rel="bookmark" 
+title="Permanent Link to 2010校赛 Judge’s View &amp;&amp; 解题报告">2010校赛 
+Judge’s View &amp;&amp; 解题报告</a></h1>
+						<div class="postdata">
+							Posted by Hang Hang on 21:42 2010年4月10日, 星期六 in <a 
+href="http://www.hhanger.com/blog/?cat=9" title="查看 算法 的全部文章" 
+rel="category">算法</a>  | <span id="wppvp_tv_438">1,052</span>次浏览 <div 
+class="rss"><a href="http://www.hhanger.com/blog/?feed=rss2" 
+title="Subscribe to my feed">Subscribe</a></div> <!-- RSS feed URL correction as noted by Bill Girimonti pipeline_intl@orcon.net.nz -->
+          
+						</div>
+						<p>赛前裁判包括看过题的姐姐一致表示题目有点难</p>
+<p>赛前估计的难度顺序是A I E B F C G D H<br>
+&nbsp; &nbsp;<span style="color: rgb(255, 0, 0);">实际的难度顺序是A I E B G F C D
+ H，除了对G的难度估计过高外其他几乎一样</span><br>
+赛前估计所有题目都有提交<br>
+<span style="color: rgb(255, 0, 0);">&nbsp; &nbsp;Bingo!</span><br>
+赛前估计通过做多的是A题<br>
+<span style="color: rgb(255, 0, 0);">&nbsp; &nbsp;Bingo!</span><br>
+赛前估计D和H都没有队伍过<br>
+<span style="color: rgb(255, 0, 0);">&nbsp; &nbsp;Bingo!</span><br>
+赛前估计第一名比第二名多一题或者一题以上<br>
+<span style="color: rgb(255, 0, 0);">&nbsp; &nbsp;Bingo!</span><br>
+赛前估计有1个7题<br>
+<span style="color: rgb(255, 0, 0);">&nbsp; &nbsp;Bingo!</span><br>
+<span id="more-438"></span><br>
+A Clock 简单 49.47% (188/380) / 76.87% (472/614) (分别为校赛与同步赛，下同)<br>
+可以在二维坐标上画出时间/角度的图，可以发现角度是从0到180的线性递增，然后是<br>
+180到0的线性递减，然后一直循环。因此可以断定答案是和x成正比的。当然，直接观<br>
+察sample也可以发现这一点。如果不怕麻烦的话，也可以把这题当成几何/物理/数学<br>
+题来做。</p>
+<p>B CAPTCHA 中等偏易 22.22% (12/54) / 21.80% (87/399)<br>
+题目保证了每个字母的点阵中，各个点之间一定是联通的；还有在大矩阵中，每个字母<br>
+之间一定是不联通；再还有，矩阵中的只包含合法的字母。这样一来，这个题就是一个<br>
+纯粹的模拟题了，在矩阵中每次用floodfill找一个联通块，然后枚举判断下这个联通<br>
+块是什么字母即可。关于每个字母的表示，可以采用的是把每个字母的每个点看成一个<br>
+相对的二维坐标（x和y坐标分别为相对这个点阵中所有点的x/y坐标最小值的偏移量）。<br>
+把这些坐标排序后就可以用来表示一个字母了，最后别忘了旋转的情况。当然，直接人<br>
+肉每个字母的话会比较累，我的做法是保存一个包含所有字母的大矩阵（从题目里直接<br>
+copy下来，填充一下空白字符，让每行一样长即可）。然后对这个字母按照从上到下，<br>
+从左到右的顺序，把每个联通分类floodfill处理一遍，这个顺序就对应着字典序。<br>
+这题的难度比预期的要高，很多人对这种程度复杂的模拟题就没有什么头绪了，看来大<br>
+家还要多向Fire学习，加强Coding能力。</p>
+<p>C Runaway Robot 中等 5.88% (2/34) / 6.96% (11/158)<br>
+这题的原型在<img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/url.gif"
+ alt="" align="absMiddle" border="0"><a 
+href="http://www.hacker.org/runaway/" target="_blank">http://www.hacker.org/runaway/</a>。
+当然原型是只要走出边界即可，而这<br>
+题是要求走到最下角。考虑一个循环指令中有a个R和b个D，则每个循环周期都是在原图<br>
+的某一个(a+1)*(b+1)的矩形中行走，假设这些小矩形分别是M1, M2, … Mk，再假设<br>
+终点在这样的矩形上的坐标为(x y)。则在除了最后一个的图中，我们都要找到一条左<br>
+上角到右下角的路，而在最后一个图中要找到从左上角到终点的路。再注意，因为是循<br>
+环指令，所以这k个矩形中，机器人所走的路线必须是一模一样的。因此，我们可以把<br>
+这k个图叠加起来，如果在这个叠加图上能找到左上角到(x y)的路，以及(x y)到右下<br>
+角的路，则说明存在一条路，从原来的左上角走到右下角。好了，剩下的工作就是先<br>
+枚举指令长度，再枚举R或者D的个数，然后套用上面的方法判断是否有解。不过这样<br>
+的枚举，总的复杂度会比较大，注意到，对于很多的(a b)组合，原图的终点根本不会<br>
+出现在路线上的某个(a+1)*(b+1)矩形上，把这些都剪枝掉后，剩下有解的情况就不多<br>
+了。<br>
+这题的难度也比预期的要高，只有2个队伍过的，其实还是因为这个枚举的思路确实不<br>
+好想了，总之这个解法还是比较巧妙的。</p>
+<p>D Game 难 0.00% (0/35) / 4.83% (9/186)<br>
+这题看似是个博弈题，其实是个一般图最大匹配的问题。首先，原图上如果两点之间<br>
+曼哈顿距离小于等于L，则把它们连边。然后对图的每一个联通分量求一般图的最大匹<br>
+配，如果存在某个图的一般图最大匹配不是完全匹配，则Fire一定会输；反之，如果<br>
+每个联通分量的一般图最大匹配都是完全匹配，则Lam一定输。假设某个图的一般图最<br>
+大匹配是完美匹配（也就是这个图的N个点可以凑成N/2个pair，其中每个pair的两个<br>
+点之间有边），则无论Lam每次走哪个点，Fire只要走和那个点相匹配的点即可。反<br>
+之，如果图的一般图最大匹配不是完美匹配，则Lam可以任意选一个没有匹配上的点来<br>
+开始，然后Fire要么没有点可以选（输了）；要么选某个有匹配的点，则Lam可以继续<br>
+选与其匹配的点。注意，Fire永远不可能选没有匹配的点，否则可以证明原图存在一个<br>
+更大的匹配。最后，关于一般图最大匹配的实现，大家在网上找资料即可。</p>
+<p>E Murder in Restaurant 简单 8.14% (61/749) / 21.24% (337/1586)<br>
+这题数据规模比较小，因此只要看清楚题意，直接模拟即可。用数组维护当前的所有房<br>
+间情况，然后按照时间顺序一个一个check in和check out的请求。check in的时候，<br>
+房间满的时候就忽略check in请求，并且忽略对应的check out请求，否则直接找出一<br>
+个号码最小的空余房间分配。check out请求处理类似，总而言之，只要看懂提议，把<br>
+题目要求实现了，这题应该就能过。<br>
+这题可能题目的描述有点歧义的地方，但是在比赛中裁判尽量解释清楚了，下次看题的<br>
+时候会加油多注意这些地方。</p>
+<p>F Strange Country 中等 9.52% (2/21) / 15.25% (27/177)<br>
+用dp[i]表示在前i张图中选路的最小cost，则dp[i] = min(dp[j] + Len(j+1 to i) *<br>
+(i – j) + 1)，j = 0 to i-1。我们枚举i和前面哪些图选择同样的路，Len(j+1 to i)<br>
+表示从j+1到i的图都选一样的路时，路的最短长度。只要把这些图合并起来（只保留每<br>
+张图都有的边），然后求最短路即可。注意dp转移函数中最后一项+1表示这次选的路和<br>
+上次不一样，也就是题目中的CHANGE，因此当j选择0的时候，这个+1就没有了。</p>
+<p>G Islands 中等 4.54% (5/110) / 8.11% (25/308)<br>
+这题首先要判断是否已经有多余的边了，如果有某些点的入度或者出度大于等于2了，<br>
+则肯定无解。否则的话，整个图可以分成x个独立点和y条有头尾的弧（环可以直接扔掉<br>
+），需要互相或者自己相接成环，但是不能有长度为1的环。这个问题有很多解决的方<br>
+法，一种是利用组合数加上错排公式；还可以用dp来计算：孤立点可以和另外一个孤立<br>
+点连起来组成一条弧，或者和一条弧链接起来组成一条弧，而弧也可以和别的弧组成一<br>
+条弧，或者把自己首尾连起来组成环。</p>
+<p>H Break Out 难 0.00% (0/8) / 6.12% (3/49)<br>
+这题是个相当复杂的dp。首先，可以把问题分成击穿某列和不击穿某些两种情况来做，<br>
+然后要考虑到失去最后一条命的时候，后面那些不伤命的东西是打不到的（如果不是<br>
+最后一条命，这些东西在耗了一条命后还是能打到的，就是这个区别）。于是，对于<br>
+每一列，我们分是否击穿过，以及是否在这列使用最后一条命，这4种情况分别预处理<br>
+出在这一列消耗x条命的时候最多能拿多少分。然后按照常理，我们要先枚举击穿哪列<br>
+，然后枚举最后一条命用在哪列，再然后进行一个背包。但是这样总的复杂度是200^5<br>
+，显然是无法接受的，需要进行优化。优化的关键就是把枚举的两个东西放到dp的过程<br>
+中，用dp[i][j][k]来表示状态，i表示当前处理到第几列，j表示之前是否击穿过，k<br>
+表示之前是否有一列使用了最后一条命，这样就把复杂度降低到了200^3的级别。当然<br>
+，整个写的过程还是非常复杂的，不太容易过。<br>
+题外话：作者vb怕有人比赛时候没题可做太无聊，特意在题目里加了游戏的applet，（<br>
+仅校内赛）不知道大家发现没有，玩的开不开心，还有，卡不卡？^^</p>
+<p>I Circle 简单 8.70% (83/954) / 22.38% (392/1751)<br>
+这题唯一的trick是要验证一下所有点是否联通。所有点都联通，并且每个点的度为2，<br>
+则图就是一个环。</p>
+												<div class="clear"></div> <!-- For inserted media at the end of the post -->
+						<div id="author_link">... other posts by <a 
+href="http://www.hhanger.com/blog/?author=2" title="由 Hang Hang 发表">Hang
+ Hang</a></div>
+						<p class="single-meta" style="float: right; margin-top: 5px; 
+margin-right: 10px; font-size: 11px;"> 标签：<a 
+href="http://www.hhanger.com/blog/?tag=acm" rel="tag">ACM</a>, <a 
+href="http://www.hhanger.com/blog/?tag=algorithm" rel="tag">algorithm</a>,
+ <a href="http://www.hhanger.com/blog/?tag=zju" rel="tag">ZJU</a>, <a 
+href="http://www.hhanger.com/blog/?tag=zjupc" rel="tag">ZJUPC</a>, <a 
+href="http://www.hhanger.com/blog/?tag=zoj" rel="tag">ZOJ</a></p>
+					</div> <!-- .post #post-ID -->
+					
+<div id="comments-main">
+    
+		<h4 id="comments">36 Comments</h4>
+		<ul class="commentlist" id="singlecomments">
+					<li class="comment even thread-even depth-1 user-id-0" 
+id="comment-871">
+				<div id="div-comment-871" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/3c706bb60434be848b0dbdfe7127222e_003.png"
+ class="avatar avatar-60 photo" width="60" height="60">		<cite 
+class="fn">VegetableB</cite> <span class="says">说：</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://www.hhanger.com/blog/?p=438&amp;cpage=1#comment-871">2010/04
+/10于9:45 下午</a></div>
+
+		<p>沙发ym……</p>
+<p class="thdrpy">[<a href="javascript:void(0)" 
+onclick="movecfm(event,871,1,'VegetableB');">回复</a>]</p><div 
+class="comment-childs chalt" id="comment-874"><img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/6ecafc6fe3c586debd42839cdadef290.png"
+ class="avatar avatar-32 photo" width="32" height="32"><p><cite><a 
+href="http://www.hhanger.com/blog/?page_id=236&amp;u=HangHang" 
+rel="external nofollow" class="url">Hang Hang</a></cite> 回复:<br><small 
+class="commentmetadata">四月 10th, 2010 at 9:51 下午</small></p><p>ym沙发……</p>
+<p class="thdrpy">[<a href="javascript:void(0)" 
+onclick="movecfm(event,874,2,'Hang Hang');">回复</a>]</p></div>
+		<div class="reply">
+				</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1 user-id-0" 
+id="comment-872">
+				<div id="div-comment-872" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/db3923721464c2ca66fc4584b3d2976d.png"
+ class="avatar avatar-60 photo" width="60" height="60">		<cite 
+class="fn">Navi</cite> <span class="says">说：</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://www.hhanger.com/blog/?p=438&amp;cpage=1#comment-872">2010/04
+/10于9:48 下午</a></div>
+
+		<p>ym.. 顺便bs这里的反spam</p>
+<p class="thdrpy">[<a href="javascript:void(0)" 
+onclick="movecfm(event,872,1,'Navi');">回复</a>]</p><div 
+class="comment-childs chalt" id="comment-873"><img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/6ecafc6fe3c586debd42839cdadef290.png"
+ class="avatar avatar-32 photo" width="32" height="32"><p><cite><a 
+href="http://www.hhanger.com/blog/?page_id=236&amp;u=HangHang" 
+rel="external nofollow" class="url">Hang Hang</a></cite> 回复:<br><small 
+class="commentmetadata">四月 10th, 2010 at 9:51 下午</small></p><p>- 
+-被span坑过的表示bsbs反spam的。。。</p>
+<p class="thdrpy">[<a href="javascript:void(0)" 
+onclick="movecfm(event,873,2,'Hang Hang');">回复</a>]</p></div><div 
+class="comment-childs chalt" id="comment-891"><img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/e2156e4a6f7f35a0bce02dbf48d08456.png"
+ class="avatar avatar-32 photo" width="32" height="32"><p><cite><a 
+href="http://lihdd.net/" rel="external nofollow" class="url">quark</a></cite>
+ 回复:<br><small class="commentmetadata">四月 10th, 2010 at 10:56 下午</small></p><p>表
+示这种反spam简单易行，实践证明比WP-SpamFree的cookie,session,js,UserAgent,Accept-
+Language等等乱搞更靠谱。</p>
+<p>你可以在我那边留一个“hello world”试试看。</p>
+<p class="thdrpy">[<a href="javascript:void(0)" 
+onclick="movecfm(event,891,2,'quark');">回复</a>]</p></div>
+		<div class="reply">
+				</div>
+				</div>
+		</li>
+		<li class="comment byuser comment-author-watashi even thread-even 
+depth-1 
+microid-mailto+http:sha1:ccf82339b76323cf23a95af17396aa8ffe71f845 
+user-id-5" id="comment-875">
+				<div id="div-comment-875" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/d395e4fe57d207fe0979da191d1dfbca.jpeg"
+ class="avatar avatar-60 photo" width="60" height="60">		<cite 
+class="fn"><a 
+href="http://www.hhanger.com/blog/?page_id=236&amp;u=watashi" 
+rel="external nofollow" class="url">watashi</a></cite> <span 
+class="says">说：</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://www.hhanger.com/blog/?p=438&amp;cpage=1#comment-875">2010/04
+/10于9:56 下午</a></div>
+
+		<p>ym 肉牛满面 555</p>
+<p class="thdrpy">[<a href="javascript:void(0)" 
+onclick="movecfm(event,875,1,'watashi');">回复</a>]</p><div 
+class="comment-childs chalt" id="comment-880"><img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/6ecafc6fe3c586debd42839cdadef290.png"
+ class="avatar avatar-32 photo" width="32" height="32"><p><cite><a 
+href="http://www.hhanger.com/blog/?page_id=236&amp;u=HangHang" 
+rel="external nofollow" class="url">Hang Hang</a></cite> 回复:<br><small 
+class="commentmetadata">四月 10th, 2010 at 9:59 下午</small></p><p>pat，你们的F啥
+情况呢</p>
+<p class="thdrpy">[<a href="javascript:void(0)" 
+onclick="movecfm(event,880,2,'Hang Hang');">回复</a>]</p><div 
+class="comment-childs" id="comment-885"><img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/d395e4fe57d207fe0979da191d1dfbca_002.jpeg"
+ class="avatar avatar-32 photo" width="32" height="32"><p><cite><a 
+href="http://www.hhanger.com/blog/?page_id=236&amp;u=watashi" 
+rel="external nofollow" class="url">watashi</a></cite> 回复:<br><small 
+class="commentmetadata">四月 10th, 2010 at 10:11 下午</small></p><p>否知,我想到了算
+法,但后来完全没有管,debug也没帮忙<br>
+就比赛而言我们队今天问题非常严重,很多问题没想清就开始瞎写了,我也不知道自己很多时间在折腾什么……<br>
+不过就结果(和过程)而言还是很开心的(换到省赛的话,就大悲剧了,期待省赛吧)</p>
+<p class="thdrpy">[<a href="javascript:void(0)" 
+onclick="movecfm(event,885,3,'watashi');">回复</a>]</p><div 
+class="comment-childs chalt" id="comment-886"><img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/6ecafc6fe3c586debd42839cdadef290.png"
+ class="avatar avatar-32 photo" width="32" height="32"><p><cite><a 
+href="http://www.hhanger.com/blog/?page_id=236&amp;u=HangHang" 
+rel="external nofollow" class="url">Hang Hang</a></cite> 回复:<br><small 
+class="commentmetadata">四月 10th, 2010 at 10:13 下午</small></p><p>同期待省赛，史哥
+加油吧～</p>
+<p class="thdrpy">[<a href="javascript:void(0)" 
+onclick="movecfm(event,886,4,'Hang Hang');">回复</a>]</p></div></div></div>
+		<div class="reply">
+				</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1 user-id-0" 
+id="comment-876">
+				<div id="div-comment-876" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/af31a1516dd8f239304ce8fae4c6d1be.png"
+ class="avatar avatar-60 photo" width="60" height="60">		<cite 
+class="fn">zjut_DD</cite> <span class="says">说：</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://www.hhanger.com/blog/?p=438&amp;cpage=1#comment-876">2010/04
+/10于9:57 下午</a></div>
+
+		<p>终于会做啦~~~题目太好啦~~YM博主HH……</p>
+<p class="thdrpy">[<a href="javascript:void(0)" 
+onclick="movecfm(event,876,1,'zjut_DD');">回复</a>]</p><div 
+class="comment-childs chalt" id="comment-881"><img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/6ecafc6fe3c586debd42839cdadef290.png"
+ class="avatar avatar-32 photo" width="32" height="32"><p><cite><a 
+href="http://www.hhanger.com/blog/?page_id=236&amp;u=HangHang" 
+rel="external nofollow" class="url">Hang Hang</a></cite> 回复:<br><small 
+class="commentmetadata">四月 10th, 2010 at 10:00 下午</small></p><p>感谢，感觉题目质
+量确实还可以，期待省赛吧～～</p>
+<p class="thdrpy">[<a href="javascript:void(0)" 
+onclick="movecfm(event,881,2,'Hang Hang');">回复</a>]</p></div>
+		<div class="reply">
+				</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1 user-id-0" 
+id="comment-877">
+				<div id="div-comment-877" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/5d9a409efad45edb19a553bcc0f77d8f.png"
+ class="avatar avatar-60 photo" width="60" height="60">		<cite 
+class="fn">code6</cite> <span class="says">说：</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://www.hhanger.com/blog/?p=438&amp;cpage=1#comment-877">2010/04
+/10于9:57 下午</a></div>
+
+		<p>突然发现F的DP好漂亮,写挫了….</p>
+<p class="thdrpy">[<a href="javascript:void(0)" 
+onclick="movecfm(event,877,1,'code6');">回复</a>]</p><div 
+class="comment-childs chalt" id="comment-882"><img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/6ecafc6fe3c586debd42839cdadef290.png"
+ class="avatar avatar-32 photo" width="32" height="32"><p><cite><a 
+href="http://www.hhanger.com/blog/?page_id=236&amp;u=HangHang" 
+rel="external nofollow" class="url">Hang Hang</a></cite> 回复:<br><small 
+class="commentmetadata">四月 10th, 2010 at 10:01 下午</small></p><p>嗯，个人觉得这个
+题虽然不是太难，但是做法很不错～～</p>
+<p class="thdrpy">[<a href="javascript:void(0)" 
+onclick="movecfm(event,882,2,'Hang Hang');">回复</a>]</p></div>
+		<div class="reply">
+				</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1 user-id-0" 
+id="comment-878">
+				<div id="div-comment-878" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/57ee47d0613f852d8437d91afe62eb66.png"
+ class="avatar avatar-60 photo" width="60" height="60">		<cite 
+class="fn">zhymaoiing</cite> <span class="says">说：</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://www.hhanger.com/blog/?p=438&amp;cpage=1#comment-878">2010/04
+/10于9:58 下午</a></div>
+
+		<p>果断膜拜</p>
+<p class="thdrpy">[<a href="javascript:void(0)" 
+onclick="movecfm(event,878,1,'zhymaoiing');">回复</a>]</p><div 
+class="comment-childs chalt" id="comment-883"><img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/6ecafc6fe3c586debd42839cdadef290.png"
+ class="avatar avatar-32 photo" width="32" height="32"><p><cite><a 
+href="http://www.hhanger.com/blog/?page_id=236&amp;u=HangHang" 
+rel="external nofollow" class="url">Hang Hang</a></cite> 回复:<br><small 
+class="commentmetadata">四月 10th, 2010 at 10:01 下午</small></p><p>膜拜……</p>
+<p class="thdrpy">[<a href="javascript:void(0)" 
+onclick="movecfm(event,883,2,'Hang Hang');">回复</a>]</p></div>
+		<div class="reply">
+				</div>
+				</div>
+		</li>
+		<li class="comment byuser comment-author-watashi even thread-even 
+depth-1 
+microid-mailto+http:sha1:ccf82339b76323cf23a95af17396aa8ffe71f845 
+user-id-5" id="comment-879">
+				<div id="div-comment-879" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/d395e4fe57d207fe0979da191d1dfbca.jpeg"
+ class="avatar avatar-60 photo" width="60" height="60">		<cite 
+class="fn"><a 
+href="http://www.hhanger.com/blog/?page_id=236&amp;u=watashi" 
+rel="external nofollow" class="url">watashi</a></cite> <span 
+class="says">说：</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://www.hhanger.com/blog/?p=438&amp;cpage=1#comment-879">2010/04
+/10于9:59 下午</a></div>
+
+		<p>就校赛而言是有点难,不过题很好啊题很好,我们很弱啊我们很弱</p>
+<p class="thdrpy">[<a href="javascript:void(0)" 
+onclick="movecfm(event,879,1,'watashi');">回复</a>]</p><div 
+class="comment-childs chalt" id="comment-884"><img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/6ecafc6fe3c586debd42839cdadef290.png"
+ class="avatar avatar-32 photo" width="32" height="32"><p><cite><a 
+href="http://www.hhanger.com/blog/?page_id=236&amp;u=HangHang" 
+rel="external nofollow" class="url">Hang Hang</a></cite> 回复:<br><small 
+class="commentmetadata">四月 10th, 2010 at 10:04 下午</small></p><p>pat，话说4小
+时的话，会比较看临场的发挥</p>
+<p class="thdrpy">[<a href="javascript:void(0)" 
+onclick="movecfm(event,884,2,'Hang Hang');">回复</a>]</p></div>
+		<div class="reply">
+				</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1 user-id-0" 
+id="comment-887">
+				<div id="div-comment-887" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/c15fc1e7bf0adb194da9a365afbce071.png"
+ class="avatar avatar-60 photo" width="60" height="60">		<cite 
+class="fn">【长颈鹿】鸭梨很大</cite> <span class="says">说：</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://www.hhanger.com/blog/?p=438&amp;cpage=1#comment-887">2010/04
+/10于10:29 下午</a></div>
+
+		<p>晚上有人说cjlu = 长颈鹿大学。表示这名字很不错。。有请HH大牛过目，能否申请省赛改队名？</p>
+<p class="thdrpy">[<a href="javascript:void(0)" 
+onclick="movecfm(event,887,1,'【长颈鹿】鸭梨很大');">回复</a>]</p><div 
+class="comment-childs chalt" id="comment-888"><img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/6ecafc6fe3c586debd42839cdadef290.png"
+ class="avatar avatar-32 photo" width="32" height="32"><p><cite><a 
+href="http://www.hhanger.com/blog/?page_id=236&amp;u=HangHang" 
+rel="external nofollow" class="url">Hang Hang</a></cite> 回复:<br><small 
+class="commentmetadata">四月 10th, 2010 at 10:32 下午</small></p><p>orz长距离
+-_-<br>
+改队名估计比较难了，你可以试着让你们老师联系下，或者明年正式启用。</p>
+<p class="thdrpy">[<a href="javascript:void(0)" 
+onclick="movecfm(event,888,2,'Hang Hang');">回复</a>]</p></div>
+		<div class="reply">
+				</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1 
+microid-mailto+http:sha1:4cf2af15e01a16816d0e41f266fa990aa30326ea 
+user-id-0" id="comment-889">
+				<div id="div-comment-889" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/e2156e4a6f7f35a0bce02dbf48d08456_002.png"
+ class="avatar avatar-60 photo" width="60" height="60">		<cite 
+class="fn"><a href="http://lihdd.net/" rel="external nofollow" 
+class="url">quark</a></cite> <span class="says">说：</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://www.hhanger.com/blog/?p=438&amp;cpage=1#comment-889">2010/04
+/10于10:50 下午</a></div>
+
+		<p>后半场各种脑残小白错误…… -,-||</p>
+<p class="thdrpy">[<a href="javascript:void(0)" 
+onclick="movecfm(event,889,1,'quark');">回复</a>]</p><div 
+class="comment-childs chalt" id="comment-892"><img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/6ecafc6fe3c586debd42839cdadef290.png"
+ class="avatar avatar-32 photo" width="32" height="32"><p><cite><a 
+href="http://www.hhanger.com/blog/?page_id=236&amp;u=HangHang" 
+rel="external nofollow" class="url">Hang Hang</a></cite> 回复:<br><small 
+class="commentmetadata">四月 10th, 2010 at 11:02 下午</small></p><p>momo，结果完
+美，嘿嘿～</p>
+<p class="thdrpy">[<a href="javascript:void(0)" 
+onclick="movecfm(event,892,2,'Hang Hang');">回复</a>]</p></div>
+		<div class="reply">
+				</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1 user-id-0" 
+id="comment-890">
+				<div id="div-comment-890" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/80d4bc23ceb22b0fb6ed90436c866166.png"
+ class="avatar avatar-60 photo" width="60" height="60">		<cite 
+class="fn">AekdyCoin</cite> <span class="says">说：</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://www.hhanger.com/blog/?p=438&amp;cpage=1#comment-890">2010/04
+/10于10:53 下午</a></div>
+
+		<p>围观仰慕……</p>
+<p class="thdrpy">[<a href="javascript:void(0)" 
+onclick="movecfm(event,890,1,'AekdyCoin');">回复</a>]</p><div 
+class="comment-childs chalt" id="comment-893"><img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/6ecafc6fe3c586debd42839cdadef290.png"
+ class="avatar avatar-32 photo" width="32" height="32"><p><cite><a 
+href="http://www.hhanger.com/blog/?page_id=236&amp;u=HangHang" 
+rel="external nofollow" class="url">Hang Hang</a></cite> 回复:<br><small 
+class="commentmetadata">四月 10th, 2010 at 11:02 下午</small></p><p>仰慕围观的AC大
+牛，下周省赛继续Happy～～</p>
+<p class="thdrpy">[<a href="javascript:void(0)" 
+onclick="movecfm(event,893,2,'Hang Hang');">回复</a>]</p></div>
+		<div class="reply">
+				</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1 
+microid-mailto+http:sha1:205f003c3364ecd1b0d7bff94edf4f9066293d44 
+user-id-0" id="comment-894">
+				<div id="div-comment-894" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/49f789bbca16149a92045a0b2108df44.png"
+ class="avatar avatar-60 photo" width="60" height="60">		<cite 
+class="fn"><a href="http://roba.rushcj.com/" rel="external nofollow" 
+class="url">RoBa</a></cite> <span class="says">说：</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://www.hhanger.com/blog/?p=438&amp;cpage=1#comment-894">2010/04
+/10于11:09 下午</a></div>
+
+		<p>题目质量非常好，很赞的比赛</p>
+<p class="thdrpy">[<a href="javascript:void(0)" 
+onclick="movecfm(event,894,1,'RoBa');">回复</a>]</p><div 
+class="comment-childs chalt" id="comment-895"><img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/6ecafc6fe3c586debd42839cdadef290.png"
+ class="avatar avatar-32 photo" width="32" height="32"><p><cite><a 
+href="http://www.hhanger.com/blog/?page_id=236&amp;u=HangHang" 
+rel="external nofollow" class="url">Hang Hang</a></cite> 回复:<br><small 
+class="commentmetadata">四月 10th, 2010 at 11:27 下午</small></p><p>感谢roba神牛
+的支持！欢迎继续期待下周六的省赛～</p>
+<p class="thdrpy">[<a href="javascript:void(0)" 
+onclick="movecfm(event,895,2,'Hang Hang');">回复</a>]</p></div>
+		<div class="reply">
+				</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1 user-id-0" 
+id="comment-896">
+				<div id="div-comment-896" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/929a9350c439eb225db9404bc61e3869.png"
+ class="avatar avatar-60 photo" width="60" height="60">		<cite 
+class="fn">Jsky</cite> <span class="says">说：</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://www.hhanger.com/blog/?p=438&amp;cpage=1#comment-896">2010/04
+/10于11:27 下午</a></div>
+
+		<p>先膜拜HH！ 再顶下博弈题！ 题目思想都相当精髓！</p>
+<p class="thdrpy">[<a href="javascript:void(0)" 
+onclick="movecfm(event,896,1,'Jsky');">回复</a>]</p><div 
+class="comment-childs chalt" id="comment-898"><img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/6ecafc6fe3c586debd42839cdadef290.png"
+ class="avatar avatar-32 photo" width="32" height="32"><p><cite><a 
+href="http://www.hhanger.com/blog/?page_id=236&amp;u=HangHang" 
+rel="external nofollow" class="url">Hang Hang</a></cite> 回复:<br><small 
+class="commentmetadata">四月 10th, 2010 at 11:41 下午</small></p><p>感谢对题目的支
+持，希望下周六继续关注省赛^^</p>
+<p class="thdrpy">[<a href="javascript:void(0)" 
+onclick="movecfm(event,898,2,'Hang Hang');">回复</a>]</p></div>
+		<div class="reply">
+				</div>
+				</div>
+		</li>
+		<li class="pingback even thread-even depth-1 user-id-0" 
+id="comment-897">
+				<div id="div-comment-897" class="comment-body">
+				<div class="comment-author vcard">
+				<cite class="fn"><a 
+href="http://watashi.ws/blog/735/my-10th-zju-cpc/" rel="external 
+nofollow" class="url">第十届浙江大学校赛比赛小结 by watashi@gensokyo | ゆっくりでいいさ</a></cite>
+ <span class="says">说：</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://www.hhanger.com/blog/?p=438&amp;cpage=1#comment-897">2010/04
+/10于11:29 下午</a></div>
+
+		<p>[...] 解题报告——《2010校赛 Judge’s View &amp;&amp; 解题报告》 by hhanger。 PPS: 
+[...]</p>
+
+		<div class="reply">
+				</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1 
+microid-mailto+http:sha1:e6493d8742fce3cb571d32c7cd3a104ed0e6a1ae 
+user-id-0" id="comment-899">
+				<div id="div-comment-899" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/d580654668f3add980acd19eebbf733b.png"
+ class="avatar avatar-60 photo" width="60" height="60">		<cite 
+class="fn"><a href="http://blog.sina.com.cn/dijiganjue" rel="external 
+nofollow" class="url">liangjiaxing</a></cite> <span class="says">说：</span>
+		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://www.hhanger.com/blog/?p=438&amp;cpage=1#comment-899">2010/04
+/10于11:50 下午</a></div>
+
+		<p>只过了4道题的也过来围观一下解题报告。<br>
+想不到我们队也能去省赛。</p>
+<p class="thdrpy">[<a href="javascript:void(0)" 
+onclick="movecfm(event,899,1,'liangjiaxing');">回复</a>]</p><div 
+class="comment-childs chalt" id="comment-902"><img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/6ecafc6fe3c586debd42839cdadef290.png"
+ class="avatar avatar-32 photo" width="32" height="32"><p><cite><a 
+href="http://www.hhanger.com/blog/?page_id=236&amp;u=HangHang" 
+rel="external nofollow" class="url">Hang Hang</a></cite> 回复:<br><small 
+class="commentmetadata">四月 10th, 2010 at 11:55 下午</small></p><p>这次题目比较难
+呀，我觉得4题已经不错了，后面的第五第六确实比较有难度。省赛加油吧^^</p>
+<p class="thdrpy">[<a href="javascript:void(0)" 
+onclick="movecfm(event,902,2,'Hang Hang');">回复</a>]</p></div>
+		<div class="reply">
+				</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1 user-id-0" 
+id="comment-904">
+				<div id="div-comment-904" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/003059191997b16cbc33f8d1d28c6670.png"
+ class="avatar avatar-60 photo" width="60" height="60">		<cite 
+class="fn">Dumbear</cite> <span class="says">说：</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://www.hhanger.com/blog/?p=438&amp;cpage=1#comment-904">2010/04
+/11于12:02 上午</a></div>
+
+		<p>YM！<br>
+话说runaway恰好我前几天在hacker.org上通关了，所以今天……呵呵~~<br>
+话说hacker.org貌似大家都在玩？Break Out的截图貌似也是那上面的……</p>
+<p class="thdrpy">[<a href="javascript:void(0)" 
+onclick="movecfm(event,904,1,'Dumbear');">回复</a>]</p><div 
+class="comment-childs chalt" id="comment-905"><img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/6ecafc6fe3c586debd42839cdadef290.png"
+ class="avatar avatar-32 photo" width="32" height="32"><p><cite><a 
+href="http://www.hhanger.com/blog/?page_id=236&amp;u=HangHang" 
+rel="external nofollow" class="url">Hang Hang</a></cite> 回复:<br><small 
+class="commentmetadata">四月 11th, 2010 at 12:06 上午</small></p><p>嗯，我、C题作
+者，以及H题作者都是hacker玩家，不过好像都是半年多前的事情了^^</p>
+<p class="thdrpy">[<a href="javascript:void(0)" 
+onclick="movecfm(event,905,2,'Hang Hang');">回复</a>]</p><div 
+class="comment-childs" id="comment-907"><img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/3c706bb60434be848b0dbdfe7127222e.png"
+ class="avatar avatar-32 photo" width="32" height="32"><p><cite>VegetableB</cite>
+ 回复:<br><small class="commentmetadata">四月 11th, 2010 at 4:27 上午</small></p><p>我
+最近又开始玩了= =<br>
+搞定了white noise…<br>
+我迟早会搞定那个螺旋环的……</p>
+<p class="thdrpy">[<a href="javascript:void(0)" 
+onclick="movecfm(event,907,3,'VegetableB');">回复</a>]</p><div 
+class="comment-childs chalt" id="comment-908"><img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/6ecafc6fe3c586debd42839cdadef290.png"
+ class="avatar avatar-32 photo" width="32" height="32"><p><cite><a 
+href="http://www.hhanger.com/blog/?page_id=236&amp;u=HangHang" 
+rel="external nofollow" class="url">Hang Hang</a></cite> 回复:<br><small 
+class="commentmetadata">四月 11th, 2010 at 11:12 上午</small></p><p>仰慕啊，等俺啥时
+候再回过头去搞一下- -</p>
+<p class="thdrpy">[<a href="javascript:void(0)" 
+onclick="movecfm(event,908,4,'Hang Hang');">回复</a>]</p></div></div></div>
+		<div class="reply">
+				</div>
+				</div>
+		</li>
+		<li class="pingback odd alt thread-odd thread-alt depth-1 user-id-0" 
+id="comment-906">
+				<div id="div-comment-906" class="comment-body">
+				<div class="comment-author vcard">
+				<cite class="fn"><a 
+href="http://lihdd.net/2010/04/%e6%a0%a1%e8%b5%9b%e5%8f%88%e4%b8%80%e5%b9%b4/"
+ rel="external nofollow" class="url">Rest Valley » Blog Archive » 校赛又一年</a></cite>
+ <span class="says">说：</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://www.hhanger.com/blog/?p=438&amp;cpage=1#comment-906">2010/04
+/11于1:53 上午</a></div>
+
+		<p>[...] 解题报告推荐看hhanger裁判的版本，十分好。我这里是流水账，不要在这里期待什么 [...]</p>
+
+		<div class="reply">
+				</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1 
+microid-mailto+http:sha1:ac848c4e780cbeff39779b41133e9ec4308cce37 
+user-id-0" id="comment-909">
+				<div id="div-comment-909" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/7791cf19488bf926d6cd15fb63df42e0.png"
+ class="avatar avatar-60 photo" width="60" height="60">		<cite 
+class="fn"><a href="http://hi.baidu.com/pojoflcc" rel="external 
+nofollow" class="url">lccycc</a></cite> <span class="says">说：</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a 
+href="http://www.hhanger.com/blog/?p=438&amp;cpage=1#comment-909">2010/04
+/11于1:08 下午</a></div>
+
+		<p>膜拜HH大神!<br>
+偶喜欢那么多的图论题!</p>
+<p class="thdrpy">[<a href="javascript:void(0)" 
+onclick="movecfm(event,909,1,'lccycc');">回复</a>]</p>
+		<div class="reply">
+				</div>
+				</div>
+		</li>
+		</ul>
+		<div class="navigation">
+    		<div class="alignleft"></div>
+		    <div class="alignright"></div>
+		</div>
+      
+	  
+		<div id="respond"><h3>留下评论</h3>
+			<div id="cancel-comment-reply">
+				<small><a rel="nofollow" id="cancel-comment-reply-link" 
+href="http://www.hhanger.com/blog/?p=438#respond" style="display: none;">点
+击这里取消回复</a></small>
+			</div>
+
+			
+				<form action="http://www.hhanger.com/wordpress/wp-comments-post.php"
+ method="post" id="commentform">
+
+					
+						<p><input name="author" id="author" size="22" tabindex="1" 
+type="text">
+						<label for="author"><small>Name (required)</small></label></p>
+						<p><input name="email" id="email" size="22" tabindex="2" 
+type="text">
+						<label for="email"><small>Email (required)</small></label></p>
+						<p><input name="url" id="url" size="22" tabindex="3" type="text">
+						<label for="url"><small>Website</small></label></p>
+
+					
+					<div>
+						<input name="comment_post_ID" value="438" id="comment_post_ID" 
+type="hidden">
+<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+						<input name="redirect_to" value="/blog/?p=438" type="hidden">
+					</div>
+
+					<p><small><strong>XHTML:</strong> You can use these tags:' &lt;a 
+href="" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; 
+&lt;b&gt; &lt;blockquote cite=""&gt; &lt;cite&gt; &lt;code&gt; &lt;del 
+datetime=""&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=""&gt; &lt;strike&gt; 
+&lt;strong&gt; </small></p>
+
+					<p><textarea name="comment" id="comment" cols="10" rows="10" 
+tabindex="4"></textarea></p>
+
+					
+					<p><input name="submit" id="submit" tabindex="5" value="Submit 
+Comment" type="submit"></p>
+					<p><input id="comment_reply_ID" name="comment_reply_ID" value="0" 
+type="hidden"><input id="comment_reply_dp" name="comment_reply_dp" 
+value="0" type="hidden"></p><div id="cancel_reply" style="display: 
+none;"><a href="javascript:void(0)" onclick="movecfm(null,0,1,null);" 
+style="color: red;">点击取消回复</a></div><script type="text/javascript">
+/* <![CDATA[ */
+var commentformid = "commentform";
+var USERINFO = false;
+var atreply = "none";
+/* ]]> */
+</script>
+<script type="text/javascript" src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/wp-thread-comment.htm"></script>
+
+				<p class="scp_message" style="color: rgb(235, 80, 80); clear: both;"><strong>NOTICE:</strong>
+ You should type some Chinese word (like “你好”) in your comment to pass 
+the spam-check, thanks for your patience!</p></form>
+					</div>
+	</div> <!-- #comments-main -->							
+		</div><!--end main blog-->
+
+		<div id="sidebar">
+	<div id="sidebar-top"></div>
+	<div id="sidebar-content">
+		<div id="subcolumn">
+    
+			<div id="search">
+				<form id="searchform" method="get" 
+action="http://www.hhanger.com/blog/">
+					<div>
+						<input class="form-input" value="Enter keyword(s) and hit enter" 
+onblur="if(this.value == '') {this.value = 'Enter keyword(s) and hit 
+enter';}" onfocus="if(this.value == 'Enter keyword(s) and hit enter') 
+{this.value = '';}" name="s" id="s" type="text"><br>
+						<input class="hidden search-submit" id="search-submit" 
+value="Search" type="submit">
+					</div>
+				</form>	
+			</div> <!-- #search -->
+
+			<ul><li>
+				<div class="widget"><h2 class="hl">我的目录</h2>		<ul>
+	<li class="cat-item cat-item-114"><a 
+href="http://www.hhanger.com/blog/?cat=114" title="查看 动漫 下的所有文章">动漫</a> 
+(3)
+</li>
+	<li class="cat-item cat-item-6"><a 
+href="http://www.hhanger.com/blog/?cat=6" title="查看 影音 下的所有文章">影音</a> 
+(4)
+</li>
+	<li class="cat-item cat-item-3"><a 
+href="http://www.hhanger.com/blog/?cat=3" title="查看 心情 下的所有文章">心情</a> 
+(7)
+</li>
+	<li class="cat-item cat-item-22"><a 
+href="http://www.hhanger.com/blog/?cat=22" title="查看 生活 下的所有文章">生活</a> 
+(8)
+</li>
+	<li class="cat-item cat-item-117"><a 
+href="http://www.hhanger.com/blog/?cat=117" title="查看 科幻 下的所有文章">科幻</a> 
+(1)
+</li>
+	<li class="cat-item cat-item-9"><a 
+href="http://www.hhanger.com/blog/?cat=9" title="查看 算法 下的所有文章">算法</a> 
+(24)
+</li>
+		</ul>
+</div><!--/widget--><div class="widget"><h2 class="hl">我的日历</h2><div 
+id="calendar_wrap"><table id="wp-calendar" summary="日历">
+	<caption>2010年四月</caption>
+	<thead>
+	<tr>
+		<th abbr="星期一" scope="col" title="星期一">一</th>
+		<th abbr="星期二" scope="col" title="星期二">二</th>
+		<th abbr="星期三" scope="col" title="星期三">三</th>
+		<th abbr="星期四" scope="col" title="星期四">四</th>
+		<th abbr="星期五" scope="col" title="星期五">五</th>
+		<th abbr="星期六" scope="col" title="星期六">六</th>
+		<th abbr="星期天" scope="col" title="星期天">日</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td abbr="三月" colspan="3" id="prev"><a 
+href="http://www.hhanger.com/blog/?m=201003" title="查看 三月 2010 的文章">« 三</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next" class="pad">&nbsp;</td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr>
+		<td colspan="3" class="pad">&nbsp;</td><td>1</td><td><a 
+href="http://www.hhanger.com/blog/?m=20100402" title="Sherlock Holmes 
+&amp; Monsters, Inc.">2</a></td><td>3</td><td><a 
+href="http://www.hhanger.com/blog/?m=20100404" title="SRM 466">4</a></td>
+	</tr>
+	<tr>
+		<td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td><a 
+href="http://www.hhanger.com/blog/?m=20100410" title="2010校赛 Judge’s 
+View &amp;&amp; 解题报告">10</a></td><td id="today">11</td>
+	</tr>
+	<tr>
+		<td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td>
+	</tr>
+	<tr>
+		<td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td>
+	</tr>
+	<tr>
+		<td>26</td><td>27</td><td>28</td><td>29</td><td>30</td>
+		<td class="pad" colspan="2">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table></div></div><!--/widget-->		<div class="widget">		<h2 
+class="hl">我的文章</h2>		<ul>
+		
+<!-- Start Of Script Generated By WP-PostViews Plus -->
+<script type="text/javascript">
+/* <![CDATA[ */
+jQuery.ajax({type:'GET',url:'http://www.hhanger.com/wordpress/wp-content/plugins/wp-postviews-plus/postviews_plus.php',data:'todowppvp=add&type=post&id=438',cache:false,dataType:'script'});
+/* ]]> */
+</script>
+<!-- End Of Script Generated By WP-PostViews Plus -->
+		<li><a href="http://www.hhanger.com/blog/?p=438" title="2010校赛 Judge’s
+ View &amp;&amp; 解题报告">2010校赛 Judge’s View &amp;&amp; 解题报告 </a></li>
+				<li><a href="http://www.hhanger.com/blog/?p=431" title="SRM 466">SRM
+ 466 </a></li>
+				<li><a href="http://www.hhanger.com/blog/?p=426" title="Sherlock 
+Holmes &amp; Monsters, Inc.">Sherlock Holmes &amp; Monsters, Inc. </a></li>
+				<li><a href="http://www.hhanger.com/blog/?p=406" title="Member SRM 
+465">Member SRM 465 </a></li>
+				<li><a href="http://www.hhanger.com/blog/?p=403" title="普通的一天">普通的一天
+ </a></li>
+				</ul>
+		</div><!--/widget--><div class="widget"><h2 class="hl">我的评论</h2><table
+ id="recentcomments"><tbody><tr><td><img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/7791cf19488bf926d6cd15fb63df42e0_002.png"
+ class="avatar avatar-25 photo" width="25" height="25"></td><td><a 
+href="http://hi.baidu.com/pojoflcc" rel="external nofollow" class="url" 
+target="_blank">lccycc</a> on <a 
+href="http://www.hhanger.com/blog/?p=438&amp;cpage=1#comment-909">2010校赛
+ Judge’s View &amp;&amp; 解题报告</a></td></tr><tr><td><img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/6ecafc6fe3c586debd42839cdadef290_002.png"
+ class="avatar avatar-25 photo" width="25" height="25"></td><td><a 
+href="http://www.hhanger.com/blog/?page_id=236&amp;u=HangHang" 
+rel="external nofollow" class="url">Hang Hang</a> on <a 
+href="http://www.hhanger.com/blog/?p=438&amp;cpage=1#comment-908">2010校赛
+ Judge’s View &amp;&amp; 解题报告</a></td></tr><tr><td><img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/3c706bb60434be848b0dbdfe7127222e_002.png"
+ class="avatar avatar-25 photo" width="25" height="25"></td><td>VegetableB
+ on <a href="http://www.hhanger.com/blog/?p=438&amp;cpage=1#comment-907">2010
+校赛 Judge’s View &amp;&amp; 解题报告</a></td></tr><tr><td></td><td><br>
+<b>Warning</b>:  printf() [<a 
+href="http://www.hhanger.com/blog/function.printf">function.printf</a>]:
+ Too few arguments in <b>/home/hhanger/public_html/wordpress/wp-content/plugins/recent-comments-with-avatars/comments.php</b>
+ on line <b>134</b><br>
+ on <a href="http://www.hhanger.com/blog/?p=438&amp;cpage=1#comment-906">2010
+校赛 Judge’s View &amp;&amp; 解题报告</a></td></tr><tr><td><img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/6ecafc6fe3c586debd42839cdadef290_002.png"
+ class="avatar avatar-25 photo" width="25" height="25"></td><td><a 
+href="http://www.hhanger.com/blog/?page_id=236&amp;u=HangHang" 
+rel="external nofollow" class="url">Hang Hang</a> on <a 
+href="http://www.hhanger.com/blog/?p=438&amp;cpage=1#comment-905">2010校赛
+ Judge’s View &amp;&amp; 解题报告</a></td></tr><tr><td><img alt="" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/003059191997b16cbc33f8d1d28c6670_002.png"
+ class="avatar avatar-25 photo" width="25" height="25"></td><td>Dumbear 
+on <a href="http://www.hhanger.com/blog/?p=438&amp;cpage=1#comment-904">2010
+校赛 Judge’s View &amp;&amp; 解题报告</a></td></tr></tbody></table></div><!--/widget--><div
+ class="widget"><h2 class="hl">我的分享</h2>
+	<ul class="xoxo blogroll">
+<li><a href="http://www.hhanger.com/wiki/" title="我的wiki小站">hhanger's 
+wiki</a></li>
+<li><a href="http://hhanger.mybrute.com/" title="大家友情帮顶吧~">hhanger@MyBrute</a></li>
+<li><a 
+href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=22645364" 
+title="我的TC个人页面">hhanger@TopCoder</a></li>
+<li><a href="http://acm.zju.edu.cn/onlinejudge/" title="ZOJ – 梦开始的地方">ZOJ</a></li>
+<li><a href="http://www.beingmusic.jp/bbs/forumdisplay.php?fid=117" 
+title="日本音乐料理店论坛 » ∴ GARNET CROW ∵">日音Garnet Crow区</a></li>
+
+	</ul>
+</div><!--/widget-->
+<div class="widget"><h2 class="hl">我的好友</h2>
+	<ul class="xoxo blogroll">
+<li><a href="http://davidzai.blog.163.com/" title="敬爱的三鲜师父">3xian@GDUT</a></li>
+<li><a href="http://hi.baidu.com/aekdycoin" title="陈鸿大牛的博客/数论神人">AekdyCoin@FZU</a></li>
+<li><a href="http://blog.cnnbboy.com/" title="wc牛的博客">cnnbboy@ZJU</a></li>
+<li><a href="http://blog.sina.com.cn/javamancaopeng" 
+title="曹鹏大牛的博客/永远仰慕彩票哥">javaman@CAS</a></li>
+<li><a href="http://www.zlinkin.com/" title="庄立大牛的博客/时牛时土">Lost@HDU</a></li>
+<li><a href="http://www.notonlysuccess.com/" title="胡浩大牛的博客/新星教主小HH">notonlysuccess@HDU</a></li>
+<li><a href="http://watashi.ws/blog/" title="巫泽俊大牛的博客/watashi.ws()">watashi@ZJU</a></li>
+<li><a href="http://wyest.blogbus.com/" title="lam">wyest@ZJU</a></li>
+<li><a href="http://www.feng5166.com/blog/">枫之羽@网易</a></li>
+<li><a href="http://292293704.qzone.qq.com/" title="阿聪徒弟">阿聪@gdcc</a></li>
+
+	</ul>
+</div><!--/widget-->
+<div class="widget"><h2 class="hl">我的存档</h2>		<ul>
+			<li><a href="http://www.hhanger.com/blog/?m=201004" title="2010年四月">2010
+年四月</a>&nbsp;(3)</li>
+	<li><a href="http://www.hhanger.com/blog/?m=201003" title="2010年三月">2010
+年三月</a>&nbsp;(9)</li>
+	<li><a href="http://www.hhanger.com/blog/?m=201002" title="2010年二月">2010
+年二月</a>&nbsp;(7)</li>
+	<li><a href="http://www.hhanger.com/blog/?m=201001" title="2010年一月">2010
+年一月</a>&nbsp;(8)</li>
+	<li><a href="http://www.hhanger.com/blog/?m=200912" title="2009年十二月">2009
+年十二月</a>&nbsp;(11)</li>
+	<li><a href="http://www.hhanger.com/blog/?m=200911" title="2009年十一月">2009
+年十一月</a>&nbsp;(6)</li>
+		</ul>
+</div><!--/widget--><div class="widget"><h2 class="hl">我的标签</h2><div 
+class="cloudy_tags"><a href="http://www.hhanger.com/blog/?tag=88" 
+class="cloudy-tags-widget tag-link-24" title="2 topics" 
+style="font-size: 10.3846pt; color: rgb(0, 0, 0); text-shadow: 0px 0px 
+20px rgb(0, 0, 0);" onmouseover="this.style.color='#000000';" 
+onmouseout="this.style.color='#000000';">88</a>
+<a href="http://www.hhanger.com/blog/?tag=acm" class="cloudy-tags-widget
+ tag-link-40" title="27 topics" style="font-size: 20pt; color: rgb(0, 0,
+ 0); text-shadow: 0px 0px 1px rgb(0, 0, 0);" 
+onmouseover="this.style.color='#000000';" 
+onmouseout="this.style.color='#000000';">ACM</a>
+<a href="http://www.hhanger.com/blog/?tag=acm_diy" 
+class="cloudy-tags-widget tag-link-17" title="6 topics" 
+style="font-size: 11.9231pt; color: rgb(0, 0, 0); text-shadow: 0px 0px 
+17px rgb(0, 0, 0);" onmouseover="this.style.color='#000000';" 
+onmouseout="this.style.color='#000000';">ACM_DIY</a>
+<a href="http://www.hhanger.com/blog/?tag=aekdycoin" 
+class="cloudy-tags-widget tag-link-62" title="3 topics" 
+style="font-size: 10.7692pt; color: rgb(0, 0, 0); text-shadow: 0px 0px 
+19px rgb(0, 0, 0);" onmouseover="this.style.color='#000000';" 
+onmouseout="this.style.color='#000000';">AekdyCoin</a>
+<a href="http://www.hhanger.com/blog/?tag=algorithm" 
+class="cloudy-tags-widget tag-link-12" title="23 topics" 
+style="font-size: 18.4615pt; color: rgb(0, 0, 0); text-shadow: 0px 0px 
+4px rgb(0, 0, 0);" onmouseover="this.style.color='#000000';" 
+onmouseout="this.style.color='#000000';">algorithm</a>
+<a href="http://www.hhanger.com/blog/?tag=beingmusic" 
+class="cloudy-tags-widget tag-link-70" title="2 topics" 
+style="font-size: 10.3846pt; color: rgb(0, 0, 0); text-shadow: 0px 0px 
+20px rgb(0, 0, 0);" onmouseover="this.style.color='#000000';" 
+onmouseout="this.style.color='#000000';">beingmusic</a>
+<a href="http://www.hhanger.com/blog/?tag=blog" 
+class="cloudy-tags-widget tag-link-4" title="4 topics" style="font-size:
+ 11.1538pt; color: rgb(0, 0, 0); text-shadow: 0px 0px 18px rgb(0, 0, 
+0);" onmouseover="this.style.color='#000000';" 
+onmouseout="this.style.color='#000000';">blog</a>
+<a href="http://www.hhanger.com/blog/?tag=coci" 
+class="cloudy-tags-widget tag-link-16" title="3 topics" 
+style="font-size: 10.7692pt; color: rgb(0, 0, 0); text-shadow: 0px 0px 
+19px rgb(0, 0, 0);" onmouseover="this.style.color='#000000';" 
+onmouseout="this.style.color='#000000';">COCI</a>
+<a href="http://www.hhanger.com/blog/?tag=conan" 
+class="cloudy-tags-widget tag-link-68" title="3 topics" 
+style="font-size: 10.7692pt; color: rgb(0, 0, 0); text-shadow: 0px 0px 
+19px rgb(0, 0, 0);" onmouseover="this.style.color='#000000';" 
+onmouseout="this.style.color='#000000';">conan</a>
+<a href="http://www.hhanger.com/blog/?tag=dijkstra" 
+class="cloudy-tags-widget tag-link-95" title="2 topics" 
+style="font-size: 10.3846pt; color: rgb(0, 0, 0); text-shadow: 0px 0px 
+20px rgb(0, 0, 0);" onmouseover="this.style.color='#000000';" 
+onmouseout="this.style.color='#000000';">dijkstra</a>
+<a href="http://www.hhanger.com/blog/?tag=dynamic-programming" 
+class="cloudy-tags-widget tag-link-138" title="12 topics" 
+style="font-size: 14.2308pt; color: rgb(0, 0, 0); text-shadow: 0px 0px 
+12px rgb(0, 0, 0);" onmouseover="this.style.color='#000000';" 
+onmouseout="this.style.color='#000000';">Dynamic Programming</a>
+<a href="http://www.hhanger.com/blog/?tag=fire" 
+class="cloudy-tags-widget tag-link-107" title="2 topics" 
+style="font-size: 10.3846pt; color: rgb(0, 0, 0); text-shadow: 0px 0px 
+20px rgb(0, 0, 0);" onmouseover="this.style.color='#000000';" 
+onmouseout="this.style.color='#000000';">Fire</a>
+<a href="http://www.hhanger.com/blog/?tag=fm996" 
+class="cloudy-tags-widget tag-link-13" title="1 topics" 
+style="font-size: 10pt; color: rgb(0, 0, 0); text-shadow: 0px 0px 20px 
+rgb(0, 0, 0);" onmouseover="this.style.color='#000000';" 
+onmouseout="this.style.color='#000000';">FM996</a>
+<a href="http://www.hhanger.com/blog/?tag=garnet-crow" 
+class="cloudy-tags-widget tag-link-8" title="3 topics" style="font-size:
+ 10.7692pt; color: rgb(0, 0, 0); text-shadow: 0px 0px 19px rgb(0, 0, 
+0);" onmouseover="this.style.color='#000000';" 
+onmouseout="this.style.color='#000000';">Garnet Crow</a>
+<a href="http://www.hhanger.com/blog/?tag=harbin" 
+class="cloudy-tags-widget tag-link-72" title="2 topics" 
+style="font-size: 10.3846pt; color: rgb(0, 0, 0); text-shadow: 0px 0px 
+20px rgb(0, 0, 0);" onmouseover="this.style.color='#000000';" 
+onmouseout="this.style.color='#000000';">Harbin</a>
+<a href="http://www.hhanger.com/blog/?tag=hdoj" 
+class="cloudy-tags-widget tag-link-78" title="2 topics" 
+style="font-size: 10.3846pt; color: rgb(0, 0, 0); text-shadow: 0px 0px 
+20px rgb(0, 0, 0);" onmouseover="this.style.color='#000000';" 
+onmouseout="this.style.color='#000000';">HDOJ</a>
+<a href="http://www.hhanger.com/blog/?tag=lost" 
+class="cloudy-tags-widget tag-link-124" title="10 topics" 
+style="font-size: 13.4615pt; color: rgb(0, 0, 0); text-shadow: 0px 0px 
+14px rgb(0, 0, 0);" onmouseover="this.style.color='#000000';" 
+onmouseout="this.style.color='#000000';">Lost</a>
+<a href="http://www.hhanger.com/blog/?tag=math" 
+class="cloudy-tags-widget tag-link-47" title="3 topics" 
+style="font-size: 10.7692pt; color: rgb(0, 0, 0); text-shadow: 0px 0px 
+19px rgb(0, 0, 0);" onmouseover="this.style.color='#000000';" 
+onmouseout="this.style.color='#000000';">math</a>
+<a href="http://www.hhanger.com/blog/?tag=music" 
+class="cloudy-tags-widget tag-link-7" title="3 topics" style="font-size:
+ 10.7692pt; color: rgb(0, 0, 0); text-shadow: 0px 0px 19px rgb(0, 0, 
+0);" onmouseover="this.style.color='#000000';" 
+onmouseout="this.style.color='#000000';">music</a>
+<a href="http://www.hhanger.com/blog/?tag=oi" class="cloudy-tags-widget 
+tag-link-21" title="2 topics" style="font-size: 10.3846pt; color: rgb(0,
+ 0, 0); text-shadow: 0px 0px 20px rgb(0, 0, 0);" 
+onmouseover="this.style.color='#000000';" 
+onmouseout="this.style.color='#000000';">OI</a>
+<a href="http://www.hhanger.com/blog/?tag=resty" 
+class="cloudy-tags-widget tag-link-38" title="2 topics" 
+style="font-size: 10.3846pt; color: rgb(0, 0, 0); text-shadow: 0px 0px 
+20px rgb(0, 0, 0);" onmouseover="this.style.color='#000000';" 
+onmouseout="this.style.color='#000000';">resty</a>
+<a href="http://www.hhanger.com/blog/?tag=rng_58" 
+class="cloudy-tags-widget tag-link-73" title="3 topics" 
+style="font-size: 10.7692pt; color: rgb(0, 0, 0); text-shadow: 0px 0px 
+19px rgb(0, 0, 0);" onmouseover="this.style.color='#000000';" 
+onmouseout="this.style.color='#000000';">rng_58</a>
+<a href="http://www.hhanger.com/blog/?tag=srm" class="cloudy-tags-widget
+ tag-link-10" title="14 topics" style="font-size: 15pt; color: rgb(0, 0,
+ 0); text-shadow: 0px 0px 10px rgb(0, 0, 0);" 
+onmouseover="this.style.color='#000000';" 
+onmouseout="this.style.color='#000000';">SRM</a>
+<a href="http://www.hhanger.com/blog/?tag=topcoder" 
+class="cloudy-tags-widget tag-link-11" title="15 topics" 
+style="font-size: 15.3846pt; color: rgb(0, 0, 0); text-shadow: 0px 0px 
+10px rgb(0, 0, 0);" onmouseover="this.style.color='#000000';" 
+onmouseout="this.style.color='#000000';">TopCoder</a>
+<a href="http://www.hhanger.com/blog/?tag=udh-winger" 
+class="cloudy-tags-widget tag-link-99" title="2 topics" 
+style="font-size: 10.3846pt; color: rgb(0, 0, 0); text-shadow: 0px 0px 
+20px rgb(0, 0, 0);" onmouseover="this.style.color='#000000';" 
+onmouseout="this.style.color='#000000';">UdH-WiNGeR</a>
+<a href="http://www.hhanger.com/blog/?tag=vls" class="cloudy-tags-widget
+ tag-link-39" title="2 topics" style="font-size: 10.3846pt; color: 
+rgb(0, 0, 0); text-shadow: 0px 0px 20px rgb(0, 0, 0);" 
+onmouseover="this.style.color='#000000';" 
+onmouseout="this.style.color='#000000';">vls</a>
+<a href="http://www.hhanger.com/blog/?tag=wiki" 
+class="cloudy-tags-widget tag-link-27" title="1 topics" 
+style="font-size: 10pt; color: rgb(0, 0, 0); text-shadow: 0px 0px 20px 
+rgb(0, 0, 0);" onmouseover="this.style.color='#000000';" 
+onmouseout="this.style.color='#000000';">wiki</a>
+<a href="http://www.hhanger.com/blog/?tag=zju" class="cloudy-tags-widget
+ tag-link-14" title="5 topics" style="font-size: 11.5385pt; color: 
+rgb(0, 0, 0); text-shadow: 0px 0px 17px rgb(0, 0, 0);" 
+onmouseover="this.style.color='#000000';" 
+onmouseout="this.style.color='#000000';">ZJU</a>
+<a href="http://www.hhanger.com/blog/?tag=zoj" class="cloudy-tags-widget
+ tag-link-44" title="4 topics" style="font-size: 11.1538pt; color: 
+rgb(0, 0, 0); text-shadow: 0px 0px 18px rgb(0, 0, 0);" 
+onmouseover="this.style.color='#000000';" 
+onmouseout="this.style.color='#000000';">ZOJ</a>
+<a href="http://www.hhanger.com/blog/?tag=%e5%91%a8%e8%8b%b1%e5%8d%9a" 
+class="cloudy-tags-widget tag-link-15" title="1 topics" 
+style="font-size: 10pt; color: rgb(0, 0, 0); text-shadow: 0px 0px 20px 
+rgb(0, 0, 0);" onmouseover="this.style.color='#000000';" 
+onmouseout="this.style.color='#000000';">周英博</a></div></div><!--/widget--><div
+ class="widget"><h2 class="hl"><a class="rsswidget" 
+href="http://www.hhanger.com/blog/?feed=rss2" title="同步此内容"><img 
+style="background: none repeat scroll 0% 0% orange; color: white; 
+border: medium none;" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/rss.png"
+ alt="RSS" width="14" height="14"></a> <a class="rsswidget" 
+href="http://www.hhanger.com/blog" title="Thinking in My Life">我的Feed</a></h2><ul><li><a
+ class="rsswidget" href="http://www.hhanger.com/blog/?p=438" 
+title="赛前裁判包括看过题的姐姐一致表示题目有点难 赛前估计的难度顺序是A I E B F C G D H &nbsp; 
+&nbsp;实际的难度顺序是A I E B G F C D H，除了对G的难度估计过高外其他几乎一样 赛前估计所有题目都有提交 &nbsp; 
+&nbsp;Bingo! 赛前估计通过做多的是A题 &nbsp; &nbsp;Bingo! 赛前估计D和H都没有队伍过 &nbsp; 
+&nbsp;Bingo! 赛前估计第一名比第二名多一题或者一题以上 &nbsp; &nbsp;Bingo! 赛前估计有1个7题 &nbsp; 
+&nbsp;Bingo! A Clock 简单 49.47% (188/380) / 76.87% (472/614) 
+(分别为校赛与同步赛，下同) 可以在二维坐标上画出时间/角度的图，可以发现角度是从0到180的线性递增，然后是 
+180到0的线性递减，然后一直循环。因此可以断定答案是和x成正比的。当然，直 […]">2010校赛 Judge’s View 
+&amp;&amp; 解题报告</a></li></ul></div><!--/widget--><div class="widget"><h2
+ class="hl">我的统计</h2>
+<!-- You can customize the sidebox by playing with your theme css-->
+<ul class="firestats_sidebox"> 
+	<li>访问页面总数：<b>25466</b></li>
+	<li>唯一访问者：<b>6243</b></li>
+	<li>最近24小时内访问页面总数：<b>976</b></li>
+	<li>最近24小时内唯一访问者：<b>314</b></li>
+	
+</ul></div><!--/widget-->      
+				        	 
+					<div class="widget">
+						<h2>Meta</h2>
+						<ul>
+							<li><a 
+href="http://www.hhanger.com/wordpress/wp-login.php?action=register">注册</a></li>
+							<li><a href="http://www.hhanger.com/wordpress/wp-login.php">登录</a></li>
+							<li><a href="http://validator.w3.org/check/referer" title="This 
+page validates as XHTML 1.0 Transitional">Valid <abbr title="eXtensible 
+HyperText Markup Language">XHTML</abbr></a></li>
+							<li><a href="http://gmpg.org/xfn/"><abbr title="XHTML Friends 
+Network">XFN</abbr></a></li>
+							<li><a href="http://wordpress.org/" title="Powered by WordPress.">WordPress</a></li>
+													</ul>
+					</div>
+					
+				
+			</li></ul>
+
+		</div> <!-- #subcolumn -->
+<div id="referer"><div title="点击查看来源统计概要" id="r_c_wrap" 
+style="background: none repeat scroll 0% 0% transparent; font: 11px 
+tahoma; overflow: hidden; color: rgb(0, 100, 140); border: 0pt none; 
+padding: 0pt; margin: 0pt; text-align: left; text-decoration: none; 
+text-indent: 0pt; position: relative; width: 260px; height: 440px;"><div
+ id="r_w_hid" style="background: none repeat scroll 0% 0% transparent; 
+font: 11px tahoma; overflow: hidden; color: rgb(0, 100, 140); border: 
+0pt none; padding: 0pt; margin: 0pt; text-align: left; text-decoration: 
+none; text-indent: 0pt; position: relative; display: none;"><div 
+id="pan_pre" style="background: none repeat scroll 0% 0% rgb(255, 255, 
+255); font: 11px tahoma; overflow: hidden; color: rgb(0, 100, 140); 
+border: 3px solid rgb(255, 255, 255); padding: 0pt; margin: 0pt; 
+text-align: left; text-decoration: none; text-indent: 0pt; position: 
+relative; width: 254px; left: 0pt; top: 0pt;"></div><img id="__x" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/float.gif"
+ style="position: absolute; top: 1px; right: 0pt; cursor: pointer;"><div
+ class="r_c_tab" id="__tab" style="background: none repeat scroll 0% 0% 
+transparent; font: 11px tahoma; overflow: hidden; color: rgb(0, 100, 
+140); border: 0pt none; padding: 0pt; margin: 0pt; text-align: left; 
+text-decoration: none; text-indent: 0pt; position: relative;"></div><div
+ class="r_c_mid" id="__mid" style="background: none repeat scroll 0% 0% 
+rgb(248, 248, 248); font: 11px tahoma; overflow-x: hidden; overflow-y: 
+auto; color: rgb(0, 100, 140); border: 1px solid rgb(255, 255, 217); 
+padding: 0pt; margin: 0pt; text-align: left; text-decoration: none; 
+text-indent: 0pt; position: relative; height: 370px;"><table 
+style="border-spacing: 0pt;" width="100%" cellpadding="2" 
+cellspacing="0"></table></div></div><div id="r_c_body" 
+style="background: none repeat scroll 0% 0% transparent; font: 11px 
+tahoma; overflow: hidden; color: rgb(0, 100, 140); border: 0pt none; 
+padding: 0pt; margin: 0pt; text-align: left; text-decoration: none; 
+text-indent: 0pt; position: relative;"><div id="pan_traf" 
+style="background: none repeat scroll 0% 0% rgb(255, 255, 255); font: 
+11px tahoma; overflow: hidden; color: rgb(0, 100, 140); border: 3px 
+solid rgb(255, 255, 255); padding: 0pt; margin: 0pt; text-align: left; 
+text-decoration: none; text-indent: 0pt; position: relative; width: 
+254px; left: 0pt; top: 0pt;"><div class="r_c_tab" id="tab_traf" 
+style="background: none repeat scroll 0% 0% transparent; font: 11px 
+tahoma; overflow: hidden; color: rgb(0, 100, 140); border: 0pt none; 
+padding: 0pt; margin: 0pt; text-align: left; text-decoration: none; 
+text-indent: 0pt; position: relative;"><div style="font-weight: bold; 
+background: none repeat scroll 0% 0% rgb(255, 255, 217); width: 60px; 
+padding: 2px; margin-left: 3px; text-align: center;">Live</div></div><div
+ class="r_c_mid" id="mid_traf" style="background: none repeat scroll 0% 
+0% rgb(248, 248, 248); font: 11px tahoma; overflow-x: hidden; 
+overflow-y: auto; color: rgb(0, 100, 140); border: 1px solid rgb(255, 
+255, 217); padding: 0pt; margin: 0pt; text-align: left; text-decoration:
+ none; text-indent: 0pt; position: relative; height: 370px;"><table 
+style="border-spacing: 0pt;" width="100%" cellpadding="2" 
+cellspacing="0"><tbody><tr class="th"><td></td></tr><tr class="row"><td><table
+ width="100%" border="0" cellspacing="0" height="20"><tbody><tr><th 
+style="background: none repeat scroll 0% 0% transparent;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}"><a
+ target="_blank" 
+href="http://www.clicki.cc/index.php/summary:location/siteID/31002"><img
+ 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/cn.png"
+ alt="中国Heilongjiang" title="中国Heilongjiang-点击查看地理统计" align="absmiddle"></a>
+ <a target="_blank" 
+href="http://www.clicki.cc/index.php/summary:system/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/windows.png"
+ alt="Windows XP" title="Windows XP-点击查看操作系统统计" align="absmiddle"></a> <a
+ target="_blank" 
+href="http://www.clicki.cc/index.php/summary:browser/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/firefox.png"
+ alt="Mozilla Firefox 3.6.3" title="Mozilla Firefox 3.6.3-点击查看浏览器统计" 
+align="absmiddle"></a> <a target="_blank" 
+href="http://ip.clicki.cc/ip/222.171.7.83" title="点击查询IP信息">Longjiang</a></th><th
+ style="text-align: right; background: none repeat scroll 0% 0% 
+transparent; line-height: 120%;" width="50%"> 刚刚</th></tr></tbody></table><p
+ style="line-height: 14px; cursor: default;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}">
+ 直接访问了 <a href="http://www.hhanger.com/blog/?p=438" title="2010校赛 
+Judge’s View &amp;&amp; 解题报告 | 籟·来·也" target="_blank">2010校赛 Judge’s 
+View &amp;&amp; 解题报告 | 籟·来·也</a></p></td></tr><tr class="row"><td><table
+ width="100%" border="0" cellspacing="0" height="20"><tbody><tr><th 
+style="background: none repeat scroll 0% 0% transparent;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}"><a
+ target="_blank" 
+href="http://www.clicki.cc/index.php/summary:location/siteID/31002"><img
+ 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/cn.png"
+ alt="中国Heilongjiang" title="中国Heilongjiang-点击查看地理统计" align="absmiddle"></a>
+ <a target="_blank" 
+href="http://www.clicki.cc/index.php/summary:system/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/linux.png"
+ alt="Linux " title="Linux -点击查看操作系统统计" align="absmiddle"></a> <a 
+target="_blank" 
+href="http://www.clicki.cc/index.php/summary:browser/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/firefox.png"
+ alt="Mozilla Firefox 3.0.5" title="Mozilla Firefox 3.0.5-点击查看浏览器统计" 
+align="absmiddle"></a> <a target="_blank" 
+href="http://ip.clicki.cc/ip/222.171.7.83" title="点击查询IP信息">Longjiang</a></th><th
+ style="text-align: right; background: none repeat scroll 0% 0% 
+transparent; line-height: 120%;" width="50%"> 22秒前</th></tr></tbody></table><p
+ style="line-height: 14px; cursor: default;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}">
+ 从 <a href="http://www.hhanger.com/" title="www.hhanger.com" 
+target="_blank">www.hhanger.com</a><br> 访问了 <a 
+href="http://www.hhanger.com/blog/" title="籟·来·也 | Thinking in My Life" 
+target="_blank">籟·来·也 | Thinking in My Life</a></p></td></tr><tr 
+class="row"><td><table width="100%" border="0" cellspacing="0" 
+height="20"><tbody><tr><th style="background: none repeat scroll 0% 0% 
+transparent;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}"><a
+ target="_blank" 
+href="http://www.clicki.cc/index.php/summary:location/siteID/31002"><img
+ 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/cn.png"
+ alt="中国Heilongjiang" title="中国Heilongjiang-点击查看地理统计" align="absmiddle"></a>
+ <a target="_blank" 
+href="http://www.clicki.cc/index.php/summary:system/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/windows.png"
+ alt="Windows XP" title="Windows XP-点击查看操作系统统计" align="absmiddle"></a> <a
+ target="_blank" 
+href="http://www.clicki.cc/index.php/summary:browser/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/firefox.png"
+ alt="Mozilla Firefox 3.6.3" title="Mozilla Firefox 3.6.3-点击查看浏览器统计" 
+align="absmiddle"></a> <a target="_blank" 
+href="http://ip.clicki.cc/ip/222.171.7.83" title="点击查询IP信息">Longjiang</a></th><th
+ style="text-align: right; background: none repeat scroll 0% 0% 
+transparent; line-height: 120%;" width="50%"> 53秒前</th></tr></tbody></table><p
+ style="line-height: 14px; cursor: default;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}">
+ 直接访问了 <a href="http://www.hhanger.com/blog/?p=438" title="2010校赛 
+Judge’s View &amp;&amp; 解题报告 | 籟·来·也" target="_blank">2010校赛 Judge’s 
+View &amp;&amp; 解题报告 | 籟·来·也</a></p></td></tr><tr class="row"><td><table
+ width="100%" border="0" cellspacing="0" height="20"><tbody><tr><th 
+style="background: none repeat scroll 0% 0% transparent;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}"><a
+ target="_blank" 
+href="http://www.clicki.cc/index.php/summary:location/siteID/31002"><img
+ 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/cn.png"
+ alt="中国Shanxi" title="中国Shanxi-点击查看地理统计" align="absmiddle"></a> <a 
+target="_blank" 
+href="http://www.clicki.cc/index.php/summary:system/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/windows.png"
+ alt="Windows 7" title="Windows 7-点击查看操作系统统计" align="absmiddle"></a> <a 
+target="_blank" 
+href="http://www.clicki.cc/index.php/summary:browser/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/ie.png"
+ alt="Internet Explorer 8.0" title="Internet Explorer 8.0-点击查看浏览器统计" 
+align="absmiddle"></a> <a target="_blank" 
+href="http://ip.clicki.cc/ip/117.39.55.187" title="点击查询IP信息">Xian</a></th><th
+ style="text-align: right; background: none repeat scroll 0% 0% 
+transparent; line-height: 120%;" width="50%"> 6分钟前</th></tr></tbody></table><p
+ style="line-height: 14px; cursor: default;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}">
+ 从 <a href="http://www.hhanger.com/" title="www.hhanger.com" 
+target="_blank">www.hhanger.com</a><br> 访问了 <a 
+href="http://www.hhanger.com/blog/" title="籟·来·也 | Thinking in My Life" 
+target="_blank">籟·来·也 | Thinking in My Life</a></p></td></tr><tr 
+class="row"><td><table width="100%" border="0" cellspacing="0" 
+height="20"><tbody><tr><th style="background: none repeat scroll 0% 0% 
+transparent;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}"><a
+ target="_blank" 
+href="http://www.clicki.cc/index.php/summary:location/siteID/31002"><img
+ 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/in.png"
+ alt="印度null" title="印度null-点击查看地理统计" align="absmiddle"></a> <a 
+target="_blank" 
+href="http://www.clicki.cc/index.php/summary:system/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/windows.png"
+ alt="Windows XP" title="Windows XP-点击查看操作系统统计" align="absmiddle"></a> <a
+ target="_blank" 
+href="http://www.clicki.cc/index.php/summary:browser/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/firefox.png"
+ alt="Mozilla Firefox 3.6.3" title="Mozilla Firefox 3.6.3-点击查看浏览器统计" 
+align="absmiddle"></a> <a target="_blank" 
+href="http://ip.clicki.cc/ip/124.247.237.81" title="点击查询IP信息"></a></th><th
+ style="text-align: right; background: none repeat scroll 0% 0% 
+transparent; line-height: 120%;" width="50%"> 10分钟前</th></tr></tbody></table><p
+ style="line-height: 14px; cursor: default;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}">
+ 从 <a href="http://watashi.ws/blog/735/my-10th-zju-cpc" 
+title="watashi.ws" target="_blank">watashi.ws</a><br> 访问了 <a 
+href="http://www.hhanger.com/blog/?p=438" title="2010校赛 Judge’s View 
+&amp;&amp; 解题报告 | 籟·来·也" target="_blank">2010校赛 Judge’s View &amp;&amp; 
+解题报告 | 籟·来·也</a></p></td></tr><tr class="row"><td><table width="100%" 
+border="0" cellspacing="0" height="20"><tbody><tr><th style="background:
+ none repeat scroll 0% 0% transparent;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}"><a
+ target="_blank" 
+href="http://www.clicki.cc/index.php/summary:location/siteID/31002"><img
+ 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/cn.png"
+ alt="中国Shanxi" title="中国Shanxi-点击查看地理统计" align="absmiddle"></a> <a 
+target="_blank" 
+href="http://www.clicki.cc/index.php/summary:system/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/windows.png"
+ alt="Windows VISTA" title="Windows VISTA-点击查看操作系统统计" align="absmiddle"></a>
+ <a target="_blank" 
+href="http://www.clicki.cc/index.php/summary:browser/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/maxthon.png"
+ alt="Maxthon 2.0" title="Maxthon 2.0-点击查看浏览器统计" align="absmiddle"></a> <a
+ target="_blank" href="http://ip.clicki.cc/ip/61.150.43.100" 
+title="点击查询IP信息">Xian</a></th><th style="text-align: right; background: 
+none repeat scroll 0% 0% transparent; line-height: 120%;" width="50%"> 
+13分钟前</th></tr></tbody></table><p style="line-height: 14px; cursor: 
+default;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}">
+ 直接访问了 <a href="http://www.hhanger.com/blog/" title="籟·来·也 | Thinking in
+ My Life" target="_blank">籟·来·也 | Thinking in My Life</a></p></td></tr><tr
+ class="row"><td><table width="100%" border="0" cellspacing="0" 
+height="20"><tbody><tr><th style="background: none repeat scroll 0% 0% 
+transparent;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}"><a
+ target="_blank" 
+href="http://www.clicki.cc/index.php/summary:location/siteID/31002"><img
+ 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/cn.png"
+ alt="中国Liaoning" title="中国Liaoning-点击查看地理统计" align="absmiddle"></a> <a 
+target="_blank" 
+href="http://www.clicki.cc/index.php/summary:system/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/windows.png"
+ alt="Windows 7" title="Windows 7-点击查看操作系统统计" align="absmiddle"></a> <a 
+target="_blank" 
+href="http://www.clicki.cc/index.php/summary:browser/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/firefox.png"
+ alt="Mozilla Firefox 3.6" title="Mozilla Firefox 3.6-点击查看浏览器统计" 
+align="absmiddle"></a> <a target="_blank" 
+href="http://ip.clicki.cc/ip/118.203.38.214" title="点击查询IP信息">Shenyang</a></th><th
+ style="text-align: right; background: none repeat scroll 0% 0% 
+transparent; line-height: 120%;" width="50%"> 29分钟前</th></tr></tbody></table><p
+ style="line-height: 14px; cursor: default;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}">
+ 直接访问了 <a href="http://www.hhanger.com/blog/" title="籟·来·也 | Thinking in
+ My Life" target="_blank">籟·来·也 | Thinking in My Life</a></p></td></tr><tr
+ class="row"><td><table width="100%" border="0" cellspacing="0" 
+height="20"><tbody><tr><th style="background: none repeat scroll 0% 0% 
+transparent;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}"><a
+ target="_blank" 
+href="http://www.clicki.cc/index.php/summary:location/siteID/31002"><img
+ 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/cn.png"
+ alt="中国Guangdong" title="中国Guangdong-点击查看地理统计" align="absmiddle"></a> <a
+ target="_blank" 
+href="http://www.clicki.cc/index.php/summary:system/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/windows.png"
+ alt="Windows 7" title="Windows 7-点击查看操作系统统计" align="absmiddle"></a> <a 
+target="_blank" 
+href="http://www.clicki.cc/index.php/summary:browser/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/firefox.png"
+ alt="Mozilla Firefox 3.6.3" title="Mozilla Firefox 3.6.3-点击查看浏览器统计" 
+align="absmiddle"></a> <a target="_blank" 
+href="http://ip.clicki.cc/ip/116.31.131.230" title="点击查询IP信息">Shantou</a></th><th
+ style="text-align: right; background: none repeat scroll 0% 0% 
+transparent; line-height: 120%;" width="50%"> 44分钟前</th></tr></tbody></table><p
+ style="line-height: 14px; cursor: default;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}">
+ 从 <a 
+href="http://www.google.cn/search?hl=zh-CN&amp;q=%E7%AC%9B%E5%8D%A1%E5%B0%94%E6%A0%91&amp;prog=aff&amp;source=sdo_cts_rs&amp;client=pub-8982674507818376&amp;sdo_rt=ChBLVyxDAAVKbwpvKhfxKWAZEgznmb7luqbpppbpobUaCBsN8CtHZoASKAFSEwjhvJq5rrOfAhUGfW8KHY4ZZWJYs5L4p7qb-7PsAQ&amp;channel=2307844747"
+ title="google: 笛卡尔树" target="_blank">google: 笛卡尔树</a><br> 访问了 <a 
+href="http://www.hhanger.com/blog/?p=134" title="笛卡尔树（Cartesian Tree） | 
+籟·来·也" target="_blank">笛卡尔树（Cartesian Tree） | 籟·来·也</a></p></td></tr><tr
+ class="row"><td><table width="100%" border="0" cellspacing="0" 
+height="20"><tbody><tr><th style="background: none repeat scroll 0% 0% 
+transparent;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}"><a
+ target="_blank" 
+href="http://www.clicki.cc/index.php/summary:location/siteID/31002"><img
+ 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/cn.png"
+ alt="中国Fujian" title="中国Fujian-点击查看地理统计" align="absmiddle"></a> <a 
+target="_blank" 
+href="http://www.clicki.cc/index.php/summary:system/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/windows.png"
+ alt="Windows XP" title="Windows XP-点击查看操作系统统计" align="absmiddle"></a> <a
+ target="_blank" 
+href="http://www.clicki.cc/index.php/summary:browser/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/ie.png"
+ alt="Internet Explorer 6.0" title="Internet Explorer 6.0-点击查看浏览器统计" 
+align="absmiddle"></a> <a target="_blank" 
+href="http://ip.clicki.cc/ip/58.23.110.165" title="点击查询IP信息">Zhangzhou</a></th><th
+ style="text-align: right; background: none repeat scroll 0% 0% 
+transparent; line-height: 120%;" width="50%"> 47分钟前</th></tr></tbody></table><p
+ style="line-height: 14px; cursor: default;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}">
+ 直接访问了 <a href="http://www.hhanger.com/blog/?p=438" title="2010校赛 
+Judge’s View &amp;&amp; 解题报告 | 籟·来·也" target="_blank">2010校赛 Judge’s 
+View &amp;&amp; 解题报告 | 籟·来·也</a></p></td></tr><tr class="row"><td><table
+ width="100%" border="0" cellspacing="0" height="20"><tbody><tr><th 
+style="background: none repeat scroll 0% 0% transparent;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}"><a
+ target="_blank" 
+href="http://www.clicki.cc/index.php/summary:location/siteID/31002"><img
+ 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/cn.png"
+ alt="中国Liaoning" title="中国Liaoning-点击查看地理统计" align="absmiddle"></a> <a 
+target="_blank" 
+href="http://www.clicki.cc/index.php/summary:system/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/windows.png"
+ alt="Windows 7" title="Windows 7-点击查看操作系统统计" align="absmiddle"></a> <a 
+target="_blank" 
+href="http://www.clicki.cc/index.php/summary:browser/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/ie.png"
+ alt="Internet Explorer 8.0" title="Internet Explorer 8.0-点击查看浏览器统计" 
+align="absmiddle"></a> <a target="_blank" 
+href="http://ip.clicki.cc/ip/59.46.174.148" title="点击查询IP信息">Dalian</a></th><th
+ style="text-align: right; background: none repeat scroll 0% 0% 
+transparent; line-height: 120%;" width="50%"> 57分钟前</th></tr></tbody></table><p
+ style="line-height: 14px; cursor: default;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}">
+ 直接访问了 <a href="http://www.hhanger.com/blog/?p=438" title="2010校赛 
+Judge’s View &amp;&amp; 解题报告 | 籟·来·也" target="_blank">2010校赛 Judge’s 
+View &amp;&amp; 解题报告 | 籟·来·也</a></p></td></tr><tr class="row"><td><table
+ width="100%" border="0" cellspacing="0" height="20"><tbody><tr><th 
+style="background: none repeat scroll 0% 0% transparent;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}"><a
+ target="_blank" 
+href="http://www.clicki.cc/index.php/summary:location/siteID/31002"><img
+ 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/cn.png"
+ alt="中国Zhejiang" title="中国Zhejiang-点击查看地理统计" align="absmiddle"></a> <a 
+target="_blank" 
+href="http://www.clicki.cc/index.php/summary:system/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/windows.png"
+ alt="Windows XP" title="Windows XP-点击查看操作系统统计" align="absmiddle"></a> <a
+ target="_blank" 
+href="http://www.clicki.cc/index.php/summary:browser/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/ie.png"
+ alt="Internet Explorer 6.0" title="Internet Explorer 6.0-点击查看浏览器统计" 
+align="absmiddle"></a> <a target="_blank" 
+href="http://ip.clicki.cc/ip/218.75.108.204" title="点击查询IP信息">Hangzhou</a></th><th
+ style="text-align: right; background: none repeat scroll 0% 0% 
+transparent; line-height: 120%;" width="50%"> 57分钟前</th></tr></tbody></table><p
+ style="line-height: 14px; cursor: default;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}">
+ 直接访问了 <a href="http://www.hhanger.com/blog/" title="籟·来·也 | Thinking in
+ My Life" target="_blank">籟·来·也 | Thinking in My Life</a></p></td></tr><tr
+ class="row"><td><table width="100%" border="0" cellspacing="0" 
+height="20"><tbody><tr><th style="background: none repeat scroll 0% 0% 
+transparent;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}"><a
+ target="_blank" 
+href="http://www.clicki.cc/index.php/summary:location/siteID/31002"><img
+ 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/cn.png"
+ alt="中国Zhejiang" title="中国Zhejiang-点击查看地理统计" align="absmiddle"></a> <a 
+target="_blank" 
+href="http://www.clicki.cc/index.php/summary:system/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/windows.png"
+ alt="Windows XP" title="Windows XP-点击查看操作系统统计" align="absmiddle"></a> <a
+ target="_blank" 
+href="http://www.clicki.cc/index.php/summary:browser/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/ie.png"
+ alt="Internet Explorer 6.0" title="Internet Explorer 6.0-点击查看浏览器统计" 
+align="absmiddle"></a> <a target="_blank" 
+href="http://ip.clicki.cc/ip/218.75.108.204" title="点击查询IP信息">Hangzhou</a></th><th
+ style="text-align: right; background: none repeat scroll 0% 0% 
+transparent; line-height: 120%;" width="50%"> 57分钟前</th></tr></tbody></table><p
+ style="line-height: 14px; cursor: default;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}">
+ 从 <a href="http://blog.sina.com.cn/javamancaopeng" 
+title="blog.sina.com.cn" target="_blank">blog.sina.com.cn</a><br> 访问了 <a
+ href="http://www.hhanger.com/blog/" title="籟·来·也 | Thinking in My Life"
+ target="_blank">籟·来·也 | Thinking in My Life</a></p></td></tr><tr 
+class="row"><td><table width="100%" border="0" cellspacing="0" 
+height="20"><tbody><tr><th style="background: none repeat scroll 0% 0% 
+transparent;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}"><a
+ target="_blank" 
+href="http://www.clicki.cc/index.php/summary:location/siteID/31002"><img
+ 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/cn.png"
+ alt="中国Jiangsu" title="中国Jiangsu-点击查看地理统计" align="absmiddle"></a> <a 
+target="_blank" 
+href="http://www.clicki.cc/index.php/summary:system/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/windows.png"
+ alt="Windows 7" title="Windows 7-点击查看操作系统统计" align="absmiddle"></a> <a 
+target="_blank" 
+href="http://www.clicki.cc/index.php/summary:browser/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/ie.png"
+ alt="Internet Explorer 8.0" title="Internet Explorer 8.0-点击查看浏览器统计" 
+align="absmiddle"></a> <a target="_blank" 
+href="http://ip.clicki.cc/ip/114.221.110.212" title="点击查询IP信息">Nanjing</a></th><th
+ style="text-align: right; background: none repeat scroll 0% 0% 
+transparent; line-height: 120%;" width="50%"> 59分钟前</th></tr></tbody></table><p
+ style="line-height: 14px; cursor: default;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}">
+ 直接访问了 <a href="http://www.hhanger.com/blog/?p=438" title="2010校赛 
+Judge’s View &amp;&amp; 解题报告 | 籟·来·也" target="_blank">2010校赛 Judge’s 
+View &amp;&amp; 解题报告 | 籟·来·也</a></p></td></tr><tr class="row"><td><table
+ width="100%" border="0" cellspacing="0" height="20"><tbody><tr><th 
+style="background: none repeat scroll 0% 0% transparent;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}"><a
+ target="_blank" 
+href="http://www.clicki.cc/index.php/summary:location/siteID/31002"><img
+ 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/cn.png"
+ alt="中国Liaoning" title="中国Liaoning-点击查看地理统计" align="absmiddle"></a> <a 
+target="_blank" 
+href="http://www.clicki.cc/index.php/summary:system/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/windows.png"
+ alt="Windows 7" title="Windows 7-点击查看操作系统统计" align="absmiddle"></a> <a 
+target="_blank" 
+href="http://www.clicki.cc/index.php/summary:browser/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/ie.png"
+ alt="Internet Explorer 8.0" title="Internet Explorer 8.0-点击查看浏览器统计" 
+align="absmiddle"></a> <a target="_blank" 
+href="http://ip.clicki.cc/ip/59.46.174.148" title="点击查询IP信息">Dalian</a></th><th
+ style="text-align: right; background: none repeat scroll 0% 0% 
+transparent; line-height: 120%;" width="50%"> 1.2小时前</th></tr></tbody></table><p
+ style="line-height: 14px; cursor: default;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}">
+ 从 <a href="http://roba.rushcj.com/?p=469&amp;cpage=1" 
+title="roba.rushcj.com" target="_blank">roba.rushcj.com</a><br> 访问了 <a 
+href="http://www.hhanger.com/blog/" title="籟·来·也 | Thinking in My Life" 
+target="_blank">籟·来·也 | Thinking in My Life</a></p></td></tr><tr 
+class="row"><td><table width="100%" border="0" cellspacing="0" 
+height="20"><tbody><tr><th style="background: none repeat scroll 0% 0% 
+transparent;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}"><a
+ target="_blank" 
+href="http://www.clicki.cc/index.php/summary:location/siteID/31002"><img
+ 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/cn.png"
+ alt="中国Fujian" title="中国Fujian-点击查看地理统计" align="absmiddle"></a> <a 
+target="_blank" 
+href="http://www.clicki.cc/index.php/summary:system/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/windows.png"
+ alt="Windows XP" title="Windows XP-点击查看操作系统统计" align="absmiddle"></a> <a
+ target="_blank" 
+href="http://www.clicki.cc/index.php/summary:browser/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/ie.png"
+ alt="Internet Explorer 7.0" title="Internet Explorer 7.0-点击查看浏览器统计" 
+align="absmiddle"></a> <a target="_blank" 
+href="http://ip.clicki.cc/ip/59.56.172.240" title="点击查询IP信息">Fuzhou</a></th><th
+ style="text-align: right; background: none repeat scroll 0% 0% 
+transparent; line-height: 120%;" width="50%"> 1.6小时前</th></tr></tbody></table><p
+ style="line-height: 14px; cursor: default;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}">
+ 从 <a href="http://www.hhanger.com/" title="www.hhanger.com" 
+target="_blank">www.hhanger.com</a><br> 访问了 <a 
+href="http://www.hhanger.com/blog/" title="籟·来·也 | Thinking in My Life" 
+target="_blank">籟·来·也 | Thinking in My Life</a></p></td></tr><tr 
+class="row"><td><table width="100%" border="0" cellspacing="0" 
+height="20"><tbody><tr><th style="background: none repeat scroll 0% 0% 
+transparent;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}"><a
+ target="_blank" 
+href="http://www.clicki.cc/index.php/summary:location/siteID/31002"><img
+ 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/cn.png"
+ alt="中国null" title="中国null-点击查看地理统计" align="absmiddle"></a> <a 
+target="_blank" 
+href="http://www.clicki.cc/index.php/summary:system/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/windows.png"
+ alt="Windows XP" title="Windows XP-点击查看操作系统统计" align="absmiddle"></a> <a
+ target="_blank" 
+href="http://www.clicki.cc/index.php/summary:browser/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/firefox.png"
+ alt="Mozilla Firefox 3.6.3" title="Mozilla Firefox 3.6.3-点击查看浏览器统计" 
+align="absmiddle"></a> <a target="_blank" 
+href="http://ip.clicki.cc/ip/222.210.13.188" title="点击查询IP信息">Chengdu</a></th><th
+ style="text-align: right; background: none repeat scroll 0% 0% 
+transparent; line-height: 120%;" width="50%"> 1.7小时前</th></tr></tbody></table><p
+ style="line-height: 14px; cursor: default;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}">
+ 从 <a 
+href="http://www.baidu.com/s?bs=Curling&amp;f=8&amp;wd=acm+Curling" 
+title="baidu: acm Curling" target="_blank">baidu: acm Curling</a><br> 
+访问了 <a href="http://www.hhanger.com/blog/?cat=9" title="籟·来·也 | 算法" 
+target="_blank">籟·来·也 | 算法</a></p></td></tr><tr class="row"><td><table 
+width="100%" border="0" cellspacing="0" height="20"><tbody><tr><th 
+style="background: none repeat scroll 0% 0% transparent;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}"><a
+ target="_blank" 
+href="http://www.clicki.cc/index.php/summary:location/siteID/31002"><img
+ 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/cn.png"
+ alt="中国null" title="中国null-点击查看地理统计" align="absmiddle"></a> <a 
+target="_blank" 
+href="http://www.clicki.cc/index.php/summary:system/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/windows.png"
+ alt="Windows 7" title="Windows 7-点击查看操作系统统计" align="absmiddle"></a> <a 
+target="_blank" 
+href="http://www.clicki.cc/index.php/summary:browser/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/firefox.png"
+ alt="Mozilla Firefox 3.6.3" title="Mozilla Firefox 3.6.3-点击查看浏览器统计" 
+align="absmiddle"></a> <a target="_blank" 
+href="http://ip.clicki.cc/ip/125.71.228.73" title="点击查询IP信息">Chengdu</a></th><th
+ style="text-align: right; background: none repeat scroll 0% 0% 
+transparent; line-height: 120%;" width="50%"> 1.7小时前</th></tr></tbody></table><p
+ style="line-height: 14px; cursor: default;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}">
+ 直接访问了 <a href="http://www.hhanger.com/blog/" title="籟·来·也 | Thinking in
+ My Life" target="_blank">籟·来·也 | Thinking in My Life</a></p></td></tr><tr
+ class="row"><td><table width="100%" border="0" cellspacing="0" 
+height="20"><tbody><tr><th style="background: none repeat scroll 0% 0% 
+transparent;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}"><a
+ target="_blank" 
+href="http://www.clicki.cc/index.php/summary:location/siteID/31002"><img
+ 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/cn.png"
+ alt="中国null" title="中国null-点击查看地理统计" align="absmiddle"></a> <a 
+target="_blank" 
+href="http://www.clicki.cc/index.php/summary:system/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/windows.png"
+ alt="Windows VISTA" title="Windows VISTA-点击查看操作系统统计" align="absmiddle"></a>
+ <a target="_blank" 
+href="http://www.clicki.cc/index.php/summary:browser/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/firefox.png"
+ alt="Mozilla Firefox 3.5.1" title="Mozilla Firefox 3.5.1-点击查看浏览器统计" 
+align="absmiddle"></a> <a target="_blank" 
+href="http://ip.clicki.cc/ip/125.71.228.73" title="点击查询IP信息">Chengdu</a></th><th
+ style="text-align: right; background: none repeat scroll 0% 0% 
+transparent; line-height: 120%;" width="50%"> 1.7小时前</th></tr></tbody></table><p
+ style="line-height: 14px; cursor: default;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}">
+ 从 <a href="http://www.hhanger.com/" title="www.hhanger.com" 
+target="_blank">www.hhanger.com</a><br> 访问了 <a 
+href="http://www.hhanger.com/blog/" title="籟·来·也 | Thinking in My Life" 
+target="_blank">籟·来·也 | Thinking in My Life</a></p></td></tr><tr 
+class="row"><td><table width="100%" border="0" cellspacing="0" 
+height="20"><tbody><tr><th style="background: none repeat scroll 0% 0% 
+transparent;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}"><a
+ target="_blank" 
+href="http://www.clicki.cc/index.php/summary:location/siteID/31002"><img
+ 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/cn.png"
+ alt="中国null" title="中国null-点击查看地理统计" align="absmiddle"></a> <a 
+target="_blank" 
+href="http://www.clicki.cc/index.php/summary:system/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/ubuntu.png"
+ alt="Ubuntu Linux " title="Ubuntu Linux -点击查看操作系统统计" align="absmiddle"></a>
+ <a target="_blank" 
+href="http://www.clicki.cc/index.php/summary:browser/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/firefox.png"
+ alt="Mozilla Firefox 3.5.9" title="Mozilla Firefox 3.5.9-点击查看浏览器统计" 
+align="absmiddle"></a> <a target="_blank" 
+href="http://ip.clicki.cc/ip/125.71.228.73" title="点击查询IP信息">Chengdu</a></th><th
+ style="text-align: right; background: none repeat scroll 0% 0% 
+transparent; line-height: 120%;" width="50%"> 1.7小时前</th></tr></tbody></table><p
+ style="line-height: 14px; cursor: default;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}">
+ 直接访问了 <a href="http://www.hhanger.com/blog/" title="籟·来·也 | Thinking in
+ My Life" target="_blank">籟·来·也 | Thinking in My Life</a></p></td></tr><tr
+ class="row"><td><table width="100%" border="0" cellspacing="0" 
+height="20"><tbody><tr><th style="background: none repeat scroll 0% 0% 
+transparent;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}"><a
+ target="_blank" 
+href="http://www.clicki.cc/index.php/summary:location/siteID/31002"><img
+ 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/cn.png"
+ alt="中国Fujian" title="中国Fujian-点击查看地理统计" align="absmiddle"></a> <a 
+target="_blank" 
+href="http://www.clicki.cc/index.php/summary:system/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/windows.png"
+ alt="Windows XP" title="Windows XP-点击查看操作系统统计" align="absmiddle"></a> <a
+ target="_blank" 
+href="http://www.clicki.cc/index.php/summary:browser/siteID/31002"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/maxthon.png"
+ alt="Maxthon 2.0" title="Maxthon 2.0-点击查看浏览器统计" align="absmiddle"></a> <a
+ target="_blank" href="http://ip.clicki.cc/ip/218.66.14.156" 
+title="点击查询IP信息">Fuzhou</a></th><th style="text-align: right; 
+background: none repeat scroll 0% 0% transparent; line-height: 120%;" 
+width="50%"> 2.0小时前</th></tr></tbody></table><p style="line-height: 
+14px; cursor: default;" onclick="if 
+(window.event){event.cancelBubble=true;}else{event.stopPropagation();}">
+ 从 <a 
+href="http://www.baidu.com/s?wd=hhanger&amp;oq=hhang&amp;f=3&amp;rsp=1" 
+title="baidu: hhanger" target="_blank">baidu: hhanger</a><br> 访问了 <a 
+href="http://www.hhanger.com/blog/" title="籟·来·也 | Thinking in My Life" 
+target="_blank">籟·来·也 | Thinking in My Life</a></p></td></tr></tbody></table></div></div></div><div
+ id="r_c_btm" style="background: none repeat scroll 0% 0% rgb(255, 255, 
+255); font: 11px tahoma; overflow: hidden; color: rgb(0, 100, 140); 
+border: 0pt none; padding: 0pt 3px 5px; margin: 0pt; text-align: center;
+ text-decoration: none; text-indent: 0pt; position: relative; width: 
+254px;"><iframe allowtransparency="true" hspace="0" vspace="0" 
+marginheight="0" marginwidth="0" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/2.htm"
+ width="110" frameborder="0" height="30" scrolling="no"></iframe><br><a 
+href="http://www.clicki.cc/" target="_blank">该功能由Clicki.cc提供</a></div></div></div><script src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/feeler.js"></script><script id="" src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/clicki.js"></script><script src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/observer.htm"></script>
+	</div> <!--#sidebar-content -->
+	<div id="sidebar-bottom"></div>
+</div>		<div class="clear"></div>
+
+	</div><!--end content-->
+</div><!--end wrapper-->
+<div id="bottom"></div> <!-- #bottom -->
+<div id="bottom-extended">
+  <div id="bottom-container">
+
+    <p>
+      Copyright © 2010  <strong>籟·来·也</strong> All rights reserved.
+      <br>Desk Mess Mirrored v1.4.5 theme from	<a 
+href="http://buynowshop.com/" title="BuyNowShop.com">BuyNowShop.com</a>.
+    </p>
+
+    <span class="fs_powered_by"><img alt="FireStats icon" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/firestats-icon-small.png"><a
+ href="http://firestats.cc/">&nbsp;由FireStats提供支持</a></span><script type="text/javascript"><!--//--><![CDATA[//><!--
+    var cf = document.getElementById("commentform");
+    cf.innerHTML += "<p class='scp_message' style='color:#EB5050;clear:both;'><strong>NOTICE:</strong> You should type some Chinese word (like “你好”) in your comment to pass the spam-check, thanks for your patience!</p>";
+//--><!]]></script>    
+  </div> <!-- #bottom-container -->
+</div> <!-- #bottom-extended -->
+</div> <!-- #mainwrap -->
+<div id="ui-datepicker-div" class="ui-datepicker ui-widget 
+ui-widget-content ui-helper-clearfix ui-corner-all 
+ui-helper-hidden-accessible"></div><div style="position: absolute; 
+display: none; z-index: 9999;" id="livemargins_control"><img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/monitor-background-horizontal.png"
+ style="position: absolute; left: -77px; top: -5px;" width="77" 
+height="5">	<img 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/monitor-background-vertical.png"
+ style="position: absolute; left: 0pt; top: -5px;">	<img 
+id="monitor-play-button" 
+src="2010%E6%A0%A1%E8%B5%9B%20Judge%E2%80%99s%20View%20&amp;&amp;%20%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%20_%20%E7%B1%9F%C2%B7%E6%9D%A5%C2%B7%E4%B9%9F_files/monitor-play-button.png"
+ onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.5" 
+style="position: absolute; left: 1px; top: 0pt; opacity: 0.5; cursor: 
+pointer;"></div></body></html>

@@ -1,0 +1,160 @@
+#include<iostream>
+#include<ctime>
+using namespace std;
+
+typedef long long LL;
+
+const int P = 1000000007;
+bool ss[50005] = {1,1};
+int p[20005],plen = 0;
+LL N,K;
+int pp0[105][2],pp1[105][2];
+int pp0l,pp1l;
+int pfac[105],pcnt[105],pflen;
+
+void mklist(){
+	int i,j;
+	for(i=2;i*i<50005;++i) if(!ss[i]) for(j=i;j*i<50005;++j) ss[i*j] = 1;
+	for(i=2;i<50005;++i) if(!ss[i])p[plen++]=i;
+}
+LL powmod(LL a,LL b){
+	LL ret = 1 ; a%= P;
+	while(b){
+		if(b&0x1) ret = ret * a % P;
+		a = a * a % P;
+		b >>= 1;
+	}
+	return ret;
+}
+
+LL inv(LL a){
+	return powmod(a,P-2);	
+}
+LL BurnSideNode(LL n){
+	LL ret;
+	if(n & 0x1){
+		ret = powmod(K,(n*n-1)/4+1) * 2 % P;
+		ret = (ret + powmod(K,n*n)) % P;
+		ret = (ret + powmod(K,(n*n-1)/2+1)) % P;
+	}else{
+		ret = powmod(K,n*n/4) * 2 % P;
+		ret = (ret + powmod(K,n*n)) % P;
+		ret = (ret + powmod(K,n*n/2)) % P;	
+	}
+	return ret * (LL)250000002 % P;
+}
+void split(int n,int fac[105][2],int &len){
+	int i;
+	len = 0;
+	for(i=0;i<plen && n>=p[i];++i){
+		if(n%p[i] == 0){
+			fac[len][0] = p[i];
+			fac[len][1] = 0;
+			while(n%p[i] == 0)n /= p[i],++ fac[len][1];
+			++ len;
+		}
+	}
+	if(n != 1){
+		fac[len][0] = n;
+		fac[len++][1] = 1;
+	}
+}
+LL ans,tmp;
+int cpcnt[105],tpcnt[105],wpcnt[105];
+int cas = 0;
+void count(int dep,LL fac,LL C,LL B){
+	int i;
+	if(dep == pflen){
+		LL F = C / fac;C = fac;
+		for(i=0;i<pflen;++i) if(cpcnt[i]){
+			C-= C / pfac[i];
+		}
+		tmp = (tmp + powmod(B,F%(P-1))*(C%P)) % P;
+		return;
+	}
+	
+	for(i=0;i<=pcnt[dep] - tpcnt[dep];++i){
+		cpcnt[dep] = i;
+		count(dep+1,fac,C,B);
+		fac *= pfac[dep];
+	}
+}
+void dfs(int dep,LL B1,LL B2){
+	if(dep == pflen){
+		int k;
+		LL C = N / B2;
+		B1 = BurnSideNode(B1);
+		tmp = 0;
+		count(0,1LL,C,B1);
+		tmp = tmp * K % P;
+		tmp = tmp * inv(C) % P;
+		ans = (ans + tmp) % P;
+		return;
+	}
+	int i;
+	for(i=0;i<=pcnt[dep];++i){
+		if(i&0x1) continue;
+		tpcnt[dep] = i;
+		dfs(dep+1,B1,B2);
+		B1 *= pfac[dep];
+		B2 *= pfac[dep];
+		B2 *= pfac[dep];
+	}
+}
+void init(){
+	scanf("%I64d%I64d",&N,&K);
+}
+void work(){
+	printf("Case %d: ",++ cas);
+	if(N == 1){
+		printf("%I64d\n",K);
+		return;
+	}
+	int i,j;
+	split(N+1,pp0,pp0l);
+	split(N-1,pp1,pp1l);
+	N = N * N - 1;
+	pflen = 0;
+	for(i=0;i<pp0l;++i){
+		for(j=0;j<pp1l;++j){
+			if(pp0[i][0] == pp1[j][0]){
+				pfac[pflen] = pp0[i][0];
+				pcnt[pflen] = pp0[i][1] + pp1[j][1];
+				++ pflen;
+				break;
+			}
+		}
+		if(j == pp1l){
+			pfac[pflen] = pp0[i][0];
+			pcnt[pflen] = pp0[i][1];
+			++ pflen;
+		}
+	}
+	for(i=0;i<pp1l;++i){
+		for(j=0;j<pp0l;++j)
+			if(pp0[j][0] == pp1[i][0])break;
+		if(j == pp0l){
+			pfac[pflen] = pp1[i][0];
+			pcnt[pflen] = pp1[i][1];
+			++ pflen;
+		}
+	}
+	for(i=0;i<pflen;++i) wpcnt[i] = pcnt[i];//,cout<<"pfac = "<<pfac[i]<<"  cnt = "<<pcnt[i]<<endl;
+	ans = 0;
+	memset(cpcnt,0,sizeof cpcnt);
+	dfs(0,1LL,1LL);
+	printf("%I64d\n",ans);
+}
+int main(){
+	//freopen("D:\\in.in","r",stdin);
+	//freopen("D:\\out2.out","w",stdout);
+	mklist();
+	int T;
+	scanf("%d",&T);
+	while(T --){
+		init();
+		work();
+	}
+	//cout<<"times = "<<clock() <<" ms "<<endl;
+	return 0;
+}

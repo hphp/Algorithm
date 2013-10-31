@@ -1,0 +1,24 @@
+Tigers are enclosed in wire-net fencing at zoo.If they get out of the fencing, they may attack people.We use some lines to present the fencing as the picture following:
+
+Your task is to judge if a tiger in the fencing or not.
+In picture 1 the tiger is in the fencing.
+Note that enclosed fencing may look like picture 2 where the tiger is not in the fencing.
+
+Input
+The first line of input is a integer t(1<=t<=100),the number of test cases.The first line of each test case contains a integer n(1<=n<=100), the number of vertexes of the fencing.The second line contains the position of the tiger followed by n vertexes of the fencing in counter-closewise order.All numbers are integers in interval[0,10000].
+
+Output
+Print "yes" if the tiger is in the fencing or at the border,print "no" if not.
+
+Sample input
+1
+5
+100 76
+55 118
+119 114
+147 66
+123 33
+68 56
+
+Sample output
+yes

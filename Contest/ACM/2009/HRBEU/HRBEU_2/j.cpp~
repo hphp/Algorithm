@@ -1,0 +1,210 @@
+//09-08-22 17:02------19:15---19:49
+#include <stdio.h>
+#include <algorithm>
+#include <queue>
+using namespace std;
+#define G 210
+#define STM 540
+#define MAX (1<<30) 
+
+int R,C;
+/*int avl(int x,int y)
+{
+	if(x>=0&&x<R&&y>=0&&y<C)
+		return 1;
+		return 0;
+}*/
+#define avl(x,y) (x>=0&&x<R&&y>=0&&y<C)?1:0
+int cnst[4][2]={{1,0},{-1,0},{0,1},{0,-1}};
+int mstp[G][G][STM];
+char grid[G][G];
+int ndstm[G][G];// stmneeded
+struct Inf
+{
+	int x,y;
+}rec[G*G];int skiller;
+//int inf[G][G];dd
+int startx,starty;
+struct Node 
+{
+	int x;
+	int y;
+	int stm;
+	int min;
+	bool operator < (const Node &a)const
+	{
+		if(min<a.min)
+			return 0;
+			return 1;
+	}
+};
+
+void bfs_init(void)
+{
+	for(int i=0;i<R;i++)
+		for(int j=0;j<C;j++)
+			for(int t=0;t<STM;t++)
+				mstp[i][j][t]=MAX;
+}
+
+int bfs(void)
+{
+	bfs_init();
+	priority_queue <Node> p_q;
+	Node temp = {startx,starty,0,0};
+	mstp[startx][starty][0]=0;
+	p_q.push(temp);
+	while(!p_q.empty())
+	{
+		Node cur = p_q.top();
+		p_q.pop();
+		int x=cur.x,y=cur.y,stp=cur.min,stm=cur.stm;
+		if(grid[x][y]=='T')
+			return stp;
+	//	printf("%d %d %d %d\n",x,y,stp,stm);
+	//	if(mstp[x][y][stm]<stp)
+	//		continue;
+		for(int i=0;i<4;i++)
+		{
+			int xx=x+cnst[i][0],yy=y+cnst[i][1];
+			if(avl(xx,yy))
+			{
+					if(grid[xx][yy]=='#')
+					{
+						continue;;
+					}
+					if(grid[xx][yy]=='.'){
+						if(mstp[xx][yy][stm]>stp+1)	
+						{
+//							if(xx==1&&yy==3&&stp+1==8)
+//								printf("wuhaha\n");
+							mstp[xx][yy][stm]=stp+1;
+							Node tmp = {xx,yy,stm,stp+1};
+							p_q.push(tmp);
+						}
+						continue;
+					}
+					if(grid[xx][yy]=='E'){
+				//		int skl = id[xx][yy];
+						int temp= stm&ndstm[xx][yy];
+						if(temp==ndstm[xx][yy])
+						{
+		//					if(xx==0&&yy==1&&stm==271)
+		//						printf("hei %d\n",ndstm[xx][yy]);
+							if(mstp[xx][yy][stm]>stp+1)	
+							{
+								mstp[xx][yy][stm]	=stp+1;
+								Node tmp = {xx,yy,stm,stp+1};
+								p_q.push(tmp);
+							}
+						}
+						continue;
+					}
+					if(grid[xx][yy]=='S'){
+						continue;;	
+					}
+					if(grid[xx][yy]=='T'){
+					//	return stp+1;
+						if(mstp[xx][yy][stm]>stp+1)
+						{
+							mstp[xx][yy][stm]=stp+1;
+							Node tmp ={xx,yy,stm,stp+1};
+							p_q.push(tmp);
+						}
+						continue;
+					}
+					if(grid[xx][yy]>='1'&&grid[xx][yy]<='9'){
+						int get = grid[xx][yy]-'1';
+						int nstm=stm|(1<<get);
+						if(mstp[xx][yy][nstm]>stp+1)
+						{
+							mstp[xx][yy][nstm]=stp+1;
+							Node tmp ={xx,yy,nstm,stp+1};
+							p_q.push(tmp);
+						}
+						continue;
+				}
+			}
+		}
+	}
+	return -1;
+}
+/*
+6 6
+
+7E..T#
+
+E9#.#6
+
+#EE#E5
+
+##2#4#
+
+#1E..E
+
+#S8##3
+1 7
+8 1 2 3 4 5 6 8 9
+2 1 2
+
+2 1 2
+
+2 1 3
+
+1 1
+2 1 4*/
+
+void init(void)
+{
+	skiller=0;
+}
+
+int main()
+{
+	int test;
+	scanf("%d",&test);
+	while(test--)
+	{
+		scanf("%d%d",&R,&C);
+		init();
+		for(int i=0;i<R;i++)
+			scanf("%s",grid[i]);
+		for(int i=0;i<R;i++)
+			for(int j=0;j<C;j++)
+			{
+				char ch=grid[i][j];
+				if(ch=='E')
+				{
+					rec[skiller].x=i;
+					rec[skiller].y=j;
+					skiller++;
+				}
+				else if(ch=='S')
+				{
+					startx=i;starty=j;
+				}
+			}	
+		for(int i=0;i<skiller;i++)
+		{
+			int a,b;
+			scanf("%d",&a);
+			int stm=0;
+			for(int j=0;j<a;j++)
+			{
+				scanf("%d",&b);
+				b--;
+				stm = stm|(1<<b);
+		//		printf("%d\n",(1<<b));
+			}
+			int x=rec[i].x;
+			int y = rec[i].y;
+			ndstm[x][y]=stm;
+		//	printf("%d %d %d\n",x,y,ndstm[x][y]);
+		}
+		int step=bfs();
+		if(step==-1)
+			printf("imposible!\n");
+		else printf("%d\n",step);
+	}	
+	return 0;
+} 

@@ -1,0 +1,41 @@
+#include<iostream>
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#include<time.h>
+#include<math.h>
+#include<string>
+#include<algorithm>
+#include<vector>
+#include<set>
+#include<map>
+#include<queue>
+using namespace std;
+#define INF 0x3fffffff
+#define eps 1e-6
+typedef long long ll;
+int main(){
+	freopen("data.in","w",stdout);
+	int i,m,x1,x2,y1,y2,r,c;
+	for(i=3;i<=30;i++){
+		if(i==29||i==30) m=1000;
+		else m=rand()%1000+1;
+		if(i==30) r=300,c=1000;
+		else r=rand()%300+1,c=rand()%1000+1;
+		printf("%d %d %d\n",r,c,m);
+		while(m--){
+			if(i==28||i==29||i==30){
+				printf("%d %d %d %d\n",1,1,r,c);
+				continue;
+			}
+			x1=rand()%r+1;
+			x2=rand()%r+1;
+			if(x1>x2) swap(x1,x2);
+			y1=rand()%c+1;
+			y2=rand()%c+1;
+			if(y1>y2) swap(y1,y2);
+			printf("%d %d %d %d\n",x1,y1,x2,y2);
+		}
+	}    	
+	return 0;
+}

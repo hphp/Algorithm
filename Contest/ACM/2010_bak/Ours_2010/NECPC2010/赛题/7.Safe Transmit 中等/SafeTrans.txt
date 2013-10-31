@@ -1,0 +1,59 @@
+Description
+
+The Administrator of the computers room in Huade College decides to using some safe protocals, the safe-level of them are difined as A, B, C(A > B, B > C). These protocals are working for the communication between different computers.
+There are N computers in the LAN , and they can communicate with each other.
+Now the Administrator wants know that if he send message from computer-a to computer-b, what is the safe-level of this communication, the message can be retransmited by other computers. The safe-level of a communication can define as : there is more than one road from computer-a to computer-b directly or indirectly, every road are made up by some segments, and each segment is a communication from computer-a to computer-b directly, each segment will use a protocal and the safe-level of the segment is the protocal's safe-level, then we can define the safe-level of a road is the minimum safe-level of all segments in the road, and the safe-level of a communication is the maximum of all the road. For example, the protocal from computer-a to computer-b is level C,the protocal from computer-a to computer-c is level A,the protocal from computer-c to computer-b is level B,then the safe-level of the communication from computer-a to computer-b is level B.( road 1:a->b ,the level is C;road 2: a->c->b ,the level is B=minimum {A,B} )
+
+Input
+
+There are many testcases.each block of testcase is begin with an integer N (2<=N<=500, the computers are numbered from 1 to N), indicates the number of computers in the LAN, in the second line there is an integer M, indicates how many pairs of computers are using safe protocals. Form 3 line to M+2 line, each line contains two integer a, b and a character c ( c belongs {'A','B','C'} ), means the safe-level of the protocal between computer-a and computer-b directly is level c. The M+3 line is a integer P (1<=P<=N^2), indicates the times that the Administrator will send messages and he want know the safe-level. From M+4 line to M+3+P line ,each line contains two integer d, e ,indicate the Administrator will send a message from computer-d to computer-e.( d not equals e)
+
+Output
+
+For each testcase, you should output the safe-level of each communication that the Administrator send messages. Different testcases will be separated by a blank line.
+
+Sample Input
+
+4
+4
+1 2 A
+1 3 A
+1 4 B
+2 3 C
+4
+2 3
+2 4
+3 4
+4 1
+5
+5
+1 2 A
+1 2 B
+2 3 B
+3 4 C
+2 4 C
+6
+1 2
+2 3
+2 4
+1 3
+4 1
+1 5
+
+Sample Output
+
+A
+B
+B
+B
+
+A
+B
+C
+B
+C
+D
+
+HINT
+the default safe-level in the LAN is D.
+

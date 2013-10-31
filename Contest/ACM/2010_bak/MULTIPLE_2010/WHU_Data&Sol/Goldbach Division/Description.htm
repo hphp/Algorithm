@@ -1,0 +1,202 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta name=Generator content="Microsoft Word 12 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"页眉 Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	layout-grid-mode:char;
+	border:none;
+	padding:0cm;
+	font-size:9.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"页脚 Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	layout-grid-mode:char;
+	font-size:9.0pt;
+	font-family:"Calibri","sans-serif";}
+span.Char
+	{mso-style-name:"页眉 Char";
+	mso-style-link:页眉;}
+span.Char0
+	{mso-style-name:"页脚 Char";
+	mso-style-link:页脚;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	layout-grid:15.6pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=ZH-CN style='text-justify-trim:punctuation'>
+
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:18.0pt;font-family:"Times New Roman","serif";color:blue'>Goldbach
+Division</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman","serif";color:green'>Time
+Limit: </span><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>1.0
+Seconds<span style='color:green'>&nbsp; &nbsp;Memory Limit: </span>65536K</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Everybody
+knows Goldbach Conjecture! Here is one edition of it:</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>1)
+Every odd integer greater than 17 can be written as three different odd primes’
+sum;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>2)
+Every even integer greater than 6 can be written as two different odd primes’
+sum.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Loving
+the magical math conjecture very much, iSea try to have a closer look on it.
+Now he has a new definition: Goldbach Division. If we express an even integer
+as two different odd primes’ sum, or odd integer as three different odd primes’
+sum, we call it a form of Goldbach Division of <i>N</i>, using a symbol <b><i>G(N)</i></b>.
+</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>For
+example, if <i>N</i> = 18, there are two ways to divide <i>N</i>.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>18
+= 5 + 13 = 7 + 11</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>If
+<i>N</i> = 19, there is only one way to divide <i>N</i>.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>19
+= 3 + 5 + 11</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Here
+comes your task, give a integer N, find<b> <i>|G(N)|</i></b>, the number of
+different <b><i>G(N)</i></b>.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:13.5pt;font-family:
+"Times New Roman","serif"'>Input</span></b></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>There
+are several test cases in the input.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Each
+test case includes one integer <i>N</i> (1 &lt;= <i>N </i>&lt;= 20000). </span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>The
+input terminates by end of file marker.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:13.5pt;font-family:
+"Times New Roman","serif"'>Output</span></b></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>For
+each test case, output one integer, indicating<b> <i>|G(N)|</i></b>.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:13.5pt;font-family:
+"Times New Roman","serif"'>Sample Input </span></b></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>18</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>19</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:13.5pt;font-family:
+"Times New Roman","serif"'>Sample Output </span></b></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>2</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>1</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:13.5pt;font-family:
+"Times New Roman","serif"'>Hint</span></b></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:13.5pt;font-family:
+"Times New Roman","serif"'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>There
+may be 2000 cases, be careful.</span></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:13.5pt;font-family:
+"Times New Roman","serif"'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:13.5pt;font-family:
+"Times New Roman","serif"'>Author</span></b></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:13.5pt;font-family:
+"Times New Roman","serif"'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>iSea
+@ WHU</span></p>
+
+</div>
+
+</body>
+
+</html>

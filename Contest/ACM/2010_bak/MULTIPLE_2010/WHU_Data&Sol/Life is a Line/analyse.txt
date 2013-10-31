@@ -1,0 +1,3 @@
+first can y_l and y_r if the line isn't parallel with y_axis
+then sort y_l, if y1_l > y2_l && y1_r < y2_r they will meet in the open interval
+you need add the number of lines parallel with y_axis multiply with this don't at last

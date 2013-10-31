@@ -1,0 +1,134 @@
+#include<cstdio> 
+#include<algorithm> 
+#include<iostream> 
+#include<vector> 
+#include<cstring> 
+#include<queue> 
+#include<cctype> 
+#include<map> 
+#include<ctime>
+#include<cmath>  
+using namespace std; 
+const int maxn=10000+10; 
+const int maxe=1000000+10; 
+typedef int flow; 
+typedef int cost; 
+const flow flow_oo=0x7f7f7f7f; 
+const cost cost_oo=0x7f7f7f7f; 
+int E; 
+int adj[maxn],to[maxe],back[maxe]; 
+flow wei[maxe]; 
+cost fee[maxe]; 
+inline void add_edge(int u,int v,flow w,cost f) 
+{ 
+       to[E]=v; 
+       back[E]=adj[u]; 
+       wei[E]=w; 
+       fee[E]=f; 
+       adj[u]=E++; 
+} 
+inline void Add_edge(int u,int v,flow w,cost f) 
+{ 
+       add_edge(u,v,w, f); 
+       add_edge(v,u,0,-f); 
+} 
+int N,S,T; //N:0-(N-1)总结点数，S:源点T:汇点。 
+cost d[maxn]; 
+inline bool Relax(int u,int v,cost t) 
+{ 
+       if(d[v]>d[u]+t) 
+       { 
+            d[v]=d[u]+t; 
+            return 1; 
+       }return 0; 
+} 
+int Q[maxn],V[maxn],Pre[maxn]; //Pre数组用来记录最短路径!!  
+cost spfa() 
+{ 
+       int l=0,r=0; 
+       memset(V,0,sizeof(V[0])*N); 
+       for(int i=0;i<N;++i)d[i]=cost_oo; 
+       Q[r++]=S; 
+       Pre[S]=-1; 
+       d[S]=0; 
+       V[S]=1; 
+       while(l^r) //while(l!=r) 
+       { 
+             int now=Q[l++];if(l>=N)l=0; 
+             for(int e=adj[now];e!=-1;e=back[e]) 
+                 if(wei[e]>0) 
+                    if(Relax(now,to[e],fee[e])) 
+                    { 
+                       Pre[to[e]]=e; 
+                       if(!V[to[e]]) 
+                       { 
+                           V[to[e]]=1; 
+                           Q[r++]=to[e]; 
+                           if(r>=N)r=0; 
+                       } 
+                    } 
+             V[now]=0; 
+       } 
+       return d[T]; 
+} 
+int F=0; 
+cost mincost() 
+{ 
+       cost ans=0; 
+       while(spfa()<cost_oo) 
+       { 
+              flow in=flow_oo; 
+              int x=T; 
+              while(x!=S) 
+              { 
+                    in=min(in,wei[Pre[x]]); 
+                    x=to[Pre[x]^1]; 
+              } 
+              F+=in;//good!
+              x=T; 
+              while(x!=S) 
+              { 
+                    ans+=in*fee[Pre[x]]; 
+                    wei[Pre[x]]-=in; 
+                    wei[Pre[x]^1]+=in; 
+                    x=to[Pre[x]^1]; 
+              } 
+       } 
+       return ans; 
+} 
+inline void Init(int n,int s,int t) //接点数源点汇点 
+{ 
+       N=n;S=s;T=t;E=0; 
+       memset(adj,0xff,sizeof(adj[0])*N); 
+}
+inline int Rint(){ int x; scanf("%d",&x); return x;}
+int main()
+{
+	//freopen("D://in.txt","r",stdin);
+	//freopen("D://myout.txt","w",stdout);
+    int Tcase = Rint();
+    while ( Tcase -- )
+    {
+           int n = Rint();
+           int m = Rint();
+           Init(n + n + 2, 0, n + n + 1);
+           while ( m -- )
+           {
+                  int u = Rint();
+                  int v = Rint();
+                  int w = Rint();
+                  Add_edge(u,n + v, 1,w);
+                  Add_edge(v,n + u, 1,w);
+           }
+           for(int i=1; i<=n; ++i)
+                Add_edge(S,i,1,0),
+                Add_edge(n + i, T, 1, 0);
+           F = 0;
+           int ans = mincost();
+           static int O = 0;printf("Case %d: ",++O);
+           if( F != n )printf("NO\n");else printf("%d\n",ans);
+    }
+   // cout<<"times = " << clock() << " ms "<<endl;
+    return 0;
+}
+           

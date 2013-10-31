@@ -1,0 +1,163 @@
+@CHARSET "UTF-8";
+
+body {background-color:#fff;background: url(http://www.youdao.com/nanti/images/top_pic_back.jpg) repeat-x;font-size: 14px; margin-top: 0px; font-family:Verdana, Arial;color:#2b2b2b;}
+p {margin: 8px 0; }
+a {color:#686868;text-decoration:none;}
+a:hover {color:#1e50a2;text-decoration:underline;}
+img {border:0;}
+ul, li{
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+margin:0pt;
+padding:0pt;
+}
+body{
+	background-color:#F9F9F9;
+}
+#pagebody{
+	background:white;
+}
+
+.picborder{border: 1px solid #dcdcdc;}
+.gray{color:#808080}
+.red{color:#ed1010}
+.double_star{font-size:9px}
+#copyright_navigation{text-align: center; font-size: 12px;width:100%;color:#808080;border-top: 1px solid #dcdcdc;overflow:hidden}
+
+#warp {margin: 0 auto;width:960px;}
+#topbanner{width:980px;height:249px;overflow:hidden}
+#title_navigation{width:980px;height:38px}
+
+.ver20all{width:100%;height:20px;overflow:hidden}
+.ver15{width:705px;height:15px;overflow:hidden}
+.ver20{width:705px;height:20px;overflow:hidden}
+.ver30{width:705px;height:30px;overflow:hidden}
+
+.ver15right{width:240px;height:15px;overflow:hidden}
+
+.space_area{width:22px;height:20px}
+
+#vessel{width:980px;}
+#vessel .left{width:705px;display:block;float:left}
+#vessel .right{width:240px;display:block;float:right;}
+
+/* 活动介绍 */
+#vessel .left .introtitle{width:705px;height:26px;background: url(http://www.youdao.com/nanti/images/left_title_jieshao.jpg) repeat-x;}
+#vessel .left .intro_neirong{width:705px;line-height:200%}
+
+.morelink a{color:#1e50a2}
+#vessel .left .prize_area{width:705px}
+
+#vessel .left .prize_area .space_area{width:22px;height:20px;display:block;float:left}
+#vessel .left .prize_area .big_area{width:220px;height:214px;background: url(http://www.youdao.com/nanti/images/squre_dajiang.jpg) no-repeat;display:block;float:left}
+#vessel .left .prize_area .big_area .content{width:188px;padding:66px 0px 0px 16px;line-height:160%}
+
+#vessel .left .prize_area .join_area{width:220px;height:214px;background: url(http://www.youdao.com/nanti/images/squre_canyujiang.jpg) no-repeat;display:block;float:left}
+#vessel .left .prize_area .join_area .content{width:198px;padding:66px 0px 0px 10px;line-height:160%}
+
+#vessel .left .prize_area .green_area{width:220px;height:214px;background: url(http://www.youdao.com/nanti/images/squre_tongdao.jpg) no-repeat;display:block;float:left}
+#vessel .left .prize_area .green_area .content{width:198px;padding:66px 0px 0px 10px;line-height:160%;font-size:13px}
+ 
+/* 日程 
+.schedule_area{width:705px;height:26px;background: url(http://www.youdao.com/nanti/images/left_title_richeng.jpg) repeat-x;color:#686868;overflow:hidden}
+.shape_area{width:705px;height:107px;background: url(http://www.youdao.com/nanti/images/richeng_area.jpg) repeat-x;color:#686868;overflow:hidden}
+.shape_area .onearea{padding:37px 0px 0px 42px;display:block;float:left;color:#686868}
+.shape_area .twoarea{padding:20px 0px 0px 52px;display:block;float:left;color:#686868}
+.shape_area .threearea{padding:20px 0px 0px 55px;display:block;float:left;color:#686868}
+.shape_area .fourarea{padding:37px 0px 0px 62px;display:block;float:left;color:#686868}
+.f12{font-size:12px}
+/* 活动新闻 
+.news_area{width:705px;height:26px;background: url(http://www.youdao.com/nanti/images/left_title_xinwen.jpg) repeat-x;color:#686868;overflow:hidden}
+.rect_top{width:705px;height:19px;background: url(http://www.youdao.com/nanti/images/squre_white_top.gif) no-repeat;color:#686868;overflow:hidden}
+.rect_middle{width:705px;background: url(http://www.youdao.com/nanti/images/squre_white_middle.gif) repeat-y;color:#686868;overflow:hidden}
+.rect_middle .content{padding:0px 0px 0px 25px;line-height:180%}
+.rect_bottom{width:705px;height:19px;background: url(http://www.youdao.com/nanti/images/squre_white_bottom.gif) no-repeat;color:#686868;overflow:hidden}
+/* 竞赛通知 
+.notice_area_top{width:240px;height:44px;background: url(http://www.youdao.com/nanti/images/right_tongzhi_title.gif) repeat-x;color:#686868;overflow:hidden}
+.notice_area_middle{width:240px;background: url(http://www.youdao.com/nanti/images/right_lan_background.gif) repeat-y;color:#686868;overflow:hidden}
+.notice_area_middle .content{padding:5px 0px 10px 10px;font-size:12px;line-height:180%}
+.notice_area_bottom{width:240px;height:9px;background: url(http://www.youdao.com/nanti/images/right_lan_bottom.gif) repeat-x;color:#686868;overflow:hidden}
+/* poj平台 
+.poj_area_top{width:240px;height:44px;background: url(http://www.youdao.com/nanti/images/right_poj_title.gif) repeat-x;color:#686868;overflow:hidden}
+.poj_area_middle{width:240px;background: url(http://www.youdao.com/nanti/images/right_lan_background.gif) repeat-y;color:#686868;overflow:hidden}
+.poj_area_middle .content{padding:5px 0px 10px 20px;font-size:12px;line-height:180%;width:210px}
+.poj_area_middle .content a{color:#1e50a2}
+/* 温馨提示 
+.clew_area_top{width:240px;height:44px;background: url(http://www.youdao.com/nanti/images/right_tishi_title.gif) repeat-x;color:#686868;overflow:hidden}
+.clew_area_middle{width:240px;background: url(http://www.youdao.com/nanti/images/right_lan_background.gif) repeat-y;color:#686868;overflow:hidden}
+.clew_area_middle .content{padding:5px 0px 10px 20px;font-size:12px;line-height:180%;width:210px}
+.clew_area_middle .content a{color:#1e50a2}
+/* 互动讨论 
+.discuss_area_top{width:240px;height:44px;background: url(http://www.youdao.com/nanti/images/right_hudong_title.gif) repeat-x;color:#686868;overflow:hidden}
+.discuss_area_middle{width:240px;background: url(http://www.youdao.com/nanti/images/right_lan_background.gif) repeat-y;color:#686868;overflow:hidden}
+.discuss_area_middle .content{padding:5px 0px 10px 20px;font-size:12px;line-height:180%;width:210px}
+.discuss_area_middle .content a{color:#1e50a2}
+
+	
+/* start of table  */
+table tbody td{
+	border-bottom: 1px solid #CCCCCC;
+	padding: 3px 6px;
+}
+table thead td, table thead th, table tfoot th{
+	color: white;
+	background: #464646;
+	padding:1px 6px;
+}
+table thead td a, table thead td a:visited{
+	color:#FFFFFF;
+}
+table thead td a:hover{
+	color:#FFFFFF;
+	text-decoration:underline;
+}
+table {
+	font-size:12px;
+	margin:10px 0;
+	border-collapse:collapse;
+	empty-cells:show;
+	width:100%;
+}
+table td{
+	line-height:27px;
+}
+.alt{
+	background: #F9F9F9;
+}
+.toolbar, .toolbar a{
+	color:#CCC;
+}
+/*  end of table  */
+
+
+
+
+#contestNavigation{
+	height:38px;
+	background-image:url(images/linkeareagray.jpg);
+}
+#contestNavigation a{
+	border-left:1px #555 solid;
+	font-weight:bold;
+}
+
+.tab{
+	width:124px;
+	height:38px;
+	border:0;
+	display:block;
+	float:left;
+	text-align:center;
+	line-height:38px;
+	font-size:18px;
+}
+a.tab,#contestNavigation a:hover,#contestNavigation a:visited{
+	color:#ACACAC;
+}
+a.tab.current, #contestNavigation a.current:hover,#contestNavigation a.current:visited{
+	color:#FFFFFF;
+}
+.tab-0{
+	width:200px;
+}

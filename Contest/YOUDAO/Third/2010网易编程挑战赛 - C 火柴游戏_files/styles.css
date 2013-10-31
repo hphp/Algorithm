@@ -1,0 +1,421 @@
+@CHARSET "UTF-8";
+
+.container{
+	background:white;
+	margin:3px;
+	padding:6px;
+}
+.main-content h3,.admin h2{
+	border-top:1px solid #B8D4E8;
+	background:#F0F5F8;
+	font-weight:bold;
+	color:#231F17;
+	padding:3px 0;
+	margin-top:10px;
+}
+.admin h2{
+	margin:0;
+}
+.main-content h3 a{
+	color:#231F17;
+	font-weight:bold;
+}
+.main-content .group-info li{
+	border-bottom:1px dashed gray;
+}
+.main-content .container dl{
+	font-size:12px;
+}
+.main-content .container dl dt,.main-content .container dl dd{
+	display:inline;
+}
+.main-content .container dl dd{
+	padding-right:17px;
+}
+.widget{
+	background:#F0F5F8;
+	border:1px solid #B8D4E8;
+	list-style:none;
+	margin-top:10px;
+}
+.widget h3{
+	border-bottom:1px solid #B8D4E8;
+	line-height:28px;
+}
+.widget .container{
+	font-size:12px;
+}
+/* start of the layout */
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col-13, .col-14, .col-15, .col-16{
+	float:left;
+	display:inline;
+	margin-left:10px;
+	margin-right:10px;
+}
+.col-1 {
+	width:40px;
+}
+.col-2 {
+	width:100px;
+}
+.col-3 {
+	width:160px;
+}
+.col-4 {
+	width:220px;
+}
+.col-5 {
+	width:280px;
+}
+.col-6 {
+	width:340px;
+}
+.col-7 {
+	width:400px;
+}
+.col-8 {
+	width:460px;
+}
+.col-9 {
+	width:520px;
+}
+.col-10 {
+	width:580px;
+}
+.col-11 {
+	width:640px;
+}
+.col-12 {
+	width:700px;
+}
+.col-13 {
+	width:760px;
+}
+.col-14 {
+	width:820px;
+}
+.col-15 {
+	width:880px;
+}
+.col-16 {
+	width:940px;
+}
+/*  end of the layout  */
+
+/*	sideSearch	*/
+#sideSearch {
+	margin: -10px 0 22px;
+	width: 100%;
+	obackground-color: #eee;
+}
+#sideSearch div{
+	padding: 5px 0 0;
+}
+#sideSearch input {
+	font-size: 12px;
+	height: 2em;
+	width: 100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	obackground-color: #fff;
+}
+#sideSearch button {
+	float: right;
+	margin-top: 5px;
+}
+/* end of sideSearch	*/
+
+/*	start of post list  */
+.postList{
+	margin: 20px 0 0 0 !important;
+	padding: 0;
+}
+.postList li{
+	list-style:none;
+	border-bottom:1px solid #DADADA;
+	margin-bottom:20px;
+	overflow: hidden;
+}
+.post-author p{
+	font-size: 11px;
+}
+.post-author cite{
+	display: block;
+	font-size:12px;
+}
+.postList .post p, .postList .post pre, .postList .post blockquote{
+	margin-bottom:11px;
+	width:86%;
+	font-size: 12px;
+}
+.postList li .actions{
+	float:right;
+	font-size:12px
+}
+/*	end of post list */
+
+#navigation li a{
+	margin-bottom:10px;
+	display:block;
+}
+/*  start of bbcrumb  */
+.bbcrumb{
+	margin-bottom: 5px;
+	font-size:12px;
+}
+.bbcrumb a{
+	border: none;
+}
+/*  end of bbcrumb  */
+
+/*	start of messages	*/
+tr.unread{
+	background-color: #EEEEEE;
+}
+.subject h4 a {
+	font-weight:normal;
+}
+.unread .subject h4 a{
+	font-weight: bold;
+}
+/*  end of messages  */
+
+/*  start of user infomation  */
+#user-submit, #user-solution, #user-try{
+	font-size: 13px;
+	font-weight: bold;
+	position: relative;
+	text-align: center;
+	width: 80px;
+}
+#user-submit-number, #user-solution-number, #user-try-number{
+	font-size:24px;
+	position: relative;
+	text-align: center;
+	width: 100px;
+	font-family:Arial,Sans-Serif;
+    font-weight:bold;
+}
+#user-submit{
+	top:48px;
+	left:-11px;
+}
+#user-solution{
+	top:-36px;
+	left:100px;
+}
+#user-try{
+	top:6px;
+	left:210px;
+}
+#user-submit-number{
+	top:0px;
+	left:-19px;
+}
+#user-solution-number{
+	top: -84px;
+	left: 90px;
+}
+#user-try-number{
+	top:-42px;
+	left:200px;
+}
+ul#mail{
+	clear:both;
+	margin-left:10px;
+	margin-bottom:8px;
+}
+/*  end of user-info  */
+
+/*  start of form  */
+.form,.zend_form{
+	padding-top:12px;
+}
+.form dt,.zend_form dt{
+	float:left;
+	font-size:14px;
+	margin:0 10px 0 0;
+	padding:3px 0 13px;
+	text-align:right;
+	width:100px;
+}
+.form dd,.zend_form dd{
+	font-size:12px;
+	margin:0 0 10px 0;
+	position:relative;
+	text-align:left;
+	overflow:hidden;
+}
+.form dd input,.zend_form dd input {
+	font-family:sans-serif;
+	font-size:14px;
+	height:20px;
+	line-height:1em;
+	padding:3px;
+	width:194px;
+}
+.admin .form dd,.admin .zend_form dd{
+	margin:0 0 20px;
+}
+.ad-botton{
+	margin-left:135px;
+	margin-right:10px;
+}
+.admin .form dt,.admin .zend_form dt{
+	width:125px;
+	padding:0;
+}
+.admin .check-box{
+	width:25px;
+	height:15px;;
+}
+#offline-element input, #userCanRegister-element input{
+	width:15px;
+}
+.user-info dt, #userInfomation h3{
+	font-weight: bold;
+	text-indent: 0;
+}
+ul.problem-list li{
+	display: inline;
+	font-size:10px;
+}
+ul.problem-list a{
+	font-size:12px;
+}
+.register .checkbox{
+	border:medium none;
+	height:auto;
+	width: 20px;
+}
+.register dd{
+	margin: 0 0 15px;
+}
+.login-message{
+	color:red;
+	font-size:14px;
+	padding-left:101px;
+}
+.user-login h3 span{
+	font-weight:bold;
+	margin:0 6px;
+}
+.user-login dd input{
+	width:141px;
+}
+.user-login .form dt{
+	width:37px;
+}
+.user-login p label input,.user-login p label{
+	float:left;
+}
+.user-login p input{
+	width:20px;
+	height:20px;
+}
+.user-login p button{
+	display:block;
+	margin-left:103px;
+}
+.user-login p label{
+	font-size:12px;
+}
+.user-login p{
+	padding-top:5px;
+	padding-left:44px;
+}
+.col-9 legend{
+	font-weight: bold;
+}
+.zend_form .description{
+	font-size:12px;
+	color:#777;
+}
+/*  end of form  */
+
+/* start of affiche */
+.affiche{
+	margin-left: 20px;
+}
+#affiche li{
+	font-size:12px;
+}
+/* end of affiche */
+
+/* start of page bar */  
+#pageTitleDescrip .page-bar{
+	padding-top:2px;
+}
+#pagebody #problem-status{
+	padding-right:89px;
+}
+#pagebody .pages a:hover{
+	text-decoration:none;
+	border: 1px solid #999999;
+}
+#pagebody .pages .current{
+	background-color:#328AB2;
+	color:#FFFFFF;
+	font-weight:bold;
+	padding:0px 3px;
+	border:1px solid #328AB2;
+	font-size:10px;
+	margin-right:3px;
+	padding:2px 3px;
+}
+.pages a{
+	border:1px solid #CCCCCC;
+	font-size:10px;
+	margin-right:3px;
+	padding:2px 3px;
+}
+/*  end of page bar   */
+
+/* start of compile result color */
+em.result-right, a.result-right{
+	color:#0000FF;
+}
+em.result-wrong, a.result-wrong{
+	color:#FF2100;
+}
+em.result-pending, a.result-pending, em.result-ce, a.result-ce {
+	color:#008000;
+}
+a.result-right:hover, a.result-wrong:hover, a.result-ce:hover{
+	text-decoration:underline;
+}
+/*  end of compile result color  */
+
+/*  start of the footer  */
+#footer{
+	font-size:12px;
+	clear:both;
+	_height:20px;
+}
+#footer .wrapper{
+	border-top:1px solid #CCC;
+	overflow:hidden;
+}
+.oj-info{
+	padding-top:5px;
+	float:left;
+	padding-top:5px;
+}
+.debug-info{
+	float:right;
+	padding-top:5px;
+}
+.debug-info li{
+	display:inline;
+	padding-left:12px;
+}
+/*  end of the footer  */
+
+/*  group-statistics  */
+.group-statistics .form dt{
+	width:auto;
+	padding:0;
+}
+
+

@@ -1,0 +1,45 @@
+ZaakDov is doing his math problem!
+
+Description
+
+Given an odd prime p.
+You are to tell whether p can be written into form a^2+b^2 (0<a<=b),
+and if p can be done, you are to determine a pair of a,b.
+
+Input
+
+There will be up to 2*10^5 test cases.
+An odd prime p (3<=p<2*10^9) in each line.
+End with EOF.
+
+Output
+
+For each number p,
+if p can be written into form a^2+b^2 (0<a<=b),
+output one line that contains "Legal a b",
+and if not just output one line that contains "Illegal".
+For a certain p that can be written into the form described above, any pair of a,b (0<a<=b) will do.
+
+Sample Input
+
+3
+5
+7
+11
+13
+17
+19
+23
+29
+
+Sample Output
+
+Illegal
+Legal 1 2
+Illegal
+Illegal
+Legal 2 3
+Legal 1 4
+Illegal
+Illegal
+Legal 2 5

@@ -1,0 +1,13 @@
+Reverse 
+Given an array of integers, your job is to print it in the reverse order. For example:
+Given an array of 1,2,3,4,5 you should output 5,4,3,2,1.
+Input 
+Input contains multiple test cases. The first line is a integer T, the number of test cases. The first line of each test case is a integer N, the number of elements in the array. Then a line with N integers follows.
+Output
+For each test case, print the reversed order of the input array.
+Sample Input
+1
+5
+1 2 3 4 5
+Sample Output
+5 4 3 2 1

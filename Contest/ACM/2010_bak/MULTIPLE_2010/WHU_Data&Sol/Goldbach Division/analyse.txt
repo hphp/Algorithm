@@ -1,0 +1,3 @@
+get prime first, bruce force to get evens' answer
+then dp the odds' answer
+be careful the primes always are different

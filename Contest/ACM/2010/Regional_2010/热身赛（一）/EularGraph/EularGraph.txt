@@ -1,0 +1,22 @@
+Eular graph is a graph that you can start from one vertex X and go through all the edges only once and go back to vertex X, your task is to judge whether a given graph is a Eular graph or not.
+A graph will be given like this:
+Give n vertexes identified from 1 to n,and a set of edges described as i,j which means that there is a edge from vertex i to vertex j. Edges are directional.
+Input 
+Input contains serveral test cases.First line of the input file is a integer t(1<=t<=100) presents the number of test cases.Each test case contains two parts. Part one contains two integer n and m. n is the number of vertexes and m is the number of edges. Part two contains m lines with two integers(i and j)1<=i,j<=100.
+Output
+For each test case,print yes if the graph is a Eular graph and no if not.
+Sample input
+2
+5 5
+1 2
+2 3
+3 4
+4 5
+5 1
+4 3
+1 2
+2 3
+3 4
+Sample output
+yes
+no

@@ -1,0 +1,42 @@
+Daizhenyang's Letter
+
+Time Limit: 10000 ms     Case Time Limit: 10000 ms     Memory Limit: 65536 KB
+
+
+Description
+
+One day, Daizhenyang is wandering in BUPT campus, thinking about having a girlfriend. Out of nowhere, a breath-taking beautiful girl came by, Daizhenyang was shocked by her beauty and was too stunned to say hi.
+There's an old saying, "Once there was true love for me but I did not cherish it. When it slipped away between my fingers, I began to regret. That is the saddest thing in life. If God could give me a second chance, I would tell the girl 'I love you!'. If there should be a time limit on this love, I wish it would be 10000 years." Regretting is what Daizhengyang is being through. He wants to make everything right, so he figured out her mail address and decides to send a love letter.
+After thinking again and again for a long time, Daizhenyang picked up some keywords to express his love and emotion. However, Daizhenyang is busy on his eternal lasting enterprise, unifying all kinds of ACM/ICPC problems to network flow, he wants to make this letter as short as possible. You can help him on this holy project, making his dream come true.
+ 
+
+
+Input
+
+There are multiple cases in the input file.
+For each test case:
+Line 1: an single integer N ( 0<N<=12 ) , represents the number of keywords.
+Line 2 - N+1: a keyword in each line, keywords only consist of uppercase letters ( for sincerity ) , length is less than 56.
+
+
+Output
+
+For each test case, output one line, begin with "Case #k: ", k is the case number, followed by the letter required. If there're several solutions output the lexicographically smaller one. 
+
+
+Sample Input
+
+3
+BUPT
+TALENT
+DAIZHENYANG
+3
+LOVE
+VERY
+RYTHM
+
+
+Sample Output
+
+Case #1: BUPTALENTDAIZHENYANG
+Case #2: LOVERYTHM

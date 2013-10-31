@@ -1,0 +1,62 @@
+/*
+ID: hanjiatong1
+PROG: packrec
+LANG: C++
+*/
+#include <iostream>
+#include <fstream>
+#include <string>
+#define Min(a,b) ((a)<(b)?(a):(b))
+#define Max(a,b) ((a)>(b)?(a):(b))
+using namespace std;
+
+struct Rec
+{
+	int l,h;	
+}rec[60];
+int l[40],h[6];
+int cnt;
+int mxh[20],mxl[20];
+int suml,sumh;
+
+int main() {
+    ofstream fout ("packrec.out");
+    ifstream fin ("packrec.in");
+    suml = 0;
+    sumh = 0;
+    int a,b;
+    for(int i=1;i<5;i++)
+    {
+    	fin >> a >> b;
+    	l[i] = Max(a,b);
+    	h[i] = Min(a,b);
+    	suml += l[i];
+    	sumh += h[i];
+	}
+	for(int i=1;i<16;i++)
+	{
+		mxh[i] = 0;
+		mxl[i] = 0;
+		for(int j=0;j<4;j++)
+			if(i & (1<<j))
+			{
+				mxh[i] = Max(h[j+1],mxh[i]);
+				mxl[i] = Max(l[j+1],mxl[i]);
+				fout << j  << ' ' ;//<< endl;
+			}
+		fout << mxh[i] << ' ' << mxl[i] << endl;
+	}
+	rec[cnt].h = Min(suml,sumh);
+	rec[cnt].l = Max(suml,sumh);
+    for(int i=1;i<5;i++)
+    {
+		int l = Max(sumh-h[i],l[i]);
+//		int h = 
+	}
+    return 0;
+}
+
+/*
+2010-06-08--8:24
+
+*/

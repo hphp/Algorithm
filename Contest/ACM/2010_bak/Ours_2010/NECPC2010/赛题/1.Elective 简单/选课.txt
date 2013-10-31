@@ -1,0 +1,29 @@
+Description
+
+New term is beginning, and students start to chose courses for their graduation. There are N courses and M students. There is no student number limit, so students can chose their favorite as possible as they can, but School has a problem that if a course has a lots of students, it must teaching in a big classroom. So school should count out the status of students' chosens. 
+
+Input
+
+There are several testcases, in each case the first line contains two integer N, M(1<=N, M<=1000). The courses are numbered from 1 to N, and students are numbered from 1 to M. Then M line follow, each line begin with an integer C, indicates how many courses have been chosen by student-i, and then follows C integers ,indicate the course number.
+process to end of file.
+
+Output
+
+for each testcase, you should output N lines. The i-line will contains all the students who has chosen course-i, the output order of student is order by student number. there is a space between each two students.
+
+Sample Input
+
+4 5
+2 1 5
+4 5 3 2 1
+0
+3 1 2 3
+1 1
+
+Sample Output
+
+1 2 4 5
+2
+2 4
+
+1 2

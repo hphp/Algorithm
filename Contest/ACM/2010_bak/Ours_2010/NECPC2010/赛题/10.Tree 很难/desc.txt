@@ -1,0 +1,28 @@
+HuaDe School of Applied Technology of Harbin Institute of Technology's的数据结构课上，老师提出了如下问题：
+求一棵树中的最长路及其个数
+
+输入
+
+给出n
+接着n-1行
+每行w,v和len，表示节点w和v之间有边长度为len
+
+输出
+
+输出最长路及其个数，占一行
+
+样例输入
+
+4
+1 2 100
+2 3 50
+2 4 50
+4
+1 2 100
+2 3 50
+3 4 50
+
+样例输出
+
+150 2
+200 1

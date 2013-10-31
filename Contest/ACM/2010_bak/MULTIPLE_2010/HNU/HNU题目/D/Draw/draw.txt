@@ -1,0 +1,41 @@
+
+  huicpc0860 likes drawing,but not good at drawing.One day, he gets a software of drawing.
+  The drawing software,an image A soiled area is a convex polygon of black,located in the white plane.There is an eraser can be seen as an another convex polygon B.For the eraser,it started from the initial position along a given direction a to translate.It can make the area it passed become white,weather the area is white or black originally.
+  When the eraser moving,the black area A's area may be clean out.Given the minimum moving distance D,that eraser make A's remaining area is divided by the ratio of the original area of k.
+
+input
+First line is the number of soiled area A's vectors NA.Follows NA lines, describes the convex polygon counterclockwise, each line has two decimal xi, yi ( -10000 ¡Ü xi, yi ¡Ü 10000) representatives one vector's coordinate.
+Then, another line is the number of soiled area B's vectors NB.Follows NB lines, describes the convex polygon clockwise, each line has two decimal xi, yi ( -10000 ¡Ü xi, yi ¡Ü 10000) representatives one vector's coordinate.
+Lastest line has two decimal, a and K.a (0 ¡Üa< 360)is the direction's angle with x positive axis and K is the rate.
+
+Output
+Only one line for each case,the minimum distance D (retain four digitals after decimal point).
+If it's impossible to get,output -1.
+
+Sample Input
+
+4
+0 0
+2 0
+2 2
+0 2
+4
+-2 0
+-1 0
+-1 1
+-2 1
+0 0.75
+3
+-2 -1
+-1 0
+-2 1
+3
+1 -1
+2 0
+1 1
+180 0.5
+
+Sample Output
+
+2.0000
+2.7071

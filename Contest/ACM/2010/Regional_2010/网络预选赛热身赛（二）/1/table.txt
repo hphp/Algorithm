@@ -1,0 +1,13 @@
+There is a table, on which some plates were put in a circle. Some apples were put in the plates. Let's play a game. For each plate, separate the apples into two parts. For example if a plate containing M apples, put M/2 apples into the lefthand plate and the rest to the righthand plate. Note that if M is a odd number, then M/2 equals (M-1)/2. Plates are numbered from 1 to N in counter-clockwise. The lefthand plate is the plate whose number is smaller. The lefthand plate of plate numbered 1 is the plate numbered N. Given the number of apples in each plate(1,2,...N), output the the number of apples in each plate when game is over.
+Input 
+The input contains multiple test case. The first line of each case contains a integer N, the number of plates on the table, followd by N integers representing the number of apples in the plates(1,2,...N).
+Output
+For each test case print the number of apples in each plate(from numbered 1 to N) when game is over.
+Sample Input
+5
+1 2 3 4 5
+10
+1 2 3 4 5 6 7 8 9 10
+Sample Output
+4 2 3 4 2
+6 2 3 4 5 6 7 8 9 5

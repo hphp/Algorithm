@@ -1,0 +1,7 @@
+a shortest path model:
+The solution is also obvious, each intersection is split into four:
+0 1
+2 3
+Then add a dimension to indicate whether has pass through red light
+The total number of points that is 29 * 29 * 4 * 2 = 6728, so we need nlogn dijkstra
+Reprocessing traffic lights and the way go acorss, the code is basically completed

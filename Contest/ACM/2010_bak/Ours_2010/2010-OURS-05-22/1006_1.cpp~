@@ -1,0 +1,59 @@
+#include <stdio.h>
+#define E 0.01
+#define avl(e) ((e)>=0&&((e)<=mxe)?1:0)
+
+int n,m;
+double p,R,S;
+int mxe;
+
+double getPrice()
+{
+	return (n*1.0*p+S*m*1.0)/(2.0*m);
+}
+
+int getBei()
+{
+	return 	(int)((n*p-0.01*m+m*S)/(2*p*m));
+}
+
+int mv[10]= {-5,-4,-3,-2,-1,0,1,2,3,4};
+
+double Rev(double prc , int rm)
+{
+	return (prc-S)*rm - R;
+}
+
+int main()
+{
+	int test;
+	scanf("%d",&test);
+	while(test--)
+	{
+		scanf("%d%lf%d%lf%lf",&n,&p,&m,&R,&S);
+		mxe = (int)(n/p);
+		int bei = getBei() ;
+//		printf("%d\n",bei);
+		double ans = -R;
+		double price = mxe+p-E;
+		int au = 0;
+		for(int i=0;i<10;i++)
+		{
+			int b= bei+mv[i];
+			if(avl(b))	
+			{
+				double tmp = Rev(p*b +p - E,n-m*b);
+				if(tmp > ans)
+				{
+					ans = tmp;
+					price = p*b+p - E;
+					au = n - m*b;
+				}
+			}
+		}
+		printf("price = %.2lf\n",price);
+		printf("audiences = %d\n",au);
+		printf("revenue %.2lf\n",ans);
+		if(test!=1)printf("\n");
+	}
+	return 0;
+}

@@ -1,0 +1,38 @@
+#include <stdio.h>
+#define M 54
+#define N 10001000
+int tail[M],mx[M];
+bool sq[N];
+int main()
+{
+	freopen("1003.out","w",stdout);
+	for(int i=1;i<N;i++)
+	{
+		if(i*i<N)
+			sq[i*i] = 1;
+		else break;
+	}
+	int cur = 1;
+	tail[1] = 1;
+	for(int i=2;i<= N;i++)
+	{
+		bool flag = 0;
+		for(int j=1;j<=cur;j++)
+		{
+			if(i+tail[j]<N &&sq[i+tail[j]])
+			{
+				flag = 1;
+				tail[j] = i;
+			}
+		}
+		if(flag ==0)
+		{
+			mx[cur-1] = i-1;
+			//printf("%d\n",mx[cur-1]);
+			tail[++cur] = i;
+		}
+		if(cur== M-1)break;
+	}
+	for(int i=1;i<=50;i++)
+		printf("%d,",mx[i]);
+}

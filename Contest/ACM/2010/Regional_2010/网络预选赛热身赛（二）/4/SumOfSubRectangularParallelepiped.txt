@@ -1,0 +1,18 @@
+There is a rectangular parallelepiped with a integer in each cell.See figure 1.Can you caculate the maximum sum of sub rectangular parallelepipeds?
+Input 
+Input contains multiple test cases. The first line is the test number T, followed by cases. Each case begin with three integer L,M,N presenting the rectangular parallelepiped you will get. Then L matrixes each with M rows and N column follow.
+Ouput 
+For each case print a line with the maximum sum of sub rectangular parallelepipeds.If all the integers are negtive,print 0.
+Sample Input
+
+1
+2 2 2
+7 -4 
+3 7 
+
+-9 -6 
+4 7 
+
+Sample Output
+
+21

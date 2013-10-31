@@ -1,0 +1,49 @@
+Give you a number, print characters like this:
+1
+*
+2
+...
+.*.
+...
+3
+*****
+*...*
+*.*.*
+*...*
+*****
+Input
+The input contains multiple test cases. Each case consist of a integer n.
+Output
+For each test case, print the character table like the examples.
+Sample Input
+1
+2
+3
+4
+5
+Sample Output
+*
+...
+.*.
+...
+*****
+*...*
+*.*.*
+*...*
+*****
+.......
+.*****.
+.*...*.
+.*.*.*.
+.*...*.
+.*****.
+.......
+*********
+*.......*
+*.*****.*
+*.*...*.*
+*.*.*.*.*
+*.*...*.*
+*.*****.*
+*.......*
+*********

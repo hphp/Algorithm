@@ -1,0 +1,3 @@
+a typical bfs + match
+first bfs every rally point to make graph
+hungray is the answer
