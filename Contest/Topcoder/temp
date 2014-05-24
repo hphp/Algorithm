@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+#include <vector>
+#include <algorithm>
+#include <math.h>
+#include <string>
+#include <map>
+
+using namespace std;
+class TwoWaysSorting{
+	public:
+	string sortingMethod(vector<string> l_list){
+		int len = l_list.size();
+		int last_len = 0;
+		int sign = 0;
+		for(int i = 0 ; i < len ; i ++){
+			string ele = l_list[i];
+			if(ele.length() < last_len){
+				sign = 1;
+				break;
+			}
+			last_len = ele.length();
+		}
+	}
+};
